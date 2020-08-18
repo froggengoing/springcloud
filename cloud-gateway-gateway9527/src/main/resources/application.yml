@@ -1,0 +1,51 @@
+server:
+  port: 9527
+eureka:
+  instance:
+    instance-id: gateway9527
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      ##defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7002.com:7002/eureka,http://eureka7001.com:7001/eureka
+
+spring:
+  application:
+    name: cloud-gateway-service
+  cloud:
+    gateway:
+      #default-filters:
+      # - PrefixPath=/httpbin
+      # - AddResponseHeader=X-Response-Default-Foo, Default-Bar
+      routes:
+        # =====================================
+        # to run server
+        # $ wscat --listen 9000
+        # to run client
+        # $ wscat --connect ws://localhost:8080/echo
+        - id: payment_routh
+          ##uri: http://localhost:8001
+          uri: lb://CLOUD-PAYMENT-SERVICE
+          ##order: 9000
+          predicates:
+            - Path=/payment/get/**
+        # =====================================
+        - id: payment_routh2
+          #uri: http://localhost:8001
+          uri: lb://CLOUD-PAYMENT-SERVICE
+          ##order: 10000
+          predicates:
+            - Path=/payment/lb/**
+            #网关在该时间点后生效
+            #- After=2020-06-10T22:35:01.930+08:00[Asia/Shanghai]
+            #请求中cookie带以下的键值对
+            #- Cookie=username,misswang
+            #- Header=X-Request-Id, \d+
+            ## curl 地址 -H "Host:froggengo"
+            #- Host=froggengo
+            #- Method=GET
+            #- Query=file,rizhi
+            #- RemoteAddr=192.168.1.1/24
+            #- Weight=group1, 2

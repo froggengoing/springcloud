@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor</OriginalElement>
+  <nodes>
+    <node x="1126.8632352941174" y="79.0">org.springframework.core.Ordered</node>
+    <node x="187.44411764705865" y="277.0">org.mybatis.spring.mapper.MapperScannerConfigurer</node>
+    <node x="652.3632352941174" y="79.0">org.springframework.beans.factory.config.BeanFactoryPostProcessor</node>
+    <node x="1467.3632352941174" y="168.0">org.springframework.context.ResourceLoaderAware</node>
+    <node x="1324.375" y="79.0">org.springframework.beans.factory.Aware</node>
+    <node x="1123.9441176470586" y="168.0">org.springframework.core.PriorityOrdered</node>
+    <node x="640.4441176470586" y="168.0">org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor</node>
+    <node x="344.0" y="168.0">org.springframework.beans.factory.InitializingBean</node>
+    <node x="667.3632352941174" y="0.0">java.lang.FunctionalInterface</node>
+    <node x="973.4441176470586" y="277.0">org.springframework.boot.autoconfigure.SharedMetadataReaderFactoryContextInitializer.CachingMetadataReaderFactoryPostProcessor</node>
+    <node x="1387.1941176470586" y="277.0">org.springframework.context.annotation.ConfigurationClassPostProcessor</node>
+    <node x="1307.3632352941174" y="168.0">org.springframework.context.EnvironmentAware</node>
+    <node x="705.4441176470586" y="277.0">org.springframework.boot.context.ConfigurationWarningsApplicationContextInitializer.ConfigurationWarningsPostProcessor</node>
+    <node x="389.44411764705865" y="277.0">org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration.EmbeddedDataSourceBeanFactoryPostProcessor</node>
+    <node x="1645.3632352941174" y="168.0">org.springframework.beans.factory.BeanClassLoaderAware</node>
+    <node x="0.0" y="168.0">org.springframework.beans.factory.BeanNameAware</node>
+    <node x="142.0" y="168.0">org.springframework.context.ApplicationContextAware</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.mybatis.spring.mapper.MapperScannerConfigurer" target="org.springframework.context.ApplicationContextAware">
+      <point x="-22.75" y="-14.5" />
+      <point x="255.69411764705865" y="257.0" />
+      <point x="233.0" y="257.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.context.ApplicationContextAware" target="org.springframework.beans.factory.Aware">
+      <point x="0.0" y="-14.5" />
+      <point x="233.0" y="148.0" />
+      <point x="1346.575" y="148.0" />
+      <point x="-14.799999999999955" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.autoconfigure.SharedMetadataReaderFactoryContextInitializer.CachingMetadataReaderFactoryPostProcessor" target="org.springframework.core.PriorityOrdered">
+      <point x="72.5" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.autoconfigure.SharedMetadataReaderFactoryContextInitializer.CachingMetadataReaderFactoryPostProcessor" target="org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor">
+      <point x="-72.5" y="-14.5" />
+      <point x="1045.9441176470586" y="247.0" />
+      <point x="818.2441176470586" y="247.0" />
+      <point x="50.799999999999955" y="14.5" />
+    </edge>
+    <edge source="org.springframework.context.annotation.ConfigurationClassPostProcessor" target="org.springframework.context.ResourceLoaderAware">
+      <point x="46.0" y="-14.5" />
+      <point x="1548.1941176470586" y="257.0" />
+      <point x="1546.3632352941174" y="257.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor" target="org.springframework.beans.factory.config.BeanFactoryPostProcessor">
+      <point x="0.0" y="-14.5" />
+      <point x="767.4441176470586" y="128.0" />
+      <point x="746.3632352941174" y="128.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.context.annotation.ConfigurationClassPostProcessor" target="org.springframework.context.EnvironmentAware">
+      <point x="0.0" y="-14.5" />
+      <point x="1502.1941176470586" y="217.0" />
+      <point x="1377.3632352941174" y="217.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.mybatis.spring.mapper.MapperScannerConfigurer" target="org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor">
+      <point x="68.25" y="-14.5" />
+      <point x="346.69411764705865" y="247.0" />
+      <point x="665.8441176470586" y="247.0" />
+      <point x="-101.60000000000002" y="14.5" />
+    </edge>
+    <edge source="org.mybatis.spring.mapper.MapperScannerConfigurer" target="org.springframework.beans.factory.InitializingBean">
+      <point x="22.75" y="-14.5" />
+      <point x="301.19411764705865" y="237.0" />
+      <point x="414.0" y="237.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.context.annotation.ConfigurationClassPostProcessor" target="org.springframework.beans.factory.BeanClassLoaderAware">
+      <point x="92.0" y="-14.5" />
+      <point x="1594.1941176470586" y="257.0" />
+      <point x="1727.3632352941174" y="257.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration.EmbeddedDataSourceBeanFactoryPostProcessor" target="org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor">
+      <point x="0.0" y="-14.5" />
+      <point x="537.4441176470586" y="257.0" />
+      <point x="716.6441176470587" y="257.0" />
+      <point x="-50.799999999999955" y="14.5" />
+    </edge>
+    <edge source="org.springframework.beans.factory.BeanClassLoaderAware" target="org.springframework.beans.factory.Aware">
+      <point x="0.0" y="-14.5" />
+      <point x="1727.3632352941174" y="128.0" />
+      <point x="1390.975" y="128.0" />
+      <point x="29.59999999999991" y="14.5" />
+    </edge>
+    <edge source="org.springframework.beans.factory.config.BeanFactoryPostProcessor" target="java.lang.FunctionalInterface">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.beans.factory.BeanNameAware" target="org.springframework.beans.factory.Aware">
+      <point x="0.0" y="-14.5" />
+      <point x="61.0" y="138.0" />
+      <point x="1331.775" y="138.0" />
+      <point x="-29.59999999999991" y="14.5" />
+    </edge>
+    <edge source="org.springframework.context.ResourceLoaderAware" target="org.springframework.beans.factory.Aware">
+      <point x="0.0" y="-14.5" />
+      <point x="1546.3632352941174" y="138.0" />
+      <point x="1376.175" y="138.0" />
+      <point x="14.799999999999955" y="14.5" />
+    </edge>
+    <edge source="org.springframework.core.PriorityOrdered" target="org.springframework.core.Ordered">
+      <point x="0.0" y="-14.5" />
+      <point x="1190.9441176470586" y="128.0" />
+      <point x="1169.8632352941174" y="128.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.context.EnvironmentAware" target="org.springframework.beans.factory.Aware">
+      <point x="0.0" y="-14.5" />
+      <point x="1377.3632352941174" y="148.0" />
+      <point x="1361.375" y="148.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.context.annotation.ConfigurationClassPostProcessor" target="org.springframework.core.PriorityOrdered">
+      <point x="-46.0" y="-14.5" />
+      <point x="1456.1941176470586" y="227.0" />
+      <point x="1235.6107843137254" y="227.0" />
+      <point x="44.66666666666674" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.context.ConfigurationWarningsApplicationContextInitializer.ConfigurationWarningsPostProcessor" target="org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor">
+      <point x="-62.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.mybatis.spring.mapper.MapperScannerConfigurer" target="org.springframework.beans.factory.BeanNameAware">
+      <point x="-68.25" y="-14.5" />
+      <point x="210.19411764705865" y="257.0" />
+      <point x="61.0" y="257.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.context.ConfigurationWarningsApplicationContextInitializer.ConfigurationWarningsPostProcessor" target="org.springframework.core.PriorityOrdered">
+      <point x="62.0" y="-14.5" />
+      <point x="891.4441176470586" y="257.0" />
+      <point x="1146.277450980392" y="257.0" />
+      <point x="-44.66666666666674" y="14.5" />
+    </edge>
+    <edge source="org.springframework.context.annotation.ConfigurationClassPostProcessor" target="org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor">
+      <point x="-92.0" y="-14.5" />
+      <point x="1410.1941176470586" y="237.0" />
+      <point x="869.0441176470587" y="237.0" />
+      <point x="101.60000000000002" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="501.5" y="98.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

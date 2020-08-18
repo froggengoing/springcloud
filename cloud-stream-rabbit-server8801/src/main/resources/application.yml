@@ -1,0 +1,38 @@
+server:
+  port: 8801
+
+spring:
+  application:
+    name: stream-rabbit-server8001
+  cloud:
+    stream:
+      binders:
+        defaultRabbit:
+          type: rabbit
+          environment:                                      #配置rabbimq连接环境
+            spring:
+              rabbitmq:
+                host: 127.0.0.1
+                port: 5672
+                username: admin
+                password: admin
+                virtual-host: /
+      bindings:
+        msgSender:                                                     #生产者绑定，这个是消息通道的名称
+          #exchange名称,交换模式默认是topic;把SpringCloud stream的消息输出通道绑定到RabbitMQ的exchange-msg交换器。
+          destination: exchange-msgSender
+          content-type: application/json
+          producer:
+            partition-count: 2                                         #指定参与消息分区的消费端节点数量为2个
+            #payload.id#这个是分区表达式, 例如当表达式的值为1, 那么在订阅者的instance-index中为1的接收方, 将会执行该消息.
+            partition-key-expression: headers['partitionKey']
+        msgSender2:                                                    #生产者绑定，这个是消息通道的名称
+          #exchange名称,交换模式默认是topic;把SpringCloud stream的消息输出通道绑定到RabbitMQ的exchange-msgSender交换器。
+          destination: exchange-msgSender
+          content-type: application/json
+          producer:
+            partition-count: 2                                         #指定参与消息分区的消费端节点数量为2个
+            #payload.id#这个是分区表达式, 例如当表达式的值为1, 那么在订阅者的instance-index中为1的接收方, 将会执行该消息.
+            partition-key-expression: headers['partitionKey']
+
+

@@ -1,0 +1,21 @@
+##Tomcat
+server:
+    port: 8080
+##springcloud
+spring:
+  cloud:
+    nacos:
+      config:
+        prefix: example
+        server-addr: 127.0.0.1:8848
+        file-extension: properties
+        #由于没对齐，导致yaml不生效。还是没生效
+        #file-extension: yaml
+      #spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    ##${prefix}-${spring.profiles.active}.${file-extension}
+    ##prefix 默认为 spring.application.name 的值，
+    ##也可以通过配置项 spring.cloud.nacos.config.prefix 来配置
+    name: service-provide

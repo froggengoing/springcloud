@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>io.netty.bootstrap.ServerBootstrap</OriginalElement>
+  <nodes>
+    <node x="228.0" y="79.0">io.netty.channel.socket.nio.NioSocketChannel</node>
+    <node x="233.5" y="0.0">io.netty.channel.Channel</node>
+    <node x="154.00000000000003" y="158.0">io.netty.bootstrap.Bootstrap</node>
+    <node x="49.50000000000003" y="0.0">java.lang.Cloneable</node>
+    <node x="0.0" y="158.0">io.netty.bootstrap.ServerBootstrap</node>
+    <node x="62.000000000000014" y="79.0">io.netty.bootstrap.AbstractBootstrap</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="io.netty.bootstrap.ServerBootstrap" target="io.netty.bootstrap.AbstractBootstrap">
+      <point x="0.0" y="-14.5" />
+      <point x="67.0" y="133.0" />
+      <point x="98.50000000000001" y="133.0" />
+      <point x="-36.5" y="14.5" />
+    </edge>
+    <edge source="io.netty.channel.socket.nio.NioSocketChannel" target="io.netty.channel.Channel">
+      <point x="0.0" y="-14.5" />
+      <point x="21.5" y="14.5" />
+    </edge>
+    <edge source="io.netty.bootstrap.AbstractBootstrap" target="java.lang.Cloneable">
+      <point x="-36.499999999999986" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="io.netty.bootstrap.AbstractBootstrap" target="io.netty.channel.Channel">
+      <point x="36.500000000000014" y="-14.5" />
+      <point x="171.50000000000003" y="54.0" />
+      <point x="255.0" y="54.0" />
+      <point x="-21.5" y="14.5" />
+    </edge>
+    <edge source="io.netty.bootstrap.Bootstrap" target="io.netty.bootstrap.AbstractBootstrap">
+      <point x="0.0" y="-14.5" />
+      <point x="203.00000000000003" y="133.0" />
+      <point x="171.50000000000003" y="133.0" />
+      <point x="36.500000000000014" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="780.4642857142858" y="1468.1984126984128" />
+  <SelectedNodes>
+    <node>io.netty.bootstrap.ServerBootstrap</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

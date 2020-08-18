@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>cloud2020</artifactId>
+        <groupId>com.froggengo.springcloud</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>simple-webservice-practise</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--    <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-core</artifactId>
+                <version>3.3.7</version>
+            </dependency>-->
+
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>apache-cxf</artifactId>
+            <version>3.2.6</version>
+            <type>pom</type>
+            <exclusions>
+                <exclusion>
+                    <artifactId>cxf-services-wsn-api</artifactId>
+                    <groupId>org.apache.cxf.services.wsn</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>cxf-services-wsn-core</artifactId>
+                    <groupId>org.apache.cxf.services.wsn</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>cxf-services-ws-discovery-api</artifactId>
+                    <groupId>org.apache.cxf.services.ws-discovery</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>cxf-services-ws-discovery-service</artifactId>
+                    <groupId>org.apache.cxf.services.ws-discovery</groupId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-jdk14</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+</project>

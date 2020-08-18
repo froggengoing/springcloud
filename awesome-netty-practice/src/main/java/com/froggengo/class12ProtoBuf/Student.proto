@@ -1,0 +1,15 @@
+syntax ="proto2";
+
+package com.froggengo.class2ProtoBuf;
+
+option optimize_for = SPEED;
+option java_package = "com.froggengo.class12ProtoBuf";
+option java_outer_classname = "DataInfo";
+
+
+message Studeng{
+    required string name =1 ;
+    optional int32 age =2;
+    optional string address =3 ;
+}
+

@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: cloud-consumer-order
+
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://eureka7002.com:7002/eureka,http://eureka7001.com:7001/eureka
+##超时等待
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+feign:
+  hystrix:
+    enabled: true

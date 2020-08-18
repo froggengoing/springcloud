@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.springframework.boot.web.servlet.ServletContextInitializer</OriginalElement>
+  <nodes>
+    <node x="334.25" y="79.0">org.springframework.core.Ordered</node>
+    <node x="276.75" y="395.0">org.springframework.boot.web.servlet.FilterRegistrationBean</node>
+    <node x="410.25" y="237.0">org.springframework.boot.web.servlet.ServletListenerRegistrationBean</node>
+    <node x="685.75" y="237.0">org.springframework.beans.factory.Aware</node>
+    <node x="502.25" y="158.0">org.springframework.boot.web.servlet.server.AbstractServletWebServerFactory.SessionConfiguringInitializer</node>
+    <node x="0.0" y="79.0">org.springframework.boot.autoconfigure.web.servlet.DispatcherServletPath</node>
+    <node x="14.75" y="395.0">org.springframework.boot.autoconfigure.web.servlet.DispatcherServletRegistrationBean</node>
+    <node x="342.25" y="158.0">org.springframework.boot.web.servlet.RegistrationBean</node>
+    <node x="308.75" y="316.0">org.springframework.boot.web.servlet.AbstractFilterRegistrationBean</node>
+    <node x="317.0" y="0.0">java.lang.FunctionalInterface</node>
+    <node x="96.0" y="316.0">org.springframework.boot.web.servlet.ServletRegistrationBean</node>
+    <node x="208.24999999999997" y="237.0">org.springframework.boot.web.servlet.DynamicRegistrationBean</node>
+    <node x="465.75" y="79.0">org.springframework.boot.web.servlet.ServletContextInitializer</node>
+    <node x="523.25" y="395.0">org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean</node>
+    <node x="631.75" y="316.0">org.springframework.context.ApplicationContextAware</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean" target="org.springframework.context.ApplicationContextAware">
+      <point x="66.5" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.autoconfigure.web.servlet.DispatcherServletRegistrationBean" target="org.springframework.boot.autoconfigure.web.servlet.DispatcherServletPath">
+      <point x="-60.5" y="-14.5" />
+      <point x="75.25" y="370.0" />
+      <point x="85.0" y="370.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.autoconfigure.web.servlet.DispatcherServletRegistrationBean" target="org.springframework.boot.web.servlet.ServletRegistrationBean">
+      <point x="60.5" y="-14.5" />
+      <point x="196.25" y="370.0" />
+      <point x="187.0" y="370.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.web.servlet.AbstractFilterRegistrationBean" target="org.springframework.boot.web.servlet.DynamicRegistrationBean">
+      <point x="0.0" y="-14.5" />
+      <point x="420.75" y="291.0" />
+      <point x="344.75" y="291.0" />
+      <point x="45.5" y="14.5" />
+    </edge>
+    <edge source="org.springframework.context.ApplicationContextAware" target="org.springframework.beans.factory.Aware">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.web.servlet.FilterRegistrationBean" target="org.springframework.boot.web.servlet.AbstractFilterRegistrationBean">
+      <point x="0.0" y="-14.5" />
+      <point x="-56.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.web.servlet.ServletRegistrationBean" target="org.springframework.boot.web.servlet.DynamicRegistrationBean">
+      <point x="0.0" y="-14.5" />
+      <point x="187.0" y="291.0" />
+      <point x="253.74999999999997" y="291.0" />
+      <point x="-45.5" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.web.servlet.ServletListenerRegistrationBean" target="org.springframework.boot.web.servlet.RegistrationBean">
+      <point x="0.0" y="-14.5" />
+      <point x="525.25" y="212.0" />
+      <point x="447.25" y="212.0" />
+      <point x="35.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.web.servlet.DynamicRegistrationBean" target="org.springframework.boot.web.servlet.RegistrationBean">
+      <point x="0.0" y="-14.5" />
+      <point x="299.25" y="212.0" />
+      <point x="377.25" y="212.0" />
+      <point x="-35.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.web.servlet.ServletContextInitializer" target="java.lang.FunctionalInterface">
+      <point x="0.0" y="-14.5" />
+      <point x="562.75" y="54.0" />
+      <point x="435.5" y="54.0" />
+      <point x="39.5" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.autoconfigure.web.servlet.DispatcherServletPath" target="java.lang.FunctionalInterface">
+      <point x="0.0" y="-14.5" />
+      <point x="85.0" y="54.0" />
+      <point x="356.5" y="54.0" />
+      <point x="-39.5" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean" target="org.springframework.boot.web.servlet.AbstractFilterRegistrationBean">
+      <point x="-66.5" y="-14.5" />
+      <point x="589.75" y="370.0" />
+      <point x="476.75" y="370.0" />
+      <point x="56.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.web.servlet.RegistrationBean" target="org.springframework.core.Ordered">
+      <point x="-35.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.web.servlet.RegistrationBean" target="org.springframework.boot.web.servlet.ServletContextInitializer">
+      <point x="35.0" y="-14.5" />
+      <point x="447.25" y="133.0" />
+      <point x="514.25" y="133.0" />
+      <point x="-48.5" y="14.5" />
+    </edge>
+    <edge source="org.springframework.boot.web.servlet.server.AbstractServletWebServerFactory.SessionConfiguringInitializer" target="org.springframework.boot.web.servlet.ServletContextInitializer">
+      <point x="0.0" y="-14.5" />
+      <point x="48.5" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="411.0" y="227.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

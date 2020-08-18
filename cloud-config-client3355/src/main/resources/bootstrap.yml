@@ -1,0 +1,38 @@
+server:
+  port: 3355
+
+eureka:
+  instance:
+    instance-id: configclient3355
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      ##defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7002.com:7002/eureka,http://eureka7001.com:7001/eureka
+spring:
+  application:
+    name: cloud-config-client
+    ##因为把cloud配置 成spring.application.cloud导致一直无法启动
+  cloud:
+    config:
+      uri: http://localhost:3344
+      label: master
+      name: config
+      profile: dev
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+
+##https://spring.io/guides/gs/centralized-configuration/
+##http://localhost:3355/actuator/refresh 必须是post请求，触发refresh事件，促使重新刷新
+#curl localhost:3344/actuator/refresh -d {} -H "Content-Type:application/json"
+##还需要配合注解@RefreshScope使用
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

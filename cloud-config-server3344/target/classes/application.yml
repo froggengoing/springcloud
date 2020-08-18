@@ -1,0 +1,45 @@
+server:
+  port: 3344
+
+eureka:
+  instance:
+    instance-id: configserver3344
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      ##defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7002.com:7002/eureka,http://eureka7001.com:7001/eureka
+spring:
+  application:
+    name: cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          ##注意与下载地址不同 https://github.com/froggengoing/springcloud-config.git
+          ##uri: git@github.com:froggengoing/springcloud-config.git
+          uri: https://github.com/froggengoing/springcloud-config.git
+          search-paths:
+            - springclouud-config
+          skip-ssl-validation: true
+      label: master
+      #spring.rabbitmq.password
+  . bus:
+     trace:
+       enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+##刷新客户端配置
+#curl localhost:3344/actuator/bus-refresh -d {} -H "Content-Type:application/json"
+#指定刷新的服务器
+#curl localhost:3344/actuator/bus-refresh/cloud-config-client:3355 -d {} -H "Content-Type:application/json"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'

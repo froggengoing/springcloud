@@ -1,0 +1,26 @@
+server:
+  port: 18083
+spring:
+  application:
+    name: sentinel-example
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+      ###使用Nacos作为sentinel配置中心
+      datasource:
+        ds2:
+          nacos:
+            server-addr: 'localhost:8848'
+            dataId: sentinel-example
+            groupId: DEFAULT_GROUP
+            data-type: json
+            #Property: spring.cloud.sentinel.datasource.ds2.nacos.ruleType不能为空
+            #参考com.alibaba.csp.sentinel.slots.block.flow.FlowRule
+            rule-type: flow
+management:
+  endpoints:
+    web:
+      exposure:
+        #yml特殊字符加引号
+        include: '*'

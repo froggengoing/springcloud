@@ -1,0 +1,37 @@
+com:
+  froggengo:
+    test: testyml_up
+context:
+  initializer:
+    classes: com.froggengo.practise.applicationContextInitializer.MyimplApplicationContext
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://localhost:3306/db2019?userUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: 82878871
+      driver-class-name: org.gjt.mm.mysql.Driver
+---
+com:
+  froggengo:
+    test: testyml_down
+
+info:
+  app:
+    name: spring-boot-actuator
+    version: 1.0.0
+    test: test
+
+management:
+  endpoints:
+    web:
+      #监控点路径默认都在/actuator/*，这里修改为monitor
+      base-path: /monitor
+      exposure:
+        ##打开所有监控
+        include: '*'
+        #排除
+        #exclude: beans,trace
+    health:
+      show-details: always

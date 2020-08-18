@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hotspot_log version='160 1' process='9564' time_ms='1592962130905'>
+<vm_version>
+<name>
+Java HotSpot(TM) 64-Bit Server VM
+</name>
+<release>
+25.45-b02
+</release>
+<info>
+Java HotSpot(TM) 64-Bit Server VM (25.45-b02) for windows-amd64 JRE (1.8.0_45-b14), built on Apr 10 2015 10:34:15 by &quot;java_re&quot; with MS VC++ 10.0 (VS2010)
+</info>
+</vm_version>
+<vm_arguments>
+<args>
+-Dvisualvm.id=89012026300180 -XX:+UnlockDiagnosticVMOptions -XX:+PrintAssembly -XX:CompileCommand=compileonly,*Thread2_volatile2.getInstance -XX:+LogCompilation -XX:LogFile=jit2.log -javaagent:D:\IntelliJ IDEA 2019.1.3\lib\idea_rt.jar=57202:D:\IntelliJ IDEA 2019.1.3\bin -Dfile.encoding=UTF-8 
+</args>
+<command>
+com.awesomeJdk.practise.bthread.Thread2_volatile2
+</command>
+<launcher>
+SUN_STANDARD
+</launcher>
+<properties>
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.version=25.45-b02
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+java.vm.info=mixed mode, sharing
+java.ext.dirs=C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_45\jre\lib\endorsed
+sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_45\jre\bin
+java.library.path=C:\Program Files\Java\jdk1.8.0_45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\app1\mh\product\11.2.0\dbhome_1\bin;d:\app\mh\product\11.2.0\dbhome_2\bin;d:\app\mh\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk1.8.0_45\bin;C:\Program Files\Java\jdk1.8.0_45\jre\bin;%CATALINA_HOME%\bin;D:\apache-maven-3.5.3\bin;D:\TortoiseSVN\bin;D:\TortoiseSVN12\bin;C:\Program Files\MySQL\MySQL Utilities 1.6\;E:\Anaconda3;E:\Anaconda3\Scripts;C:\Windows\System32;F:\软件安装\Git\cmd;F:\application\;C:\Program Files\Pandoc\;C:\cmder;D:\app1\redis;C:\Python27;C:\Python27\Scripts;F:\application\front\yarn\bin\;D:\Go\bin;F:\dev\tool\protocolbuffer\protoc-3.12.0-win64\bin;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\erl-23.0\bin;D:\Program Files\consul;E:\Anaconda3\Library\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\IntelliJ IDEA 2019.1.3\bin;;C:\Program Files\Bandizip\;D:\PyCharm 2019.2\bin;;F:\application\node_global;F:\软件安装\Microsoft VS Code\bin;C:\Users\mh\AppData\Local\Yarn\bin;C:\Users\mh\go\bin;.
+java.home=C:\Program Files\Java\jdk1.8.0_45\jre
+java.class.path=C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;D:\1PracticeProject\cloud2020\awesome-jdk-practice\target\classes;D:\apache-maven-3.5.3\repository2\org\openjdk\jmh\jmh-core\1.23\jmh-core-1.23.jar;D:\apache-maven-3.5.3\repository2\net\sf\jopt-simple\jopt-simple\4.6\jopt-simple-4.6.jar;D:\apache-maven-3.5.3\repository2\org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar;D:\apache-maven-3.5.3\repository2\org\openjdk\jmh\jmh-generator-annprocess\1.23\jmh-generator-annprocess-1.23.jar;D:\apache-maven-3.5.3\repository2\org\springframework\boot\spring-boot-starter-test\2.2.2.RELEASE\spring-boot-starter-test-2.2.2.RELEASE.jar;D:\apache-maven-3.5.3\repository2\org\springframework\boot\spring-boot-starter\2.2.2.RELEASE\sprin
+sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.8
+java.vm.vendor=Oracle Corporation
+visualvm.id=89012026300180
+file.encoding=UTF-8
+sun.java.command=com.awesomeJdk.practise.bthread.Thread2_volatile2
+sun.java.launcher=SUN_STANDARD
+</properties>
+</vm_arguments>
+<tty>
+<writer thread='12040'/>
+CompilerOracle: compileonly *Thread2_volatile2.getInstance
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/System getSecurityManager ()Ljava/lang/SecurityManager;' bytes='4' count='768' iicount='768' stamp='0.262'/>
+<writer thread='8012'/>
+<thread_logfile thread='8012' filename='C:\Users\mh\AppData\Local\Temp\\hs_c8012_pid9564.log'/>
+<writer thread='15404'/>
+<thread_logfile thread='15404' filename='C:\Users\mh\AppData\Local\Temp\\hs_c15404_pid9564.log'/>
+<writer thread='13444'/>
+<make_not_compilable thread='13444' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringBuilder &lt;init&gt; ()V' bytes='7' count='384' iicount='384' stamp='0.265'/>
+<make_not_compilable thread='13444' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Math min (II)I' bytes='11' count='4096' iicount='4096' stamp='0.265'/>
+<writer thread='16272'/>
+<thread_logfile thread='16272' filename='C:\Users\mh\AppData\Local\Temp\\hs_c16272_pid9564.log'/>
+<writer thread='13444'/>
+<make_not_compilable thread='13444' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String charAt (I)C' bytes='29' count='133504' iicount='133504' stamp='0.266'/>
+<writer thread='12040'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='sun/instrument/TransformerManager getSnapshotTransformerList ()[Lsun/instrument/TransformerManager$TransformerInfo;' bytes='5' count='128' iicount='128' stamp='0.269'/>
+<writer thread='13444'/>
+<make_not_compilable thread='13444' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/Object &lt;init&gt; ()V' bytes='1' count='8320' iicount='8320' stamp='0.269'/>
+<make_not_compilable thread='13444' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/AbstractStringBuilder ensureCapacityInternal (I)V' bytes='16' count='23424' iicount='23424' stamp='0.269'/>
+<blob name='MethodHandlesAdapterBlob' size='32000'>
+<sect index='1' size='32000' free='31636'/>
+</blob>
+<writer thread='12040'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String hashCode ()I' bytes='55' count='1538' backedge_count='37888' iicount='1538' stamp='0.270'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String length ()I' bytes='6' count='29184' iicount='29184' stamp='0.271'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String startsWith (Ljava/lang/String;)Z' bytes='7' count='512' iicount='512' stamp='0.273'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String startsWith (Ljava/lang/String;I)Z' bytes='72' count='896' backedge_count='1236' iicount='896' stamp='0.273'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/System arraycopy (Ljava/lang/Object;ILjava/lang/Object;II)V' bytes='0' count='6528' iicount='6528' stamp='0.273'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/zip/ZipFile ensureOpen ()V' bytes='37' count='384' iicount='384' stamp='0.273'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/zip/ZipCoder getBytes (Ljava/lang/String;)[B' bytes='192' count='384' iicount='384' stamp='0.273'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/zip/ZipCoder encoder ()Ljava/nio/charset/CharsetEncoder;' bytes='35' count='384' iicount='384' stamp='0.273'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/nio/charset/CharsetEncoder reset ()Ljava/nio/charset/CharsetEncoder;' bytes='11' count='384' iicount='384' stamp='0.273'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/nio/charset/CharsetEncoder implReset ()V' bytes='1' count='384' iicount='384' stamp='0.273'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/zip/ZipFile getEntry (J[BZ)J' bytes='0' count='384' iicount='384' stamp='0.273'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String indexOf (II)I' bytes='70' count='1058' backedge_count='64512' iicount='1058' stamp='0.274'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/AbstractStringBuilder append (Ljava/lang/String;)Ljava/lang/AbstractStringBuilder;' bytes='50' count='1280' iicount='1280' stamp='0.274'/>
+<writer thread='13444'/>
+<make_not_compilable thread='13444' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/String equals (Ljava/lang/Object;)Z' bytes='81' count='1115' backedge_count='3440' iicount='1115' stamp='0.274'/>
+<writer thread='12040'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/HashMap put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;' bytes='13' count='512' iicount='512' stamp='0.274'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/util/HashMap putVal (ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;' bytes='300' count='512' backedge_count='69' iicount='512' stamp='0.275'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/io/WinNTFileSystem isSlash (C)Z' bytes='18' count='20992' iicount='20992' stamp='0.275'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/StringBuffer append (C)Ljava/lang/StringBuffer;' bytes='13' count='19456' iicount='19456' stamp='0.275'/>
+<make_not_compilable thread='12040' osr='0' level='-1' reason='excluded by CompilerOracle' method='java/lang/AbstractStringBuilder append (C)Ljava/lang/AbstractStringBuilder;' bytes='29' count='22272' iicount='22272' stamp='0.275'/>
+<writer thread='13716'/>
+<destroy_vm stamp='0.277'/>
+<tty_done stamp='0.286'/>
+</tty>
+<compilation_log thread='16272'>
+<fragment>
+<![CDATA[
+<start_compile_thread name='C1 CompilerThread2' thread='16272' process='9564' stamp='0.265'/>
+]]>
+</fragment>
+</compilation_log>
+<compilation_log thread='15404'>
+<fragment>
+<![CDATA[
+<start_compile_thread name='C2 CompilerThread1' thread='15404' process='9564' stamp='0.264'/>
+]]>
+</fragment>
+</compilation_log>
+<compilation_log thread='8012'>
+<fragment>
+<![CDATA[
+<start_compile_thread name='C2 CompilerThread0' thread='8012' process='9564' stamp='0.264'/>
+]]>
+</fragment>
+</compilation_log>
+<hotspot_log_done stamp='0.289'/>
+</hotspot_log>

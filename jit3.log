@@ -1,0 +1,1953 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hotspot_log version='160 1' process='13840' time_ms='1593006559689'>
+<vm_version>
+<name>
+Java HotSpot(TM) 64-Bit Server VM
+</name>
+<release>
+25.45-b02
+</release>
+<info>
+Java HotSpot(TM) 64-Bit Server VM (25.45-b02) for windows-amd64 JRE (1.8.0_45-b14), built on Apr 10 2015 10:34:15 by &quot;java_re&quot; with MS VC++ 10.0 (VS2010)
+</info>
+</vm_version>
+<vm_arguments>
+<args>
+-Dvisualvm.id=133438364474250 -XX:+UnlockDiagnosticVMOptions -XX:+PrintAssembly -XX:+LogCompilation -XX:LogFile=jit3.log -javaagent:D:\IntelliJ IDEA 2019.1.3\lib\idea_rt.jar=56766:D:\IntelliJ IDEA 2019.1.3\bin -Dfile.encoding=UTF-8 
+</args>
+<command>
+com.awesomeJdk.practise.bthread.Thread3_synchronized
+</command>
+<launcher>
+SUN_STANDARD
+</launcher>
+<properties>
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.version=25.45-b02
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+java.vm.info=mixed mode, sharing
+java.ext.dirs=C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_45\jre\lib\endorsed
+sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_45\jre\bin
+java.library.path=C:\Program Files\Java\jdk1.8.0_45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\app1\mh\product\11.2.0\dbhome_1\bin;d:\app\mh\product\11.2.0\dbhome_2\bin;d:\app\mh\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Java\jdk1.8.0_45\bin;C:\Program Files\Java\jdk1.8.0_45\jre\bin;%CATALINA_HOME%\bin;D:\apache-maven-3.5.3\bin;D:\TortoiseSVN\bin;D:\TortoiseSVN12\bin;C:\Program Files\MySQL\MySQL Utilities 1.6\;E:\Anaconda3;E:\Anaconda3\Scripts;C:\Windows\System32;F:\软件安装\Git\cmd;F:\application\;C:\Program Files\Pandoc\;C:\cmder;D:\app1\redis;C:\Python27;C:\Python27\Scripts;F:\application\front\yarn\bin\;D:\Go\bin;F:\dev\tool\protocolbuffer\protoc-3.12.0-win64\bin;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\erl-23.0\bin;D:\Program Files\consul;E:\Anaconda3\Library\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\IntelliJ IDEA 2019.1.3\bin;;C:\Program Files\Bandizip\;D:\PyCharm 2019.2\bin;;F:\application\node_global;F:\软件安装\Microsoft VS Code\bin;C:\Users\mh\AppData\Local\Yarn\bin;C:\Users\mh\go\bin;.
+java.home=C:\Program Files\Java\jdk1.8.0_45\jre
+java.class.path=C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;D:\1PracticeProject\cloud2020\awesome-jdk-practice\target\classes;D:\apache-maven-3.5.3\repository2\org\openjdk\jmh\jmh-core\1.23\jmh-core-1.23.jar;D:\apache-maven-3.5.3\repository2\net\sf\jopt-simple\jopt-simple\4.6\jopt-simple-4.6.jar;D:\apache-maven-3.5.3\repository2\org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar;D:\apache-maven-3.5.3\repository2\org\openjdk\jmh\jmh-generator-annprocess\1.23\jmh-generator-annprocess-1.23.jar;D:\apache-maven-3.5.3\repository2\org\springframework\boot\spring-boot-starter-test\2.2.2.RELEASE\spring-boot-starter-test-2.2.2.RELEASE.jar;D:\apache-maven-3.5.3\repository2\org\springframework\boot\spring-boot-starter\2.2.2.RELEASE\sprin
+sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.8
+java.vm.vendor=Oracle Corporation
+visualvm.id=133438364474250
+file.encoding=UTF-8
+sun.java.command=com.awesomeJdk.practise.bthread.Thread3_synchronized
+sun.java.launcher=SUN_STANDARD
+</properties>
+</vm_arguments>
+<tty>
+<writer thread='15488'/>
+<task_queued compile_id='1' method='java/lang/StringBuilder &lt;init&gt; ()V' bytes='7' count='384' iicount='384' level='3' stamp='0.278' comment='tiered' hot_count='384'/>
+<task_queued compile_id='2' method='java/lang/Math min (II)I' bytes='11' count='4096' iicount='4096' level='3' stamp='0.279' comment='tiered' hot_count='4096'/>
+<task_queued compile_id='3' method='java/lang/String charAt (I)C' bytes='29' count='133504' iicount='133504' stamp='0.279' comment='tiered' hot_count='133504'/>
+<blob name='MethodHandlesAdapterBlob' size='32000'>
+<sect index='1' size='32000' free='31636'/>
+</blob>
+<writer thread='15048'/>
+<task_queued compile_id='4' method='java/lang/String hashCode ()I' bytes='55' count='1537' backedge_count='37888' iicount='1537' stamp='0.280' comment='tiered' hot_count='1537'/>
+<task_queued compile_id='5' method='sun/instrument/TransformerManager getSnapshotTransformerList ()[Lsun/instrument/TransformerManager$TransformerInfo;' bytes='5' count='128' iicount='128' level='1' stamp='0.281' comment='tiered' hot_count='128'/>
+<task_queued compile_id='6' method='java/lang/AbstractStringBuilder ensureCapacityInternal (I)V' bytes='16' count='23424' iicount='23424' stamp='0.281' comment='tiered' hot_count='23424'/>
+<writer thread='15488'/>
+<task_queued compile_id='7' method='java/lang/Object &lt;init&gt; ()V' bytes='1' count='8321' iicount='8321' stamp='0.282' comment='tiered' hot_count='8320'/>
+<task_queued compile_id='8' method='java/lang/String length ()I' bytes='6' count='29184' iicount='29184' stamp='0.282' comment='tiered' hot_count='29184'/>
+<writer thread='15048'/>
+<task_queued compile_id='9' method='java/lang/String startsWith (Ljava/lang/String;)Z' bytes='7' count='512' iicount='512' level='3' stamp='0.282' comment='tiered' hot_count='512'/>
+<task_queued compile_id='10' method='java/lang/String startsWith (Ljava/lang/String;I)Z' bytes='72' count='896' backedge_count='1236' iicount='896' level='3' stamp='0.282' comment='tiered' hot_count='896'/>
+<task_queued compile_id='12' method='java/lang/String indexOf (II)I' bytes='70' count='1058' backedge_count='64512' iicount='1058' level='3' stamp='0.282' comment='tiered' hot_count='1058'/>
+<writer thread='15488'/>
+Loaded disassembler from C:\Program Files\Java\jdk1.8.0_45\jre\bin\server\hsdis-amd64.dll
+Decoding compiled method 0x000000000f0888d0:
+Code:
+[Disassembling for mach=&apos;i386:x86-64&apos;]
+[Entry Point]
+  # {method} {0x00000000080395d8} &apos;arraycopy&apos; &apos;(Ljava/lang/Object;ILjava/lang/Object;II)V&apos; in &apos;java/lang/System&apos;
+  # parm0:    rdx:rdx   = &apos;java/lang/Object&apos;
+  # parm1:    r8        = int
+  # parm2:    r9:r9     = &apos;java/lang/Object&apos;
+  # parm3:    rdi       = int
+  # parm4:    rsi       = int
+  #           [sp+0x90]  (sp of caller)
+  0x000000000f088a40: mov    0x8(%rdx),%r10d
+  0x000000000f088a44: cmp    %r10,%rax
+  0x000000000f088a47: je     0x000000000f088a58
+  0x000000000f088a4d: jmpq   0x000000000f055f60  ;   {runtime_call}
+  0x000000000f088a52: nopw   0x0(%rax,%rax,1)
+[Verified Entry Point]
+  0x000000000f088a58: mov    %eax,-0x6000(%rsp)
+  0x000000000f088a5f: push   %rbp
+  0x000000000f088a60: mov    %rsp,%rbp
+  0x000000000f088a63: sub    $0x80,%rsp
+  0x000000000f088a6a: mov    %rsi,0x30(%rsp)
+  0x000000000f088a6f: mov    %rdi,0x28(%rsp)
+  0x000000000f088a74: mov    %r9,0x48(%rsp)
+  0x000000000f088a79: cmp    $0x0,%r9
+  0x000000000f088a7d: lea    0x48(%rsp),%rax
+  0x000000000f088a82: cmove  0x48(%rsp),%rax
+  0x000000000f088a88: mov    %rax,0x20(%rsp)
+  0x000000000f088a8d: mov    %r8,%r9
+  0x000000000f088a90: mov    %rdx,0x38(%rsp)
+  0x000000000f088a95: cmp    $0x0,%rdx
+  0x000000000f088a99: lea    0x38(%rsp),%r8
+  0x000000000f088a9e: cmove  0x38(%rsp),%r8
+  0x000000000f088aa4: movabs $0xd5d00c78,%r14   ;   {oop(a &apos;java/lang/Class&apos; = &apos;java/lang/System&apos;)}
+  0x000000000f088aae: mov    %r14,0x68(%rsp)
+  0x000000000f088ab3: lea    0x68(%rsp),%r14
+  0x000000000f088ab8: mov    %r14,%rdx          ; OopMap{[72]=Oop [56]=Oop [104]=Oop off=123}
+  0x000000000f088abb: movabs $0xf088abb,%r10    ;   {section_word}
+  0x000000000f088ac5: mov    %r10,0x1e0(%r15)
+  0x000000000f088acc: mov    %rsp,0x1d8(%r15)
+  0x000000000f088ad3: cmpb   $0x0,-0xc72e9f3(%rip)        # 0x000000000295a0e7
+                                                ;   {external_word}
+  0x000000000f088ada: je     0x000000000f088b22
+  0x000000000f088ae0: push   %rdx
+  0x000000000f088ae1: push   %r8
+  0x000000000f088ae3: push   %r9
+  0x000000000f088ae5: movabs $0x80395d0,%rdx    ;   {metadata({method} {0x00000000080395d8} &apos;arraycopy&apos; &apos;(Ljava/lang/Object;ILjava/lang/Object;II)V&apos; in &apos;java/lang/System&apos;)}
+  0x000000000f088aef: mov    %r15,%rcx
+  0x000000000f088af2: sub    $0x20,%rsp
+  0x000000000f088af6: test   $0xf,%esp
+  0x000000000f088afc: je     0x000000000f088b14
+  0x000000000f088b02: sub    $0x8,%rsp
+  0x000000000f088b06: callq  0x0000000002388cf0  ;   {runtime_call}
+  0x000000000f088b0b: add    $0x8,%rsp
+  0x000000000f088b0f: jmpq   0x000000000f088b19
+  0x000000000f088b14: callq  0x0000000002388cf0  ;   {runtime_call}
+  0x000000000f088b19: add    $0x20,%rsp
+  0x000000000f088b1d: pop    %r9
+  0x000000000f088b1f: pop    %r8
+  0x000000000f088b21: pop    %rdx
+  0x000000000f088b22: lea    0x1f8(%r15),%rcx
+  0x000000000f088b29: movl   $0x4,0x270(%r15)
+  0x000000000f088b34: callq  0x000000006d030476  ;   {runtime_call}
+  0x000000000f088b39: vzeroupper 
+  0x000000000f088b3c: movl   $0x5,0x270(%r15)
+  0x000000000f088b47: mov    %r15d,%ecx
+  0x000000000f088b4a: shr    $0x4,%ecx
+  0x000000000f088b4d: and    $0xffc,%ecx
+  0x000000000f088b53: movabs $0x330000,%r10     ;   {external_word}
+  0x000000000f088b5d: mov    %ecx,(%r10,%rcx,1)
+  0x000000000f088b61: cmpl   $0x0,-0xc72de9b(%rip)        # 0x000000000295acd0
+                                                ;   {external_word}
+  0x000000000f088b6b: jne    0x000000000f088b7f
+  0x000000000f088b71: cmpl   $0x0,0x30(%r15)
+  0x000000000f088b79: je     0x000000000f088b98
+  0x000000000f088b7f: mov    %r15,%rcx
+  0x000000000f088b82: mov    %rsp,%r12
+  0x000000000f088b85: sub    $0x20,%rsp
+  0x000000000f088b89: and    $0xfffffffffffffff0,%rsp
+  0x000000000f088b8d: callq  0x000000000239f110  ;   {runtime_call}
+  0x000000000f088b92: mov    %r12,%rsp
+  0x000000000f088b95: xor    %r12,%r12
+  0x000000000f088b98: movl   $0x8,0x270(%r15)
+  0x000000000f088ba3: cmpl   $0x1,0x29c(%r15)
+  0x000000000f088bae: je     0x000000000f088c3e
+  0x000000000f088bb4: cmpb   $0x0,-0xc72ead4(%rip)        # 0x000000000295a0e7
+                                                ;   {external_word}
+  0x000000000f088bbb: je     0x000000000f088bf9
+  0x000000000f088bc1: movabs $0x80395d0,%rdx
+<writer thread='14476'/>
+<thread_logfile thread='14476' filename='C:\Users\mh\AppData\Local\Temp\\hs_c14476_pid13840.log'/>
+<writer thread='11004'/>
+<thread_logfile thread='11004' filename='C:\Users\mh\AppData\Local\Temp\\hs_c11004_pid13840.log'/>
+<writer thread='15488'/>
+    ;   {metadata({method} {0x00000000080395d8} &apos;arraycopy&apos; &apos;(Ljava/lang/Object;ILjava/lang/Object;II)V&apos; in &apos;java/lang/System&apos;)}
+  0x000000000f088bcb: mov    %r15,%rcx
+  0x000000000f088bce: sub    $0x20,%rsp
+  0x000000000f088bd2: test   $0xf,%esp
+  0x000000000f088bd8: je     0x000000000f088bf0
+  0x000000000f088bde: sub    $0x8,%rsp
+  0x000000000f088be2: callq  0x0000000002388cf0  ;   {runtime_call}
+  0x000000000f088be7: add    $0x8,%rsp
+  0x000000000f088beb: jmpq   0x000000000f088bf5
+  0x000000000f088bf0: callq  0x0000000002388cf0  ;   {runtime_call}
+  0x000000000f088bf5: add    $0x20,%rsp
+  0x000000000f088bf9: movabs $0x0,%r10
+  0x000000000f088c03: mov    %r10,0x1d8(%r15)
+  0x000000000f088c0a: movabs $0x0,%r10
+  0x000000000f088c14: mov    %r10,0x1e0(%r15)
+  0x000000000f088c1b: mov    0x38(%r15),%rcx
+<writer thread='15784'/>
+<thread_logfile thread='15784' filename='C:\Users\mh\AppData\Local\Temp\\hs_c15784_pid13840.log'/>
+<writer thread='15488'/>
+  0x000000000f088c1f: movl   $0x0,0x100(%rcx)
+  0x000000000f088c29: leaveq 
+  0x000000000f088c2a: cmpq   $0x0,0x8(%r15)
+  0x000000000f088c32: jne    0x000000000f088c39
+  0x000000000f088c38: retq   
+  0x000000000f088c39: jmpq   Stub::forward exception  ;   {runtime_call}
+  0x000000000f088c3e: mov    %rsp,%r12
+  0x000000000f088c41: sub    $0x20,%rsp
+  0x000000000f088c45: and    $0xfffffffffffffff0,%rsp
+  0x000000000f088c49: callq  0x0000000002388d10  ;   {runtime_call}
+  0x000000000f088c4e: mov    %r12,%rsp
+  0x000000000f088c51: xor    %r12,%r12
+  0x000000000f088c54: jmpq   0x000000000f088bb4
+  0x000000000f088c59: hlt    
+  0x000000000f088c5a: hlt    
+  0x000000000f088c5b: hlt    
+  0x000000000f088c5c: hlt    
+  0x000000000f088c5d: hlt    
+  0x000000000f088c5e: hlt    
+  0x000000000f088c5f: hlt    
+<nmethod compile_id='11' compile_kind='c2n' level='0' entry='0x000000000f088a40' size='912' address='0x000000000f0888d0' relocation_offset='288' consts_offset='912' insts_offset='368' method='java/lang/System arraycopy (Ljava/lang/Object;ILjava/lang/Object;II)V' bytes='0' count='6557' iicount='6557' stamp='0.287'/>
+<task_queued compile_id='13' method='java/lang/AbstractStringBuilder append (Ljava/lang/String;)Ljava/lang/AbstractStringBuilder;' bytes='50' count='1280' iicount='1280' level='3' stamp='0.288' comment='tiered' hot_count='1280'/>
+<writer thread='15784'/>
+Decoding compiled method 0x000000000f11db50:
+Code:
+[Entry Point]
+[Constants]
+  # {method} {0x0000000008025108} &apos;indexOf&apos; &apos;(II)I&apos; in &apos;java/lang/String&apos;
+  # this:     rdx:rdx   = &apos;java/lang/String&apos;
+  # parm0:    r8        = int
+  # parm1:    r9        = int
+  #           [sp+0x40]  (sp of caller)
+  0x000000000f11dcc0: mov    0x8(%rdx),%r10d
+  0x000000000f11dcc4: cmp    %rax,%r10
+  0x000000000f11dcc7: jne    0x000000000f055f60  ;   {runtime_call}
+  0x000000000f11dccd: data16 data16 nopw 0x0(%rax,%rax,1)
+  0x000000000f11dcd8: data16 data16 xchg %ax,%ax
+  0x000000000f11dcdc: nopl   0x0(%rax)
+[Verified Entry Point]
+  0x000000000f11dce0: mov    %eax,-0x6000(%rsp)
+  0x000000000f11dce7: push   %rbp
+  0x000000000f11dce8: sub    $0x30,%rsp
+  0x000000000f11dcec: movabs $0x81a0218,%rax
+  0x000000000f11dcf6: mov    0x8(%rax),%esi
+  0x000000000f11dcf9: add    $0x8,%esi
+  0x000000000f11dcfc: mov    %esi,0x8(%rax)
+  0x000000000f11dcff: movabs $0x8025100,%rax    ;   {metadata({method} {0x0000000008025108} &apos;indexOf&apos; &apos;(II)I&apos; in &apos;java/lang/String&apos;)}
+  0x000000000f11dd09: and    $0x3ff8,%esi
+  0x000000000f11dd0f: cmp    $0x0,%esi
+  0x000000000f11dd12: je     0x000000000f11ddf1  ;*aload_0
+                                                ; - java.lang.String::indexOf@0 (line 1534)
+
+  0x000000000f11dd18: mov    0xc(%rdx),%eax     ;*getfield value
+                                                ; - java.lang.String::indexOf@1 (line 1534)
+
+  0x000000000f11dd1b: mov    0xc(%rax),%esi     ;*arraylength
+                                                ; - java.lang.String::indexOf@4 (line 1534)
+                                                ; implicit exception: dispatches to 0x000000000f11de08
+  0x000000000f11dd1e: cmp    $0x0,%r9d
+  0x000000000f11dd22: jge    0x000000000f11dd33  ;*ifge
+                                                ; - java.lang.String::indexOf@7 (line 1535)
+
+  0x000000000f11dd28: mov    $0x0,%r9d
+  0x000000000f11dd2e: jmpq   0x000000000f11dd3c  ;*goto
+                                                ; - java.lang.String::indexOf@12 (line 1536)
+
+  0x000000000f11dd33: cmp    %esi,%r9d
+  0x000000000f11dd36: jge    0x000000000f11dde0  ;*if_icmplt
+                                                ; - java.lang.String::indexOf@17 (line 1537)
+
+  0x000000000f11dd3c: cmp    $0x10000,%r8d
+  0x000000000f11dd43: jge    0x000000000f11ddcb
+  0x000000000f11dd49: jmpq   0x000000000f11dda0  ;*if_icmpge
+                                                ; - java.lang.String::indexOf@25 (line 1542)
+
+  0x000000000f11dd4e: xchg   %ax,%ax
+  0x000000000f11dd50: movslq %r9d,%rdx
+  0x000000000f11dd53: cmp    0xc(%rax),%r9d
+  0x000000000f11dd57: jae    0x000000000f11de0d
+  0x000000000f11dd5d: movzwl 0x10(%rax,%rdx,2),%edx  ;*caload
+                                                ; - java.lang.String::indexOf@47 (line 1547)
+
+  0x000000000f11dd62: cmp    %r8d,%edx
+  0x000000000f11dd65: je     0x000000000f11ddab  ;*if_icmpne
+                                                ; - java.lang.String::indexOf@49 (line 1547)
+
+  0x000000000f11dd6b: inc    %r9d
+  0x000000000f11dd6e: movabs $0x81a0218,%rdx
+  0x000000000f11dd78: mov    0xc(%rdx),%edi
+  0x000000000f11dd7b: add    $0x8,%edi
+  0x000000000f11dd7e: mov    %edi,0xc(%rdx)
+  0x000000000f11dd81: movabs $0x8025100,%rdx    ;   {metadata({method} {0x0000000008025108} &apos;indexOf&apos; &apos;(II)I&apos; in &apos;java/lang/String&apos;)}
+  0x000000000f11dd8b: and    $0x1fff8,%edi
+  0x000000000f11dd91: cmp    $0x0,%edi
+  0x000000000f11dd94: je     0x000000000f11de16  ; OopMap{rax=Oop off=218}
+                                                ;*goto
+                                                ; - java.lang.String::indexOf@58 (line 1546)
+
+  0x000000000f11dd9a: test   %eax,-0xedfdca0(%rip)        # 0x0000000000320100
+                                                ;*goto
+                                                ; - java.lang.String::indexOf@58 (line 1546)
+                                                ;   {poll}
+  0x000000000f11dda0: cmp    %esi,%r9d
+  0x000000000f11dda3: jge    0x000000000f11ddba
+  0x000000000f11dda9: jmp    0x000000000f11dd50  ;*if_icmpge
+                                                ; - java.lang.String::indexOf@40 (line 1546)
+
+  0x000000000f11ddab: mov    %r9,%rax
+  0x000000000f11ddae: add    $0x30,%rsp
+  0x000000000f11ddb2: pop    %rbp
+  0x000000000f11ddb3: test   %eax,-0xedfdcb9(%rip)        # 0x0000000000320100
+                                                ;   {poll_return}
+  0x000000000f11ddb9: retq                      ;*ireturn
+                                                ; - java.lang.String::indexOf@54 (line 1548)
+
+  0x000000000f11ddba: mov    $0xffffffff,%eax
+  0x000000000f11ddbf: add    $0x30,%rsp
+  0x000000000f11ddc3: pop    %rbp
+  0x000000000f11ddc4: test   %eax,-0xedfdcca(%rip)        # 0x0000000000320100
+                                                ;   {poll_return}
+  0x000000000f11ddca: retq                      ;*ireturn
+                                                ; - java.lang.String::indexOf@62 (line 1551)
+
+  0x000000000f11ddcb: nop
+  0x000000000f11ddcc: nop
+  0x000000000f11ddcd: nop
+  0x000000000f11ddce: nop
+  0x000000000f11ddcf: callq  0x000000000f0561a0  ; OopMap{off=276}
+                                                ;*invokespecial indexOfSupplementary
+                                                ; - java.lang.String::indexOf@66 (line 1553)
+                                                ;   {optimized virtual_call}
+  0x000000000f11ddd4: add    $0x30,%rsp
+  0x000000000f11ddd8: pop    %rbp
+  0x000000000f11ddd9: test   %eax,-0xedfdcdf(%rip)        # 0x0000000000320100
+                                                ;   {poll_return}
+  0x000000000f11dddf: retq                      ;*ireturn
+                                                ; - java.lang.String::indexOf@69 (line 1553)
+
+  0x000000000f11dde0: mov    $0xffffffff,%eax
+  0x000000000f11dde5: add    $0x30,%rsp
+  0x000000000f11dde9: pop    %rbp
+  0x000000000f11ddea: test   %eax,-0xedfdcf0(%rip)        # 0x0000000000320100
+                                                ;   {poll_return}
+  0x000000000f11ddf0: retq   
+  0x000000000f11ddf1: mov    %rax,0x8(%rsp)
+  0x000000000f11ddf6: movq   $0xffffffffffffffff,(%rsp)
+  0x000000000f11ddfe: callq  0x000000000f11b060  ; OopMap{rdx=Oop off=323}
+                                                ;*synchronization entry
+                                                ; - java.lang.String::indexOf@-1 (line 1534)
+                                                ;   {runtime_call}
+  0x000000000f11de03: jmpq   0x000000000f11dd18
+  0x000000000f11de08: callq  0x000000000f116940  ; OopMap{rdx=Oop rax=Oop off=333}
+                                                ;*arraylength
+                                                ; - java.lang.String::indexOf@4 (line 1534)
+                                                ;   {runtime_call}
+  0x000000000f11de0d: mov    %r9,(%rsp)
+  0x000000000f11de11: callq  0x000000000f115c00  ; OopMap{rax=Oop off=342}
+                                                ;*caload
+                                                ; - java.lang.String::indexOf@47 (line 1547)
+                                                ;   {runtime_call}
+  0x000000000f11de16: mov    %rdx,0x8(%rsp)
+  0x000000000f11de1b: movq   $0x3a,(%rsp)
+  0x000000000f11de23: callq  0x000000000f11b060  ; OopMap{rax=Oop off=360}
+                                                ;*goto
+                                                ; - java.lang.String::indexOf@58 (line 1546)
+                                                ;   {runtime_call}
+  0x000000000f11de28: jmpq   0x000000000f11dd9a
+  0x000000000f11de2d: nop
+  0x000000000f11de2e: nop
+  0x000000000f11de2f: mov    0x2a8(%r15),%rax
+  0x000000000f11de36: movabs $0x0,%r10
+  0x000000000f11de40: mov    %r10,0x2a8(%r15)
+  0x000000000f11de47: movabs $0x0,%r10
+  0x000000000f11de51: mov    %r10,0x2b0(%r15)
+  0x000000000f11de58: add    $0x30,%rsp
+  0x000000000f11de5c: pop    %rbp
+  0x000000000f11de5d: jmpq   0x000000000f1160a0  ;   {runtime_call}
+  0x000000000f11de62: hlt    
+  0x000000000f11de63: hlt    
+  0x000000000f11de64: hlt    
+  0x000000000f11de65: hlt    
+  0x000000000f11de66: hlt    
+  0x000000000f11de67: hlt    
+  0x000000000f11de68: hlt    
+  0x000000000f11de69: hlt    
+  0x000000000f11de6a: hlt    
+  0x000000000f11de6b: hlt    
+  0x000000000f11de6c: hlt    
+  0x000000000f11de6d: hlt    
+  0x000000000f11de6e: hlt    
+  0x000000000f11de6f: hlt    
+  0x000000000f11de70: hlt    
+  0x000000000f11de71: hlt    
+  0x000000000f11de72: hlt    
+  0x000000000f11de73: hlt    
+  0x000000000f11de74: hlt    
+  0x000000000f11de75: hlt    
+  0x000000000f11de76: hlt    
+  0x000000000f11de77: hlt    
+  0x000000000f11de78: hlt    
+  0x000000000f11de79: hlt    
+  0x000000000f11de7a: hlt    
+  0x000000000f11de7b: hlt    
+  0x000000000f11de7c: hlt    
+  0x000000000f11de7d: hlt    
+  0x000000000f11de7e: hlt    
+  0x000000000f11de7f: hlt    
+[Stub Code]
+  0x000000000f11de80: nop                       ;   {no_reloc}
+  0x000000000f11de81: nop
+  0x000000000f11de82: nop
+  0x000000000f11de83: nop
+  0x000000000f11de84: nop
+  0x000000000f11de85: movabs $0x0,%rbx          ;   {static_stub}
+  0x000000000f11de8f: jmpq   0x000000000f11de8f  ;   {runtime_call}
+[Exception Handler]
+  0x000000000f11de94: callq  0x000000000f1187e0  ;   {runtime_call}
+  0x000000000f11de99: mov    %rsp,-0x28(%rsp)
+  0x000000000f11de9e: sub    $0x80,%rsp
+  0x000000000f11dea5: mov    %rax,0x78(%rsp)
+  0x000000000f11deaa: mov    %rcx,0x70(%rsp)
+  0x000000000f11deaf: mov    %rdx,0x68(%rsp)
+  0x000000000f11deb4: mov    %rbx,0x60(%rsp)
+  0x000000000f11deb9: mov    %rbp,0x50(%rsp)
+  0x000000000f11debe: mov    %rsi,0x48(%rsp)
+  0x000000000f11dec3: mov    %rdi,0x40(%rsp)
+  0x000000000f11dec8: mov    %r8,0x38(%rsp)
+  0x000000000f11decd: mov    %r9,0x30(%rsp)
+  0x000000000f11ded2: mov    %r10,0x28(%rsp)
+  0x000000000f11ded7: mov    %r11,0x20(%rsp)
+  0x000000000f11dedc: mov    %r12,0x18(%rsp)
+  0x000000000f11dee1: mov    %r13,0x10(%rsp)
+  0x000000000f11dee6: mov    %r14,0x8(%rsp)
+  0x000000000f11deeb: mov    %r15,(%rsp)
+  0x000000000f11deef: movabs $0x278af20,%rcx    ;   {external_word}
+  0x000000000f11def9: movabs $0xf11de99,%rdx    ;   {internal_word}
+  0x000000000f11df03: mov    %rsp,%r8
+  0x000000000f11df06: and    $0xfffffffffffffff0,%rsp
+  0x000000000f11df0a: callq  0x000000000244d370  ;   {runtime_call}
+  0x000000000f11df0f: hlt    
+[Deopt Handler Code]
+  0x000000000f11df10: movabs $0xf11df10,%r10    ;   {section_word}
+  0x000000000f11df1a: push   %r10
+  0x000000000f11df1c: jmpq   0x000000000f057600  ;   {runtime_call}
+  0x000000000f11df21: hlt    
+  0x000000000f11df22: hlt    
+  0x000000000f11df23: hlt    
+  0x000000000f11df24: hlt    
+  0x000000000f11df25: hlt    
+  0x000000000f11df26: hlt    
+  0x000000000f11df27: hlt    
+<nmethod compile_id='12' compiler='C1' level='2' entry='0x000000000f11dcc0' size='1528' address='0x000000000f11db50' relocation_offset='288' insts_offset='368' stub_offset='816' scopes_data_offset='992' scopes_pcs_offset='1152' dependencies_offset='1504' nul_chk_table_offset='1512' method='java/lang/String indexOf (II)I' bytes='70' count='1059' backedge_count='64658' iicount='1059' stamp='0.295'/>
+<writer thread='15048'/>
+<task_queued compile_id='14' method='java/util/HashMap put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;' bytes='13' count='512' iicount='512' level='3' stamp='0.295' comment='tiered' hot_count='512'/>
+<task_queued compile_id='15' method='java/util/HashMap putVal (ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;' bytes='300' count='512' backedge_count='69' iicount='512' level='3' stamp='0.295' comment='tiered' hot_count='512'/>
+<writer thread='15784'/>
+Decoding compiled method 0x000000000f11bd10:
+Code:
+[Entry Point]
+[Constants]
+  # {method} {0x0000000008024d80} &apos;startsWith&apos; &apos;(Ljava/lang/String;I)Z&apos; in &apos;java/lang/String&apos;
+  # this:     rdx:rdx   = &apos;java/lang/String&apos;
+  # parm0:    r8:r8     = &apos;java/lang/String&apos;
+  # parm1:    r9        = int
+  #           [sp+0x40]  (sp of caller)
+  0x000000000f11be80: mov    0x8(%rdx),%r10d
+  0x000000000f11be84: cmp    %rax,%r10
+  0x000000000f11be87: jne    0x000000000f055f60  ;   {runtime_call}
+  0x000000000f11be8d: data16 data16 nopw 0x0(%rax,%rax,1)
+  0x000000000f11be98: data16 data16 xchg %ax,%ax
+  0x000000000f11be9c: nopl   0x0(%rax)
+[Verified Entry Point]
+  0x000000000f11bea0: mov    %eax,-0x6000(%rsp)
+  0x000000000f11bea7: push   %rbp
+  0x000000000f11bea8: sub    $0x30,%rsp
+  0x000000000f11beac: movabs $0x8273278,%rax    ;   {metadata(method data for {method} {0x0000000008024d80} &apos;startsWith&apos; &apos;(Ljava/lang/String;I)Z&apos; in &apos;java/lang/String&apos;)}
+  0x000000000f11beb6: mov    0xdc(%rax),%esi
+  0x000000000f11bebc: add    $0x8,%esi
+  0x000000000f11bebf: mov    %esi,0xdc(%rax)
+  0x000000000f11bec5: movabs $0x8024d78,%rax    ;   {metadata({method} {0x0000000008024d80} &apos;startsWith&apos; &apos;(Ljava/lang/String;I)Z&apos; in &apos;java/lang/String&apos;)}
+  0x000000000f11becf: and    $0x1ff8,%esi
+  0x000000000f11bed5: cmp    $0x0,%esi
+  0x000000000f11bed8: je     0x000000000f11c08d  ;*aload_0
+                                                ; - java.lang.String::startsWith@0 (line 1391)
+
+  0x000000000f11bede: mov    0xc(%rdx),%eax     ;*getfield value
+                                                ; - java.lang.String::startsWith@1 (line 1391)
+
+  0x000000000f11bee1: mov    0xc(%r8),%esi      ;*getfield value
+                                                ; - java.lang.String::startsWith@9 (line 1393)
+                                                ; implicit exception: dispatches to 0x000000000f11c0a4
+  0x000000000f11bee5: mov    0xc(%rsi),%edi     ;*arraylength
+                                                ; - java.lang.String::startsWith@21 (line 1395)
+                                                ; implicit exception: dispatches to 0x000000000f11c0a9
+  0x000000000f11bee8: cmp    $0x0,%r9d
+  0x000000000f11beec: movabs $0x8273278,%rbx    ;   {metadata(method data for {method} {0x0000000008024d80} &apos;startsWith&apos; &apos;(Ljava/lang/String;I)Z&apos; in &apos;java/lang/String&apos;)}
+  0x000000000f11bef6: movabs $0x108,%rdx
+  0x000000000f11bf00: jl     0x000000000f11bf10
+  0x000000000f11bf06: movabs $0x118,%rdx
+  0x000000000f11bf10: mov    (%rbx,%rdx,1),%rcx
+  0x000000000f11bf14: lea    0x1(%rcx),%rcx
+  0x000000000f11bf18: mov    %rcx,(%rbx,%rdx,1)
+  0x000000000f11bf1c: jl     0x000000000f11c05a  ;*iflt
+                                                ; - java.lang.String::startsWith@25 (line 1397)
+
+  0x000000000f11bf22: mov    0xc(%rax),%ebx     ;*arraylength
+                                                ; - java.lang.String::startsWith@33 (line 1397)
+                                                ; implicit exception: dispatches to 0x000000000f11c0ae
+  0x000000000f11bf25: sub    %edi,%ebx
+  0x000000000f11bf27: cmp    %ebx,%r9d
+  0x000000000f11bf2a: movabs $0x8273278,%rbx    ;   {metadata(method data for {method} {0x0000000008024d80} &apos;startsWith&apos; &apos;(Ljava/lang/String;I)Z&apos; in &apos;java/lang/String&apos;)}
+  0x000000000f11bf34: movabs $0x128,%rdx
+  0x000000000f11bf3e: jle    0x000000000f11bf4e
+  0x000000000f11bf44: movabs $0x138,%rdx
+  0x000000000f11bf4e: mov    (%rbx,%rdx,1),%rcx
+  0x000000000f11bf52: lea    0x1(%rcx),%rcx
+  0x000000000f11bf56: mov    %rcx,(%rbx,%rdx,1)
+  0x000000000f11bf5a: jg     0x000000000f11c05a  ;*if_icmple
+                                                ; - java.lang.String::startsWith@37 (line 1397)
+
+  0x000000000f11bf60: mov    $0x0,%ebx
+  0x000000000f11bf65: jmpq   0x000000000f11c01a  ;*iinc
+                                                ; - java.lang.String::startsWith@42 (line 1400)
+
+  0x000000000f11bf6a: nopw   0x0(%rax,%rax,1)
+  0x000000000f11bf70: mov    %r9,%rdx
+  0x000000000f11bf73: inc    %edx
+  0x000000000f11bf75: movslq %r9d,%rcx
+  0x000000000f11bf78: cmp    0xc(%rax),%r9d
+  0x000000000f11bf7c: jae    0x000000000f11c0b3
+  0x000000000f11bf82: movzwl 0x10(%rax,%rcx,2),%ecx  ;*caload
+                                                ; - java.lang.String::startsWith@56 (line 1401)
+
+  0x000000000f11bf87: mov    %rbx,%r8
+  0x000000000f11bf8a: inc    %r8d
+  0x000000000f11bf8d: movslq %ebx,%r9
+  0x000000000f11bf90: cmp    0xc(%rsi),%ebx
+  0x000000000f11bf93: jae    0x000000000f11c0bc
+  0x000000000f11bf99: movzwl 0x10(%rsi,%r9,2),%ebx  ;*caload
+                                                ; - java.lang.String::startsWith@64 (line 1401)
+
+  0x000000000f11bf9f: movabs $0x8273278,%r9     ;   {metadata(method data for {method} {0x0000000008024d80} &apos;startsWith&apos; &apos;(Ljava/lang/String;I)Z&apos; in &apos;java/lang/String&apos;)}
+  0x000000000f11bfa9: mov    0xe0(%r9),%r11d
+  0x000000000f11bfb0: add    $0x8,%r11d
+  0x000000000f11bfb4: mov    %r11d,0xe0(%r9)
+  0x000000000f11bfbb: movabs $0x8024d78,%r9     ;   {metadata({method} {0x0000000008024d80} &apos;startsWith&apos; &apos;(Ljava/lang/String;I)Z&apos; in &apos;java/lang/String&apos;)}
+  0x000000000f11bfc5: and    $0xfff8,%r11d
+  0x000000000f11bfcc: cmp    $0x0,%r11d
+  0x000000000f11bfd0: je     0x000000000f11c0c5  ; OopMap{rsi=Oop rax=Oop off=342}
+                                                ;*if_icmpeq
+                                                ; - java.lang.String::startsWith@65 (line 1401)
+
+  0x000000000f11bfd6: test   %eax,-0xedfbedc(%rip)        # 0x0000000000320100
+                                                ;   {poll}
+  0x000000000f11bfdc: cmp    %ebx,%ecx
+  0x000000000f11bfde: movabs $0x8273278,%rbx    ;   {metadata(method data for {method} {0x0000000008024d80} &apos;startsWith&apos; &apos;(Ljava/lang/String;I)Z&apos; in &apos;java/lang/String&apos;)}
+  0x000000000f11bfe8: movabs $0x168,%rcx
+  0x000000000f11bff2: je     0x000000000f11c002
+  0x000000000f11bff8: movabs $0x178,%rcx
+  0x000000000f11c002: mov    (%rbx,%rcx,1),%r9
+  0x000000000f11c006: lea    0x1(%r9),%r9
+  0x000000000f11c00a: mov    %r9,(%rbx,%rcx,1)
+  0x000000000f11c00e: jne    0x000000000f11c06b  ;*if_icmpeq
+                                                ; - java.lang.String::startsWith@65 (line 1401)
+
+  0x000000000f11c014: mov    %r8,%rbx
+  0x000000000f11c017: mov    %rdx,%r9           ;*iinc
+                                                ; - java.lang.String::startsWith@42 (line 1400)
+
+  0x000000000f11c01a: dec    %edi
+  0x000000000f11c01c: cmp    $0x0,%edi
+  0x000000000f11c01f: movabs $0x8273278,%rdx    ;   {metadata(method data for {method} {0x0000000008024d80} &apos;startsWith&apos; &apos;(Ljava/lang/String;I)Z&apos; in &apos;java/lang/String&apos;)}
+  0x000000000f11c029: movabs $0x148,%rcx
+  0x000000000f11c033: jl     0x000000000f11c043
+  0x000000000f11c039: movabs $0x158,%rcx
+  0x000000000f11c043: mov    (%rdx,%rcx,1),%r8
+  0x000000000f11c047: lea    0x1(%r8),%r8
+  0x000000000f11c04b: mov    %r8,(%rdx,%rcx,1)
+  0x000000000f11c04f: jl     0x000000000f11c07c
+  0x000000000f11c055: jmpq   0x000000000f11bf70  ;*iflt
+                                                ; - java.lang.String::startsWith@47 (line 1400)
+
+  0x000000000f11c05a: mov    $0x0,%eax
+  0x000000000f11c05f: add    $0x30,%rsp
+  0x000000000f11c063: pop    %rbp
+  0x000000000f11c064: test   %eax,-0xedfbf6a(%rip)        # 0x0000000000320100
+                                                ;   {poll_return}
+  0x000000000f11c06a: retq                      ;*ireturn
+                                                ; - java.lang.String::startsWith@41 (line 1398)
+
+  0x000000000f11c06b: mov    $0x0,%eax
+  0x000000000f11c070: add    $0x30,%rsp
+  0x000000000f11c074: pop    %rbp
+  0x000000000f11c075: test   %eax,-0xedfbf7b(%rip)        # 0x0000000000320100
+                                                ;   {poll_return}
+  0x000000000f11c07b: retq                      ;*ireturn
+                                                ; - java.lang.String::startsWith@69 (line 1402)
+
+  0x000000000f11c07c: mov    $0x1,%eax
+  0x000000000f11c081: add    $0x30,%rsp
+  0x000000000f11c085: pop    %rbp
+  0x000000000f11c086: test   %eax,-0xedfbf8c(%rip)        # 0x0000000000320100
+                                                ;   {poll_return}
+  0x000000000f11c08c: retq   
+  0x000000000f11c08d: mov    %rax,0x8(%rsp)
+  0x000000000f11c092: movq   $0xffffffffffffffff,(%rsp)
+  0x000000000f11c09a: callq  0x000000000f11b060  ; OopMap{rdx=Oop r8=Oop off=543}
+                                                ;*synchronization entry
+                                                ; - java.lang.String::startsWith@-1 (line 1391)
+                                                ;   {runtime_call}
+  0x000000000f11c09f: jmpq   0x000000000f11bede
+  0x000000000f11c0a4: callq  0x000000000f116940  ; OopMap{rax=Oop off=553}
+                                                ;*getfield value
+                                                ; - java.lang.String::startsWith@9 (line 1393)
+                                                ;   {runtime_call}
+  0x000000000f11c0a9: callq  0x000000000f116940  ; OopMap{rax=Oop rsi=Oop off=558}
+                                                ;*arraylength
+                                                ; - java.lang.String::startsWith@21 (line 1395)
+                                                ;   {runtime_call}
+  0x000000000f11c0ae: callq  0x000000000f116940  ; OopMap{rsi=Oop rax=Oop off=563}
+                                                ;*arraylength
+                                                ; - java.lang.String::startsWith@33 (line 1397)
+                                                ;   {runtime_call}
+  0x000000000f11c0b3: mov    %r9,(%rsp)
+  0x000000000f11c0b7: callq  0x000000000f115c00  ; OopMap{rsi=Oop rax=Oop off=572}
+                                                ;*caload
+                                                ; - java.lang.String::startsWith@56 (line 1401)
+                                                ;   {runtime_call}
+  0x000000000f11c0bc: mov    %rbx,(%rsp)
+  0x000000000f11c0c0: callq  0x000000000f115c00  ; OopMap{rsi=Oop rax=Oop off=581}
+                                                ;*caload
+                                                ; - java.lang.String::startsWith@64 (line 1401)
+                                                ;   {runtime_call}
+  0x000000000f11c0c5: mov    %r9,0x8(%rsp)
+  0x000000000f11c0ca: movq   $0x41,(%rsp)
+  0x000000000f11c0d2: callq  0x000000000f11b060  ; OopMap{rsi=Oop rax=Oop off=599}
+                                                ;*if_icmpeq
+                                                ; - java.lang.String::startsWith@65 (line 1401)
+                                                ;   {runtime_call}
+  0x000000000f11c0d7: jmpq   0x000000000f11bfd6
+  0x000000000f11c0dc: nop
+  0x000000000f11c0dd: nop
+  0x000000000f11c0de: mov    0x2a8(%r15),%rax
+  0x000000000f11c0e5: movabs $0x0,%r10
+  0x000000000f11c0ef: mov    %r10,0x2a8(%r15)
+  0x000000000f11c0f6: movabs $0x0,%r10
+  0x000000000f11c100: mov    %r10,0x2b0(%r15)
+  0x000000000f11c107: add    $0x30,%rsp
+  0x000000000f11c10b: pop    %rbp
+  0x000000000f11c10c: jmpq   0x000000000f1160a0  ;   {runtime_call}
+  0x000000000f11c111: hlt    
+  0x000000000f11c112: hlt    
+  0x000000000f11c113: hlt    
+  0x000000000f11c114: hlt    
+  0x000000000f11c115: hlt    
+  0x000000000f11c116: hlt    
+  0x000000000f11c117: hlt    
+  0x000000000f11c118: hlt    
+  0x000000000f11c119: hlt    
+  0x000000000f11c11a: hlt    
+  0x000000000f11c11b: hlt    
+  0x000000000f11c11c: hlt    
+  0x000000000f11c11d: hlt    
+  0x000000000f11c11e: hlt    
+  0x000000000f11c11f: hlt    
+[Exception Handler]
+[Stub Code]
+  0x000000000f11c120: callq  0x000000000f1187e0  ;   {no_reloc}
+  0x000000000f11c125: mov    %rsp,-0x28(%rsp)
+  0x000000000f11c12a: sub    $0x80,%rsp
+  0x000000000f11c131: mov    %rax,0x78(%rsp)
+  0x000000000f11c136: mov    %rcx,0x70(%rsp)
+  0x000000000f11c13b: mov    %rdx,0x68(%rsp)
+  0x000000000f11c140: mov    %rbx,0x60(%rsp)
+  0x000000000f11c145: mov    %rbp,0x50(%rsp)
+  0x000000000f11c14a: mov    %rsi,0x48(%rsp)
+  0x000000000f11c14f: mov    %rdi,0x40(%rsp)
+  0x000000000f11c154: mov    %r8,0x38(%rsp)
+  0x000000000f11c159: mov    %r9,0x30(%rsp)
+  0x000000000f11c15e: mov    %r10,0x28(%rsp)
+  0x000000000f11c163: mov    %r11,0x20(%rsp)
+  0x000000000f11c168: mov    %r12,0x18(%rsp)
+  0x000000000f11c16d: mov    %r13,0x10(%rsp)
+  0x000000000f11c172: mov    %r14,0x8(%rsp)
+  0x000000000f11c177: mov    %r15,(%rsp)
+  0x000000000f11c17b: movabs $0x278af20,%rcx    ;   {external_word}
+  0x000000000f11c185: movabs $0xf11c125,%rdx    ;   {internal_word}
+  0x000000000f11c18f: mov    %rsp,%r8
+  0x000000000f11c192: and    $0xfffffffffffffff0,%rsp
+  0x000000000f11c196: callq  0x000000000244d370  ;   {runtime_call}
+  0x000000000f11c19b: hlt    
+[Deopt Handler Code]
+  0x000000000f11c19c: movabs $0xf11c19c,%r10    ;   {section_word}
+  0x000000000f11c1a6: push   %r10
+  0x000000000f11c1a8: jmpq   0x000000000f057600  ;   {runtime_call}
+  0x000000000f11c1ad: hlt    
+  0x000000000f11c1ae: hlt    
+  0x000000000f11c1af: hlt    
+<nmethod compile_id='10' compiler='C1' level='3' entry='0x000000000f11be80' size='1824' address='0x000000000f11bd10' relocation_offset='288' insts_offset='368' stub_offset='1040' scopes_data_offset='1192' scopes_pcs_offset='1384' dependencies_offset='1784' nul_chk_table_offset='1792' method='java/lang/String startsWith (Ljava/lang/String;I)Z' bytes='72' count='979' backedge_count='1397' iicount='979' stamp='0.303'/>
+<writer thread='15048'/>
+<task_queued compile_id='16' method='java/io/WinNTFileSystem isSlash (C)Z' bytes='18' count='20992' iicount='20992' stamp='0.303' comment='tiered' hot_count='20992'/>
+<task_queued compile_id='17' method='java/lang/StringBuffer append (C)Ljava/lang/StringBuffer;' bytes='13' count='19456' iicount='19456' stamp='0.303' comment='tiered' hot_count='19456'/>
+<task_queued compile_id='18' method='java/lang/AbstractStringBuilder append (C)Ljava/lang/AbstractStringBuilder;' bytes='29' count='22272' iicount='22272' stamp='0.303' comment='tiered' hot_count='22272'/>
+<writer thread='15488'/>
+<task_queued compile_id='19' method='java/lang/String equals (Ljava/lang/Object;)Z' bytes='81' count='1121' backedge_count='3440' iicount='1121' level='3' stamp='0.303' comment='tiered' hot_count='1121'/>
+<writer thread='10456'/>
+<destroy_vm stamp='0.305'/>
+<writer thread='15784'/>
+Decoding compiled method 0x000000000f121290:
+Code:
+[Entry Point]
+[Constants]
+  # {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;
+  # this:     rdx:rdx   = &apos;java/util/HashMap&apos;
+  # parm0:    r8        = int
+  # parm1:    r9:r9     = &apos;java/lang/Object&apos;
+  # parm2:    rdi:rdi   = &apos;java/lang/Object&apos;
+  # parm3:    rsi       = boolean
+  # parm4:    rcx       = boolean
+  #           [sp+0xb0]  (sp of caller)
+  0x000000000f121500: mov    0x8(%rdx),%r10d
+  0x000000000f121504: cmp    %rax,%r10
+  0x000000000f121507: jne    0x000000000f055f60  ;   {runtime_call}
+  0x000000000f12150d: data16 data16 nopw 0x0(%rax,%rax,1)
+  0x000000000f121518: data16 data16 xchg %ax,%ax
+  0x000000000f12151c: nopl   0x0(%rax)
+[Verified Entry Point]
+  0x000000000f121520: mov    %eax,-0x6000(%rsp)
+  0x000000000f121527: push   %rbp
+  0x000000000f121528: sub    $0xa0,%rsp
+  0x000000000f12152f: mov    %rdx,0x48(%rsp)
+  0x000000000f121534: mov    %r8d,0x40(%rsp)
+  0x000000000f121539: mov    %r9,0x50(%rsp)
+  0x000000000f12153e: movabs $0x82d8078,%rbx    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121548: mov    0xdc(%rbx),%eax
+  0x000000000f12154e: add    $0x8,%eax
+  0x000000000f121551: mov    %eax,0xdc(%rbx)
+  0x000000000f121557: movabs $0x811c540,%rbx    ;   {metadata({method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121561: and    $0x1ff8,%eax
+  0x000000000f121567: cmp    $0x0,%eax
+  0x000000000f12156a: je     0x000000000f12256d  ;*aload_0
+                                                ; - java.util.HashMap::putVal@0 (line 627)
+
+  0x000000000f121570: mov    0x24(%rdx),%ebx    ;*getfield table
+                                                ; - java.util.HashMap::putVal@1 (line 627)
+
+  0x000000000f121573: cmp    $0x0,%rbx
+  0x000000000f121577: movabs $0x82d8078,%rax    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121581: movabs $0x108,%r11
+  0x000000000f12158b: je     0x000000000f12159b
+  0x000000000f121591: movabs $0x118,%r11
+  0x000000000f12159b: mov    (%rax,%r11,1),%r13
+  0x000000000f12159f: lea    0x1(%r13),%r13
+  0x000000000f1215a3: mov    %r13,(%rax,%r11,1)
+  0x000000000f1215a7: je     0x000000000f1215fb  ;*ifnull
+                                                ; - java.util.HashMap::putVal@7 (line 627)
+
+  0x000000000f1215ad: mov    0xc(%rbx),%eax     ;*arraylength
+                                                ; - java.util.HashMap::putVal@12 (line 627)
+                                                ; implicit exception: dispatches to 0x000000000f122584
+  0x000000000f1215b0: cmp    $0x0,%eax
+  0x000000000f1215b3: movabs $0x82d8078,%r11    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f1215bd: movabs $0x128,%r13
+  0x000000000f1215c7: jne    0x000000000f1215d7
+  0x000000000f1215cd: movabs $0x138,%r13
+  0x000000000f1215d7: mov    (%r11,%r13,1),%r14
+  0x000000000f1215db: lea    0x1(%r14),%r14
+  0x000000000f1215df: mov    %r14,(%r11,%r13,1)
+  0x000000000f1215e3: je     0x000000000f1215fb  ;*ifne
+                                                ; - java.util.HashMap::putVal@16 (line 627)
+
+  0x000000000f1215e9: mov    %ecx,0x60(%rsp)
+  0x000000000f1215ed: mov    %esi,0x44(%rsp)
+  0x000000000f1215f1: mov    %rdi,0x58(%rsp)
+  0x000000000f1215f6: jmpq   0x000000000f1216b1  ;*aload
+                                                ; - java.util.HashMap::putVal@29 (line 629)
+
+  0x000000000f1215fb: mov    %ecx,0x60(%rsp)
+  0x000000000f1215ff: mov    %esi,0x44(%rsp)
+  0x000000000f121603: mov    %rdi,0x58(%rsp)
+  0x000000000f121608: mov    %rdx,%rbx
+  0x000000000f12160b: movabs $0x82d8078,%rax    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121615: mov    0x8(%rbx),%ebx
+  0x000000000f121618: cmp    0x150(%rax),%rbx
+  0x000000000f12161f: jne    0x000000000f12162e
+  0x000000000f121621: addq   $0x1,0x158(%rax)
+  0x000000000f121629: jmpq   0x000000000f121694
+  0x000000000f12162e: cmp    0x160(%rax),%rbx
+  0x000000000f121635: jne    0x000000000f121644
+  0x000000000f121637: addq   $0x1,0x168(%rax)
+  0x000000000f12163f: jmpq   0x000000000f121694
+  0x000000000f121644: cmpq   $0x0,0x150(%rax)
+  0x000000000f12164f: jne    0x000000000f121668
+  0x000000000f121651: mov    %rbx,0x150(%rax)
+  0x000000000f121658: movq   $0x1,0x158(%rax)
+  0x000000000f121663: jmpq   0x000000000f121694
+  0x000000000f121668: cmpq   $0x0,0x160(%rax)
+  0x000000000f121673: jne    0x000000000f12168c
+  0x000000000f121675: mov    %rbx,0x160(%rax)
+  0x000000000f12167c: movq   $0x1,0x168(%rax)
+  0x000000000f121687: jmpq   0x000000000f121694
+  0x000000000f12168c: addq   $0x1,0x148(%rax)
+  0x000000000f121694: mov    %rdx,%rbx
+  0x000000000f121697: mov    %rbx,%rdx          ;*invokevirtual resize
+                                                ; - java.util.HashMap::putVal@20 (line 628)
+
+  0x000000000f12169a: nop
+  0x000000000f12169b: nop
+  0x000000000f12169c: nop
+  0x000000000f12169d: nop
+  0x000000000f12169e: nop
+  0x000000000f12169f: callq  0x000000000f0561a0  ; OopMap{[88]=Oop [80]=Oop [72]=Oop off=420}
+                                                ;*invokevirtual resize
+                                                ; - java.util.HashMap::putVal@20 (line 628)
+                                                ;   {optimized virtual_call}
+  0x000000000f1216a4: mov    %rax,%r8           ;*invokevirtual resize
+                                                ; - java.util.HashMap::putVal@20 (line 628)
+
+  0x000000000f1216a7: mov    0xc(%r8),%r9d      ;*arraylength
+                                                ; - java.util.HashMap::putVal@26 (line 628)
+                                                ; implicit exception: dispatches to 0x000000000f122589
+  0x000000000f1216ab: mov    %r9,%rax
+  0x000000000f1216ae: mov    %r8,%rbx           ;*aload
+                                                ; - java.util.HashMap::putVal@29 (line 629)
+
+  0x000000000f1216b1: dec    %eax
+  0x000000000f1216b3: and    0x40(%rsp),%eax
+  0x000000000f1216b7: movslq %eax,%r8
+  0x000000000f1216ba: cmp    0xc(%rbx),%eax     ; implicit exception: dispatches to 0x000000000f12258e
+  0x000000000f1216bd: jae    0x000000000f122598
+  0x000000000f1216c3: mov    0x10(%rbx,%r8,4),%esi  ;*aaload
+                                                ; - java.util.HashMap::putVal@40 (line 629)
+
+  0x000000000f1216c8: cmp    $0x0,%rsi
+  0x000000000f1216cc: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f1216d6: movabs $0x178,%r9
+  0x000000000f1216e0: jne    0x000000000f1216f0
+  0x000000000f1216e6: movabs $0x188,%r9
+  0x000000000f1216f0: mov    (%r8,%r9,1),%rdi
+  0x000000000f1216f4: lea    0x1(%rdi),%rdi
+  0x000000000f1216f8: mov    %rdi,(%r8,%r9,1)
+  0x000000000f1216fc: jne    0x000000000f121914  ;*ifnonnull
+                                                ; - java.util.HashMap::putVal@44 (line 629)
+
+  0x000000000f121702: mov    %eax,0x64(%rsp)
+  0x000000000f121706: mov    %rbx,0x68(%rsp)
+  0x000000000f12170b: mov    0x48(%rsp),%rdx
+  0x000000000f121710: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f12171a: mov    0x8(%rdx),%edx
+  0x000000000f12171d: cmp    0x1a0(%r8),%rdx
+  0x000000000f121724: jne    0x000000000f121733
+  0x000000000f121726: addq   $0x1,0x1a8(%r8)
+  0x000000000f12172e: jmpq   0x000000000f121799
+  0x000000000f121733: cmp    0x1b0(%r8),%rdx
+  0x000000000f12173a: jne    0x000000000f121749
+  0x000000000f12173c: addq   $0x1,0x1b8(%r8)
+  0x000000000f121744: jmpq   0x000000000f121799
+  0x000000000f121749: cmpq   $0x0,0x1a0(%r8)
+  0x000000000f121754: jne    0x000000000f12176d
+  0x000000000f121756: mov    %rdx,0x1a0(%r8)
+  0x000000000f12175d: movq   $0x1,0x1a8(%r8)
+  0x000000000f121768: jmpq   0x000000000f121799
+  0x000000000f12176d: cmpq   $0x0,0x1b0(%r8)
+  0x000000000f121778: jne    0x000000000f121791
+  0x000000000f12177a: mov    %rdx,0x1b0(%r8)
+  0x000000000f121781: movq   $0x1,0x1b8(%r8)
+  0x000000000f12178c: jmpq   0x000000000f121799
+  0x000000000f121791: addq   $0x1,0x198(%r8)
+  0x000000000f121799: mov    0x40(%rsp),%r8d
+  0x000000000f12179e: mov    0x50(%rsp),%r9
+  0x000000000f1217a3: mov    0x58(%rsp),%rdi
+  0x000000000f1217a8: movabs $0x0,%rsi          ;   {oop(NULL)}
+  0x000000000f1217b2: mov    0x48(%rsp),%rdx    ;*invokevirtual newNode
+                                                ; - java.util.HashMap::putVal@56 (line 630)
+
+  0x000000000f1217b7: nop
+  0x000000000f1217b8: nop
+  0x000000000f1217b9: nop
+  0x000000000f1217ba: nop
+  0x000000000f1217bb: nop
+  0x000000000f1217bc: nop
+  0x000000000f1217bd: movabs $0xffffffffffffffff,%rax
+  0x000000000f1217c7: callq  0x000000000f0563e0  ; OopMap{[72]=Oop [104]=Oop off=716}
+                                                ;*invokevirtual newNode
+                                                ; - java.util.HashMap::putVal@56 (line 630)
+                                                ;   {virtual_call}
+  0x000000000f1217cc: mov    0x64(%rsp),%r8d
+  0x000000000f1217d1: movslq %r8d,%rdx
+  0x000000000f1217d4: mov    0x68(%rsp),%rbx
+  0x000000000f1217d9: lea    0x10(%rbx,%rdx,4),%rdx
+  0x000000000f1217de: cmp    0xc(%rbx),%r8d
+  0x000000000f1217e2: jae    0x000000000f1225a1
+  0x000000000f1217e8: cmp    $0x0,%rax
+  0x000000000f1217ec: jne    0x000000000f121807
+  0x000000000f1217ee: movabs $0x82d8078,%rsi    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f1217f8: orl    $0x100,0x1c0(%rsi)
+  0x000000000f121802: jmpq   0x000000000f1218e5
+  0x000000000f121807: mov    0x8(%rbx),%r8d     ; implicit exception: dispatches to 0x000000000f1225aa
+  0x000000000f12180b: mov    0x8(%rax),%esi
+  0x000000000f12180e: mov    0xf0(%r8),%r8
+  0x000000000f121815: cmp    %r8,%rsi
+  0x000000000f121818: je     0x000000000f12184a
+  0x000000000f12181e: mov    0xc(%r8),%edi
+  0x000000000f121822: cmp    (%rsi,%rdi,1),%r8
+  0x000000000f121826: je     0x000000000f12184a
+  0x000000000f12182c: cmp    $0x18,%edi
+  0x000000000f12182f: jne    0x000000000f1218ce
+  0x000000000f121835: push   %rsi
+  0x000000000f121836: push   %r8
+  0x000000000f121838: callq  0x000000000f118fe0  ;   {runtime_call}
+  0x000000000f12183d: pop    %rsi
+  0x000000000f12183e: pop    %r8
+  0x000000000f121840: cmp    $0x0,%r8d
+  0x000000000f121844: je     0x000000000f1218ce
+  0x000000000f12184a: movabs $0x82d8078,%rsi    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121854: mov    0x8(%rax),%r8d
+  0x000000000f121858: cmp    0x1d0(%rsi),%r8
+  0x000000000f12185f: jne    0x000000000f12186e
+  0x000000000f121861: addq   $0x1,0x1d8(%rsi)
+  0x000000000f121869: jmpq   0x000000000f1218e5
+  0x000000000f12186e: cmp    0x1e0(%rsi),%r8
+  0x000000000f121875: jne    0x000000000f121884
+  0x000000000f121877: addq   $0x1,0x1e8(%rsi)
+  0x000000000f12187f: jmpq   0x000000000f1218e5
+  0x000000000f121884: cmpq   $0x0,0x1d0(%rsi)
+  0x000000000f12188f: jne    0x000000000f1218a8
+  0x000000000f121891: mov    %r8,0x1d0(%rsi)
+  0x000000000f121898: movq   $0x1,0x1d8(%rsi)
+  0x000000000f1218a3: jmpq   0x000000000f1218e5
+  0x000000000f1218a8: cmpq   $0x0,0x1e0(%rsi)
+  0x000000000f1218b3: jne    0x000000000f1218cc
+  0x000000000f1218b5: mov    %r8,0x1e0(%rsi)
+  0x000000000f1218bc: movq   $0x1,0x1e8(%rsi)
+  0x000000000f1218c7: jmpq   0x000000000f1218e5
+  0x000000000f1218cc: jmp    0x000000000f1218e5
+  0x000000000f1218ce: movabs $0x82d8078,%rsi    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f1218d8: subq   $0x1,0x1c8(%rsi)
+  0x000000000f1218e0: jmpq   0x000000000f1225af
+  0x000000000f1218e5: mov    %rax,%r10
+  0x000000000f1218e8: mov    %r10d,(%rdx)
+  0x000000000f1218eb: shr    $0x9,%rdx
+  0x000000000f1218ef: movabs $0x2d05000,%r8
+  0x000000000f1218f9: movb   $0x0,(%rdx,%r8,1)  ;*aastore
+                                                ; - java.util.HashMap::putVal@59 (line 630)
+
+  0x000000000f1218fe: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121908: incl   0x1f8(%r8)
+  0x000000000f12190f: jmpq   0x000000000f122250  ;*goto
+                                                ; - java.util.HashMap::putVal@60 (line 630)
+
+  0x000000000f121914: mov    0xc(%rsi),%r8d     ;*getfield hash
+                                                ; - java.util.HashMap::putVal@65 (line 633)
+                                                ; implicit exception: dispatches to 0x000000000f1225b8
+  0x000000000f121918: cmp    0x40(%rsp),%r8d
+  0x000000000f12191d: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121927: movabs $0x210,%rdx
+  0x000000000f121931: jne    0x000000000f121941
+  0x000000000f121937: movabs $0x220,%rdx
+  0x000000000f121941: mov    (%r8,%rdx,1),%rdi
+  0x000000000f121945: lea    0x1(%rdi),%rdi
+  0x000000000f121949: mov    %rdi,(%r8,%rdx,1)
+  0x000000000f12194d: je     0x000000000f12195d  ;*if_icmpne
+                                                ; - java.util.HashMap::putVal@69 (line 633)
+
+  0x000000000f121953: mov    %rbx,0x68(%rsp)
+  0x000000000f121958: jmpq   0x000000000f121ad2  ;*aload
+                                                ; - java.util.HashMap::putVal@104 (line 636)
+
+  0x000000000f12195d: mov    0x50(%rsp),%r9
+  0x000000000f121962: mov    0x10(%rsi),%r8d    ;*getfield key
+                                                ; - java.util.HashMap::putVal@74 (line 633)
+
+  0x000000000f121966: cmp    %r9,%r8
+  0x000000000f121969: movabs $0x82d8078,%rdx    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121973: movabs $0x230,%rdi
+  0x000000000f12197d: je     0x000000000f12198d
+  0x000000000f121983: movabs $0x240,%rdi
+  0x000000000f12198d: mov    (%rdx,%rdi,1),%rax
+  0x000000000f121991: lea    0x1(%rax),%rax
+  0x000000000f121995: mov    %rax,(%rdx,%rdi,1)
+  0x000000000f121999: je     0x000000000f122202  ;*if_acmpeq
+                                                ; - java.util.HashMap::putVal@81 (line 633)
+
+  0x000000000f12199f: cmp    $0x0,%r9
+  0x000000000f1219a3: movabs $0x82d8078,%rdx    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f1219ad: movabs $0x250,%rdi
+  0x000000000f1219b7: je     0x000000000f1219c7
+  0x000000000f1219bd: movabs $0x260,%rdi
+  0x000000000f1219c7: mov    (%rdx,%rdi,1),%rax
+  0x000000000f1219cb: lea    0x1(%rax),%rax
+  0x000000000f1219cf: mov    %rax,(%rdx,%rdi,1)
+  0x000000000f1219d3: jne    0x000000000f1219e3  ;*ifnull
+                                                ; - java.util.HashMap::putVal@85 (line 633)
+
+  0x000000000f1219d9: mov    %rbx,0x68(%rsp)
+  0x000000000f1219de: jmpq   0x000000000f121ad2  ;*aload
+                                                ; - java.util.HashMap::putVal@104 (line 636)
+
+  0x000000000f1219e3: mov    %rsi,0x70(%rsp)
+  0x000000000f1219e8: mov    %rbx,0x68(%rsp)
+  0x000000000f1219ed: cmp    (%r9),%rax         ; implicit exception: dispatches to 0x000000000f1225bd
+  0x000000000f1219f0: mov    %r9,%rdx
+  0x000000000f1219f3: movabs $0x82d8078,%rdi    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f1219fd: mov    0x8(%rdx),%edx
+  0x000000000f121a00: cmp    0x278(%rdi),%rdx
+  0x000000000f121a07: jne    0x000000000f121a16
+  0x000000000f121a09: addq   $0x1,0x280(%rdi)
+  0x000000000f121a11: jmpq   0x000000000f121a7c
+  0x000000000f121a16: cmp    0x288(%rdi),%rdx
+  0x000000000f121a1d: jne    0x000000000f121a2c
+  0x000000000f121a1f: addq   $0x1,0x290(%rdi)
+  0x000000000f121a27: jmpq   0x000000000f121a7c
+  0x000000000f121a2c: cmpq   $0x0,0x278(%rdi)
+  0x000000000f121a37: jne    0x000000000f121a50
+  0x000000000f121a39: mov    %rdx,0x278(%rdi)
+  0x000000000f121a40: movq   $0x1,0x280(%rdi)
+  0x000000000f121a4b: jmpq   0x000000000f121a7c
+  0x000000000f121a50: cmpq   $0x0,0x288(%rdi)
+  0x000000000f121a5b: jne    0x000000000f121a74
+  0x000000000f121a5d: mov    %rdx,0x288(%rdi)
+  0x000000000f121a64: movq   $0x1,0x290(%rdi)
+  0x000000000f121a6f: jmpq   0x000000000f121a7c
+  0x000000000f121a74: addq   $0x1,0x270(%rdi)
+  0x000000000f121a7c: mov    %r9,%rdx           ;*invokevirtual equals
+                                                ; - java.util.HashMap::putVal@91 (line 634)
+
+  0x000000000f121a7f: nop
+  0x000000000f121a80: nop
+  0x000000000f121a81: nop
+  0x000000000f121a82: nop
+  0x000000000f121a83: nop
+  0x000000000f121a84: nop
+  0x000000000f121a85: movabs $0xffffffffffffffff,%rax
+  0x000000000f121a8f: callq  0x000000000f0563e0  ; OopMap{[72]=Oop [88]=Oop [80]=Oop [112]=Oop [104]=Oop off=1428}
+                                                ;*invokevirtual equals
+                                                ; - java.util.HashMap::putVal@91 (line 634)
+                                                ;   {virtual_call}
+  0x000000000f121a94: cmp    $0x0,%eax
+  0x000000000f121a97: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121aa1: movabs $0x2a0,%r9
+  0x000000000f121aab: je     0x000000000f121abb
+  0x000000000f121ab1: movabs $0x2b0,%r9
+  0x000000000f121abb: mov    (%r8,%r9,1),%rdi
+  0x000000000f121abf: lea    0x1(%rdi),%rdi
+  0x000000000f121ac3: mov    %rdi,(%r8,%r9,1)
+  0x000000000f121ac7: mov    0x70(%rsp),%rsi
+  0x000000000f121acc: jne    0x000000000f122202  ;*ifeq
+                                                ; - java.util.HashMap::putVal@94 (line 634)
+
+  0x000000000f121ad2: cmp    $0x0,%rsi
+  0x000000000f121ad6: jne    0x000000000f121af1
+  0x000000000f121ad8: movabs $0x82d8078,%rdi    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121ae2: orl    $0x100,0x2d0(%rdi)
+  0x000000000f121aec: jmpq   0x000000000f121baa
+  0x000000000f121af1: movabs $0x1e048e90,%rcx   ;   {metadata(&apos;java/util/HashMap$TreeNode&apos;)}
+  0x000000000f121afb: mov    0x8(%rsi),%r9d
+  0x000000000f121aff: cmp    %r9,%rcx
+  0x000000000f121b02: jne    0x000000000f121b8e
+  0x000000000f121b08: movabs $0x82d8078,%rdi    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121b12: mov    0x8(%rsi),%ecx
+  0x000000000f121b15: cmp    0x2e0(%rdi),%rcx
+  0x000000000f121b1c: jne    0x000000000f121b2b
+  0x000000000f121b1e: addq   $0x1,0x2e8(%rdi)
+  0x000000000f121b26: jmpq   0x000000000f121baf
+  0x000000000f121b2b: cmp    0x2f0(%rdi),%rcx
+  0x000000000f121b32: jne    0x000000000f121b41
+  0x000000000f121b34: addq   $0x1,0x2f8(%rdi)
+  0x000000000f121b3c: jmpq   0x000000000f121baf
+  0x000000000f121b41: cmpq   $0x0,0x2e0(%rdi)
+  0x000000000f121b4c: jne    0x000000000f121b65
+  0x000000000f121b4e: mov    %rcx,0x2e0(%rdi)
+  0x000000000f121b55: movq   $0x1,0x2e8(%rdi)
+  0x000000000f121b60: jmpq   0x000000000f121baf
+  0x000000000f121b65: cmpq   $0x0,0x2f0(%rdi)
+  0x000000000f121b70: jne    0x000000000f121b89
+  0x000000000f121b72: mov    %rcx,0x2f0(%rdi)
+  0x000000000f121b79: movq   $0x1,0x2f8(%rdi)
+  0x000000000f121b84: jmpq   0x000000000f121baf
+  0x000000000f121b89: jmpq   0x000000000f121baf
+  0x000000000f121b8e: movabs $0x82d8078,%rdi    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121b98: subq   $0x1,0x2d8(%rdi)
+  0x000000000f121ba0: jmpq   0x000000000f121baa
+  0x000000000f121ba5: jmpq   0x000000000f121baf
+  0x000000000f121baa: xor    %r8,%r8
+  0x000000000f121bad: jmp    0x000000000f121bb9
+  0x000000000f121baf: movabs $0x1,%r8           ;*instanceof
+                                                ; - java.util.HashMap::putVal@106 (line 636)
+
+  0x000000000f121bb9: cmp    $0x0,%r8d
+  0x000000000f121bbd: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121bc7: movabs $0x308,%r9
+  0x000000000f121bd1: je     0x000000000f121be1
+  0x000000000f121bd7: movabs $0x318,%r9
+  0x000000000f121be1: mov    (%r8,%r9,1),%rdi
+  0x000000000f121be5: lea    0x1(%rdi),%rdi
+  0x000000000f121be9: mov    %rdi,(%r8,%r9,1)
+  0x000000000f121bed: je     0x000000000f121d92  ;*ifeq
+                                                ; - java.util.HashMap::putVal@109 (line 636)
+
+  0x000000000f121bf3: cmp    $0x0,%rsi
+  0x000000000f121bf7: jne    0x000000000f121c13
+  0x000000000f121bf9: movabs $0x82d8078,%r9     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121c03: orl    $0x100,0x320(%r9)
+  0x000000000f121c0e: jmpq   0x000000000f121ccc
+  0x000000000f121c13: movabs $0x1e048e90,%rdi   ;   {metadata(&apos;java/util/HashMap$TreeNode&apos;)}
+  0x000000000f121c1d: mov    0x8(%rsi),%r8d
+  0x000000000f121c21: cmp    %r8,%rdi
+  0x000000000f121c24: jne    0x000000000f121cb0
+  0x000000000f121c2a: movabs $0x82d8078,%r9     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121c34: mov    0x8(%rsi),%edi
+  0x000000000f121c37: cmp    0x330(%r9),%rdi
+  0x000000000f121c3e: jne    0x000000000f121c4d
+  0x000000000f121c40: addq   $0x1,0x338(%r9)
+  0x000000000f121c48: jmpq   0x000000000f121ccc
+  0x000000000f121c4d: cmp    0x340(%r9),%rdi
+  0x000000000f121c54: jne    0x000000000f121c63
+  0x000000000f121c56: addq   $0x1,0x348(%r9)
+  0x000000000f121c5e: jmpq   0x000000000f121ccc
+  0x000000000f121c63: cmpq   $0x0,0x330(%r9)
+  0x000000000f121c6e: jne    0x000000000f121c87
+  0x000000000f121c70: mov    %rdi,0x330(%r9)
+  0x000000000f121c77: movq   $0x1,0x338(%r9)
+  0x000000000f121c82: jmpq   0x000000000f121ccc
+  0x000000000f121c87: cmpq   $0x0,0x340(%r9)
+  0x000000000f121c92: jne    0x000000000f121cab
+  0x000000000f121c94: mov    %rdi,0x340(%r9)
+  0x000000000f121c9b: movq   $0x1,0x348(%r9)
+  0x000000000f121ca6: jmpq   0x000000000f121ccc
+  0x000000000f121cab: jmpq   0x000000000f121ccc
+  0x000000000f121cb0: movabs $0x82d8078,%r9     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121cba: subq   $0x1,0x328(%r9)
+  0x000000000f121cc2: jmpq   0x000000000f1225c2
+  0x000000000f121cc7: jmpq   0x000000000f121ccc
+  0x000000000f121ccc: mov    %rsi,%rdx          ;*checkcast
+                                                ; - java.util.HashMap::putVal@114 (line 637)
+
+  0x000000000f121ccf: cmp    (%rdx),%rax        ; implicit exception: dispatches to 0x000000000f1225cb
+  0x000000000f121cd2: mov    %rdx,%r8
+  0x000000000f121cd5: movabs $0x82d8078,%r9     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121cdf: mov    0x8(%r8),%r8d
+  0x000000000f121ce3: cmp    0x360(%r9),%r8
+  0x000000000f121cea: jne    0x000000000f121cf9
+  0x000000000f121cec: addq   $0x1,0x368(%r9)
+  0x000000000f121cf4: jmpq   0x000000000f121d5f
+  0x000000000f121cf9: cmp    0x370(%r9),%r8
+  0x000000000f121d00: jne    0x000000000f121d0f
+  0x000000000f121d02: addq   $0x1,0x378(%r9)
+  0x000000000f121d0a: jmpq   0x000000000f121d5f
+  0x000000000f121d0f: cmpq   $0x0,0x360(%r9)
+  0x000000000f121d1a: jne    0x000000000f121d33
+  0x000000000f121d1c: mov    %r8,0x360(%r9)
+  0x000000000f121d23: movq   $0x1,0x368(%r9)
+  0x000000000f121d2e: jmpq   0x000000000f121d5f
+  0x000000000f121d33: cmpq   $0x0,0x370(%r9)
+  0x000000000f121d3e: jne    0x000000000f121d57
+  0x000000000f121d40: mov    %r8,0x370(%r9)
+  0x000000000f121d47: movq   $0x1,0x378(%r9)
+  0x000000000f121d52: jmpq   0x000000000f121d5f
+  0x000000000f121d57: addq   $0x1,0x358(%r9)
+  0x000000000f121d5f: mov    0x48(%rsp),%r8
+  0x000000000f121d64: mov    0x68(%rsp),%r9
+  0x000000000f121d69: mov    0x40(%rsp),%edi
+  0x000000000f121d6d: mov    0x50(%rsp),%rsi
+  0x000000000f121d72: mov    0x58(%rsp),%rcx    ;*invokevirtual putTreeVal
+                                                ; - java.util.HashMap::putVal@123 (line 637)
+
+  0x000000000f121d77: callq  0x000000000f0561a0  ; OopMap{[72]=Oop [88]=Oop off=2172}
+                                                ;*invokevirtual putTreeVal
+                                                ; - java.util.HashMap::putVal@123 (line 637)
+                                                ;   {optimized virtual_call}
+  0x000000000f121d7c: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121d86: incl   0x388(%r8)
+  0x000000000f121d8d: jmpq   0x000000000f122216  ;*goto
+                                                ; - java.util.HashMap::putVal@128 (line 637)
+
+  0x000000000f121d92: mov    $0x0,%edi          ;*aload
+                                                ; - java.util.HashMap::putVal@134 (line 640)
+
+  0x000000000f121d97: nop
+  0x000000000f121d98: mov    %edi,0x78(%rsp)
+  0x000000000f121d9c: mov    0x50(%rsp),%r9
+  0x000000000f121da1: mov    0x40(%rsp),%r8d
+  0x000000000f121da6: mov    0x18(%rsi),%ebx    ;*getfield next
+                                                ; - java.util.HashMap::putVal@136 (line 640)
+                                                ; implicit exception: dispatches to 0x000000000f1225d0
+  0x000000000f121da9: mov    %rbx,0x80(%rsp)
+  0x000000000f121db1: cmp    $0x0,%rbx
+  0x000000000f121db5: movabs $0x82d8078,%rdx    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121dbf: movabs $0x3a0,%rax
+  0x000000000f121dc9: jne    0x000000000f121dd9
+  0x000000000f121dcf: movabs $0x3b0,%rax
+  0x000000000f121dd9: mov    (%rdx,%rax,1),%rcx
+  0x000000000f121ddd: lea    0x1(%rcx),%rcx
+  0x000000000f121de1: mov    %rcx,(%rdx,%rax,1)
+  0x000000000f121de5: je     0x000000000f122009  ;*ifnonnull
+                                                ; - java.util.HashMap::putVal@142 (line 640)
+
+  0x000000000f121deb: mov    0xc(%rbx),%edx     ;*getfield hash
+                                                ; - java.util.HashMap::putVal@177 (line 646)
+                                                ; implicit exception: dispatches to 0x000000000f1225d5
+  0x000000000f121dee: cmp    %r8d,%edx
+  0x000000000f121df1: movabs $0x82d8078,%rdx    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121dfb: movabs $0x458,%rsi
+  0x000000000f121e05: jne    0x000000000f121e15
+  0x000000000f121e0b: movabs $0x468,%rsi
+  0x000000000f121e15: mov    (%rdx,%rsi,1),%rax
+  0x000000000f121e19: lea    0x1(%rax),%rax
+  0x000000000f121e1d: mov    %rax,(%rdx,%rsi,1)
+  0x000000000f121e21: jne    0x000000000f121f7d  ;*if_icmpne
+                                                ; - java.util.HashMap::putVal@181 (line 646)
+
+  0x000000000f121e27: mov    0x10(%rbx),%edx    ;*getfield key
+                                                ; - java.util.HashMap::putVal@186 (line 646)
+
+  0x000000000f121e2a: cmp    %r9,%rdx
+  0x000000000f121e2d: movabs $0x82d8078,%rsi    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121e37: movabs $0x478,%rax
+  0x000000000f121e41: je     0x000000000f121e51
+  0x000000000f121e47: movabs $0x488,%rax
+  0x000000000f121e51: mov    (%rsi,%rax,1),%rcx
+  0x000000000f121e55: lea    0x1(%rcx),%rcx
+  0x000000000f121e59: mov    %rcx,(%rsi,%rax,1)
+  0x000000000f121e5d: je     0x000000000f121fde  ;*if_acmpeq
+                                                ; - java.util.HashMap::putVal@193 (line 646)
+
+  0x000000000f121e63: cmp    $0x0,%r9
+  0x000000000f121e67: movabs $0x82d8078,%rsi    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121e71: movabs $0x498,%rax
+  0x000000000f121e7b: je     0x000000000f121e8b
+  0x000000000f121e81: movabs $0x4a8,%rax
+  0x000000000f121e8b: mov    (%rsi,%rax,1),%rcx
+  0x000000000f121e8f: lea    0x1(%rcx),%rcx
+  0x000000000f121e93: mov    %rcx,(%rsi,%rax,1)
+  0x000000000f121e97: je     0x000000000f121f7d  ;*ifnull
+                                                ; - java.util.HashMap::putVal@197 (line 646)
+
+  0x000000000f121e9d: cmp    (%r9),%rax         ; implicit exception: dispatches to 0x000000000f1225da
+  0x000000000f121ea0: mov    %r9,%rsi
+  0x000000000f121ea3: movabs $0x82d8078,%rax    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121ead: mov    0x8(%rsi),%esi
+  0x000000000f121eb0: cmp    0x4c0(%rax),%rsi
+  0x000000000f121eb7: jne    0x000000000f121ec6
+  0x000000000f121eb9: addq   $0x1,0x4c8(%rax)
+  0x000000000f121ec1: jmpq   0x000000000f121f2c
+  0x000000000f121ec6: cmp    0x4d0(%rax),%rsi
+  0x000000000f121ecd: jne    0x000000000f121edc
+  0x000000000f121ecf: addq   $0x1,0x4d8(%rax)
+  0x000000000f121ed7: jmpq   0x000000000f121f2c
+  0x000000000f121edc: cmpq   $0x0,0x4c0(%rax)
+  0x000000000f121ee7: jne    0x000000000f121f00
+  0x000000000f121ee9: mov    %rsi,0x4c0(%rax)
+  0x000000000f121ef0: movq   $0x1,0x4c8(%rax)
+  0x000000000f121efb: jmpq   0x000000000f121f2c
+  0x000000000f121f00: cmpq   $0x0,0x4d0(%rax)
+  0x000000000f121f0b: jne    0x000000000f121f24
+  0x000000000f121f0d: mov    %rsi,0x4d0(%rax)
+  0x000000000f121f14: movq   $0x1,0x4d8(%rax)
+  0x000000000f121f1f: jmpq   0x000000000f121f2c
+  0x000000000f121f24: addq   $0x1,0x4b8(%rax)
+  0x000000000f121f2c: mov    %rdx,%r8
+  0x000000000f121f2f: mov    %r9,%rdx           ;*invokevirtual equals
+                                                ; - java.util.HashMap::putVal@203 (line 647)
+
+  0x000000000f121f32: nop
+  0x000000000f121f33: nop
+  0x000000000f121f34: nop
+  0x000000000f121f35: movabs $0xffffffffffffffff,%rax
+  0x000000000f121f3f: callq  0x000000000f0563e0  ; OopMap{[72]=Oop [88]=Oop [104]=Oop [80]=Oop [128]=Oop off=2628}
+                                                ;*invokevirtual equals
+                                                ; - java.util.HashMap::putVal@203 (line 647)
+                                                ;   {virtual_call}
+  0x000000000f121f44: cmp    $0x0,%eax
+  0x000000000f121f47: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121f51: movabs $0x4e8,%r9
+  0x000000000f121f5b: je     0x000000000f121f6b
+  0x000000000f121f61: movabs $0x4f8,%r9
+  0x000000000f121f6b: mov    (%r8,%r9,1),%rdi
+  0x000000000f121f6f: lea    0x1(%rdi),%rdi
+  0x000000000f121f73: mov    %rdi,(%r8,%r9,1)
+  0x000000000f121f77: jne    0x000000000f121feb  ;*ifeq
+                                                ; - java.util.HashMap::putVal@206 (line 647)
+
+  0x000000000f121f7d: mov    0x78(%rsp),%edi
+  0x000000000f121f81: inc    %edi
+  0x000000000f121f83: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121f8d: mov    0xe0(%r8),%r9d
+  0x000000000f121f94: add    $0x8,%r9d
+  0x000000000f121f98: mov    %r9d,0xe0(%r8)
+  0x000000000f121f9f: movabs $0x811c540,%r8     ;   {metadata({method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121fa9: and    $0xfff8,%r9d
+  0x000000000f121fb0: cmp    $0x0,%r9d
+  0x000000000f121fb4: je     0x000000000f1225df  ; OopMap{[72]=Oop [88]=Oop [104]=Oop [80]=Oop [128]=Oop off=2746}
+                                                ;*goto
+                                                ; - java.util.HashMap::putVal@219 (line 639)
+
+  0x000000000f121fba: test   %eax,-0xee01ec0(%rip)        # 0x0000000000320100
+                                                ;   {poll}
+  0x000000000f121fc0: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121fca: incl   0x520(%r8)
+  0x000000000f121fd1: mov    0x80(%rsp),%rsi
+  0x000000000f121fd9: jmpq   0x000000000f121d98  ;*goto
+                                                ; - java.util.HashMap::putVal@219 (line 639)
+
+  0x000000000f121fde: mov    0x80(%rsp),%rax
+  0x000000000f121fe6: jmpq   0x000000000f122216  ;*aload
+                                                ; - java.util.HashMap::putVal@222 (line 652)
+
+  0x000000000f121feb: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f121ff5: incl   0x508(%r8)
+  0x000000000f121ffc: mov    0x80(%rsp),%rax
+  0x000000000f122004: jmpq   0x000000000f122216  ;*goto
+                                                ; - java.util.HashMap::putVal@209 (line 648)
+
+  0x000000000f122009: mov    %rsi,0x88(%rsp)
+  0x000000000f122011: mov    0x48(%rsp),%rdx
+  0x000000000f122016: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f122020: mov    0x8(%rdx),%edx
+  0x000000000f122023: cmp    0x3c8(%r8),%rdx
+  0x000000000f12202a: jne    0x000000000f122039
+  0x000000000f12202c: addq   $0x1,0x3d0(%r8)
+  0x000000000f122034: jmpq   0x000000000f12209f
+  0x000000000f122039: cmp    0x3d8(%r8),%rdx
+  0x000000000f122040: jne    0x000000000f12204f
+  0x000000000f122042: addq   $0x1,0x3e0(%r8)
+  0x000000000f12204a: jmpq   0x000000000f12209f
+  0x000000000f12204f: cmpq   $0x0,0x3c8(%r8)
+  0x000000000f12205a: jne    0x000000000f122073
+  0x000000000f12205c: mov    %rdx,0x3c8(%r8)
+  0x000000000f122063: movq   $0x1,0x3d0(%r8)
+  0x000000000f12206e: jmpq   0x000000000f12209f
+  0x000000000f122073: cmpq   $0x0,0x3d8(%r8)
+  0x000000000f12207e: jne    0x000000000f122097
+  0x000000000f122080: mov    %rdx,0x3d8(%r8)
+  0x000000000f122087: movq   $0x1,0x3e0(%r8)
+  0x000000000f122092: jmpq   0x000000000f12209f
+  0x000000000f122097: addq   $0x1,0x3c0(%r8)
+  0x000000000f12209f: mov    0x40(%rsp),%r8d
+  0x000000000f1220a4: mov    0x58(%rsp),%rdi
+  0x000000000f1220a9: movabs $0x0,%rsi          ;   {oop(NULL)}
+  0x000000000f1220b3: mov    0x48(%rsp),%rdx    ;*invokevirtual newNode
+                                                ; - java.util.HashMap::putVal@152 (line 641)
+
+  0x000000000f1220b8: nop
+  0x000000000f1220b9: nop
+  0x000000000f1220ba: nop
+  0x000000000f1220bb: nop
+  0x000000000f1220bc: nop
+  0x000000000f1220bd: movabs $0xffffffffffffffff,%rax
+  0x000000000f1220c7: callq  0x000000000f0563e0  ; OopMap{[72]=Oop [88]=Oop [128]=Oop [104]=Oop [136]=Oop off=3020}
+                                                ;*invokevirtual newNode
+                                                ; - java.util.HashMap::putVal@152 (line 641)
+                                                ;   {virtual_call}
+  0x000000000f1220cc: mov    0x88(%rsp),%rsi
+  0x000000000f1220d4: mov    %rax,%r10
+  0x000000000f1220d7: mov    %r10d,0x18(%rsi)
+  0x000000000f1220db: shr    $0x9,%rsi
+  0x000000000f1220df: movabs $0x2d05000,%r8
+  0x000000000f1220e9: movb   $0x0,(%rsi,%r8,1)  ;*putfield next
+                                                ; - java.util.HashMap::putVal@155 (line 641)
+
+  0x000000000f1220ee: mov    0x78(%rsp),%edi
+  0x000000000f1220f2: cmp    $0x7,%edi
+  0x000000000f1220f5: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f1220ff: movabs $0x3f0,%r9
+  0x000000000f122109: jl     0x000000000f122119
+  0x000000000f12210f: movabs $0x400,%r9
+  0x000000000f122119: mov    (%r8,%r9,1),%rdx
+  0x000000000f12211d: lea    0x1(%rdx),%rdx
+  0x000000000f122121: mov    %rdx,(%r8,%r9,1)
+  0x000000000f122125: jge    0x000000000f122138  ;*if_icmplt
+                                                ; - java.util.HashMap::putVal@162 (line 642)
+
+  0x000000000f12212b: mov    0x80(%rsp),%rax
+  0x000000000f122133: jmpq   0x000000000f122216  ;*aload
+                                                ; - java.util.HashMap::putVal@222 (line 652)
+
+  0x000000000f122138: mov    0x68(%rsp),%rbx
+  0x000000000f12213d: mov    0x40(%rsp),%r9d
+  0x000000000f122142: mov    0x48(%rsp),%rdx
+  0x000000000f122147: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f122151: mov    0x8(%rdx),%edx
+  0x000000000f122154: cmp    0x418(%r8),%rdx
+  0x000000000f12215b: jne    0x000000000f12216a
+  0x000000000f12215d: addq   $0x1,0x420(%r8)
+  0x000000000f122165: jmpq   0x000000000f1221d0
+  0x000000000f12216a: cmp    0x428(%r8),%rdx
+  0x000000000f122171: jne    0x000000000f122180
+  0x000000000f122173: addq   $0x1,0x430(%r8)
+  0x000000000f12217b: jmpq   0x000000000f1221d0
+  0x000000000f122180: cmpq   $0x0,0x418(%r8)
+  0x000000000f12218b: jne    0x000000000f1221a4
+  0x000000000f12218d: mov    %rdx,0x418(%r8)
+  0x000000000f122194: movq   $0x1,0x420(%r8)
+  0x000000000f12219f: jmpq   0x000000000f1221d0
+  0x000000000f1221a4: cmpq   $0x0,0x428(%r8)
+  0x000000000f1221af: jne    0x000000000f1221c8
+  0x000000000f1221b1: mov    %rdx,0x428(%r8)
+  0x000000000f1221b8: movq   $0x1,0x430(%r8)
+  0x000000000f1221c3: jmpq   0x000000000f1221d0
+  0x000000000f1221c8: addq   $0x1,0x410(%r8)
+  0x000000000f1221d0: mov    %rbx,%r8
+  0x000000000f1221d3: mov    0x48(%rsp),%rdx    ;*invokevirtual treeifyBin
+                                                ; - java.util.HashMap::putVal@169 (line 643)
+
+  0x000000000f1221d8: nop
+  0x000000000f1221d9: nop
+  0x000000000f1221da: nop
+  0x000000000f1221db: nop
+  0x000000000f1221dc: nop
+  0x000000000f1221dd: nop
+  0x000000000f1221de: nop
+  0x000000000f1221df: callq  0x000000000f0561a0  ; OopMap{[72]=Oop [88]=Oop [128]=Oop off=3300}
+                                                ;*invokevirtual treeifyBin
+                                                ; - java.util.HashMap::putVal@169 (line 643)
+                                                ;   {optimized virtual_call}
+  0x000000000f1221e4: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f1221ee: incl   0x440(%r8)
+  0x000000000f1221f5: mov    0x80(%rsp),%rax
+  0x000000000f1221fd: jmpq   0x000000000f122216  ;*goto
+                                                ; - java.util.HashMap::putVal@172 (line 643)
+
+  0x000000000f122202: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f12220c: incl   0x2c0(%r8)
+  0x000000000f122213: mov    %rsi,%rax          ;*goto
+                                                ; - java.util.HashMap::putVal@101 (line 635)
+
+  0x000000000f122216: cmp    $0x0,%rax
+  0x000000000f12221a: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f122224: movabs $0x538,%rdx
+  0x000000000f12222e: je     0x000000000f12223e
+  0x000000000f122234: movabs $0x548,%rdx
+  0x000000000f12223e: mov    (%r8,%rdx,1),%rsi
+  0x000000000f122242: lea    0x1(%rsi),%rsi
+  0x000000000f122246: mov    %rsi,(%r8,%rdx,1)
+  0x000000000f12224a: jne    0x000000000f1222b0  ;*ifnull
+                                                ; - java.util.HashMap::putVal@224 (line 652)
+
+  0x000000000f122250: mov    0x48(%rsp),%rdx
+  0x000000000f122255: mov    0x18(%rdx),%r8d    ;*getfield modCount
+                                                ; - java.util.HashMap::putVal@261 (line 660)
+
+  0x000000000f122259: inc    %r8d
+  0x000000000f12225c: mov    %r8d,0x18(%rdx)    ;*putfield modCount
+                                                ; - java.util.HashMap::putVal@266 (line 660)
+
+  0x000000000f122260: mov    0x14(%rdx),%r8d    ;*getfield size
+                                                ; - java.util.HashMap::putVal@271 (line 661)
+
+  0x000000000f122264: inc    %r8d
+  0x000000000f122267: mov    %r8d,0x14(%rdx)    ;*putfield size
+                                                ; - java.util.HashMap::putVal@277 (line 661)
+
+  0x000000000f12226b: mov    0x1c(%rdx),%esi    ;*getfield threshold
+                                                ; - java.util.HashMap::putVal@281 (line 661)
+
+  0x000000000f12226e: cmp    %esi,%r8d
+  0x000000000f122271: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f12227b: movabs $0x5c8,%rsi
+  0x000000000f122285: jle    0x000000000f122295
+  0x000000000f12228b: movabs $0x5d8,%rsi
+  0x000000000f122295: mov    (%r8,%rsi,1),%rdi
+  0x000000000f122299: lea    0x1(%rdi),%rdi
+  0x000000000f12229d: mov    %rdi,(%r8,%rsi,1)
+  0x000000000f1222a1: jg     0x000000000f122413  ;*if_icmple
+                                                ; - java.util.HashMap::putVal@284 (line 661)
+
+  0x000000000f1222a7: mov    0x60(%rsp),%ecx
+  0x000000000f1222ab: jmpq   0x000000000f1224b5  ;*aload_0
+                                                ; - java.util.HashMap::putVal@292 (line 663)
+
+  0x000000000f1222b0: mov    0x44(%rsp),%esi
+  0x000000000f1222b4: mov    0x48(%rsp),%rdx
+  0x000000000f1222b9: mov    0x14(%rax),%edi    ;*getfield value
+                                                ; - java.util.HashMap::putVal@229 (line 653)
+                                                ; implicit exception: dispatches to 0x000000000f1225f6
+  0x000000000f1222bc: cmp    $0x0,%esi
+  0x000000000f1222bf: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f1222c9: movabs $0x558,%rsi
+  0x000000000f1222d3: je     0x000000000f1222e3
+  0x000000000f1222d9: movabs $0x568,%rsi
+  0x000000000f1222e3: mov    (%r8,%rsi,1),%rbx
+  0x000000000f1222e7: lea    0x1(%rbx),%rbx
+  0x000000000f1222eb: mov    %rbx,(%r8,%rsi,1)
+  0x000000000f1222ef: je     0x000000000f12232f  ;*ifeq
+                                                ; - java.util.HashMap::putVal@236 (line 654)
+
+  0x000000000f1222f5: cmp    $0x0,%rdi
+  0x000000000f1222f9: movabs $0x82d8078,%r8     ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f122303: movabs $0x578,%rsi
+  0x000000000f12230d: jne    0x000000000f12231d
+  0x000000000f122313: movabs $0x588,%rsi
+  0x000000000f12231d: mov    (%r8,%rsi,1),%rbx
+  0x000000000f122321: lea    0x1(%rbx),%rbx
+  0x000000000f122325: mov    %rbx,(%r8,%rsi,1)
+  0x000000000f122329: jne    0x000000000f122351  ;*ifnonnull
+                                                ; - java.util.HashMap::putVal@241 (line 654)
+
+  0x000000000f12232f: mov    0x58(%rsp),%r8
+  0x000000000f122334: mov    %r8,%r10
+  0x000000000f122337: mov    %r10d,0x14(%rax)
+  0x000000000f12233b: mov    %rax,%r8
+  0x000000000f12233e: shr    $0x9,%r8
+  0x000000000f122342: movabs $0x2d05000,%rsi
+  0x000000000f12234c: movb   $0x0,(%r8,%rsi,1)  ;*putfield value
+                                                ; - java.util.HashMap::putVal@247 (line 655)
+
+  0x000000000f122351: mov    %rdi,0x90(%rsp)
+  0x000000000f122359: mov    %rdx,%r8
+  0x000000000f12235c: movabs $0x82d8078,%rsi    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f122366: mov    0x8(%r8),%r8d
+  0x000000000f12236a: cmp    0x5a0(%rsi),%r8
+  0x000000000f122371: jne    0x000000000f122380
+  0x000000000f122373: addq   $0x1,0x5a8(%rsi)
+  0x000000000f12237b: jmpq   0x000000000f1223e6
+  0x000000000f122380: cmp    0x5b0(%rsi),%r8
+  0x000000000f122387: jne    0x000000000f122396
+  0x000000000f122389: addq   $0x1,0x5b8(%rsi)
+  0x000000000f122391: jmpq   0x000000000f1223e6
+  0x000000000f122396: cmpq   $0x0,0x5a0(%rsi)
+  0x000000000f1223a1: jne    0x000000000f1223ba
+  0x000000000f1223a3: mov    %r8,0x5a0(%rsi)
+  0x000000000f1223aa: movq   $0x1,0x5a8(%rsi)
+  0x000000000f1223b5: jmpq   0x000000000f1223e6
+  0x000000000f1223ba: cmpq   $0x0,0x5b0(%rsi)
+  0x000000000f1223c5: jne    0x000000000f1223de
+  0x000000000f1223c7: mov    %r8,0x5b0(%rsi)
+  0x000000000f1223ce: movq   $0x1,0x5b8(%rsi)
+  0x000000000f1223d9: jmpq   0x000000000f1223e6
+  0x000000000f1223de: addq   $0x1,0x598(%rsi)
+  0x000000000f1223e6: mov    %rax,%r8           ;*invokevirtual afterNodeAccess
+                                                ; - java.util.HashMap::putVal@253 (line 656)
+
+  0x000000000f1223e9: nop
+  0x000000000f1223ea: nop
+  0x000000000f1223eb: nop
+  0x000000000f1223ec: nop
+  0x000000000f1223ed: movabs $0xffffffffffffffff,%rax
+  0x000000000f1223f7: callq  0x000000000f0563e0  ; OopMap{[144]=Oop off=3836}
+                                                ;*invokevirtual afterNodeAccess
+                                                ; - java.util.HashMap::putVal@253 (line 656)
+                                                ;   {virtual_call}
+  0x000000000f1223fc: mov    0x90(%rsp),%rax
+  0x000000000f122404: add    $0xa0,%rsp
+  0x000000000f12240b: pop    %rbp
+  0x000000000f12240c: test   %eax,-0xee02312(%rip)        # 0x0000000000320100
+                                                ;   {poll_return}
+  0x000000000f122412: retq                      ;*areturn
+                                                ; - java.util.HashMap::putVal@258 (line 657)
+
+  0x000000000f122413: mov    %rdx,%rsi
+  0x000000000f122416: movabs $0x82d8078,%rdi    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f122420: mov    0x8(%rsi),%esi
+  0x000000000f122423: cmp    0x5f0(%rdi),%rsi
+  0x000000000f12242a: jne    0x000000000f122439
+  0x000000000f12242c: addq   $0x1,0x5f8(%rdi)
+  0x000000000f122434: jmpq   0x000000000f12249f
+  0x000000000f122439: cmp    0x600(%rdi),%rsi
+  0x000000000f122440: jne    0x000000000f12244f
+  0x000000000f122442: addq   $0x1,0x608(%rdi)
+  0x000000000f12244a: jmpq   0x000000000f12249f
+  0x000000000f12244f: cmpq   $0x0,0x5f0(%rdi)
+  0x000000000f12245a: jne    0x000000000f122473
+  0x000000000f12245c: mov    %rsi,0x5f0(%rdi)
+  0x000000000f122463: movq   $0x1,0x5f8(%rdi)
+  0x000000000f12246e: jmpq   0x000000000f12249f
+  0x000000000f122473: cmpq   $0x0,0x600(%rdi)
+  0x000000000f12247e: jne    0x000000000f122497
+  0x000000000f122480: mov    %rsi,0x600(%rdi)
+  0x000000000f122487: movq   $0x1,0x608(%rdi)
+  0x000000000f122492: jmpq   0x000000000f12249f
+  0x000000000f122497: addq   $0x1,0x5e8(%rdi)
+  0x000000000f12249f: mov    %rdx,%rsi
+  0x000000000f1224a2: mov    %rsi,%rdx          ;*invokevirtual resize
+                                                ; - java.util.HashMap::putVal@288 (line 662)
+
+  0x000000000f1224a5: nop
+  0x000000000f1224a6: nop
+  0x000000000f1224a7: callq  0x000000000f0561a0  ; OopMap{[72]=Oop off=4012}
+                                                ;*invokevirtual resize
+                                                ; - java.util.HashMap::putVal@288 (line 662)
+                                                ;   {optimized virtual_call}
+  0x000000000f1224ac: mov    0x60(%rsp),%ecx
+  0x000000000f1224b0: mov    0x48(%rsp),%rdx
+  0x000000000f1224b5: mov    %rdx,%r8
+  0x000000000f1224b8: movabs $0x82d8078,%rsi    ;   {metadata(method data for {method} {0x000000000811c548} &apos;putVal&apos; &apos;(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;&apos; in &apos;java/util/HashMap&apos;)}
+  0x000000000f1224c2: mov    0x8(%r8),%r8d
+  0x000000000f1224c6: cmp    0x620(%rsi),%r8
+  0x000000000f1224cd: jne    0x000000000f1224dc
+  0x000000000f1224cf: addq   $0x1,0x628(%rsi)
+  0x000000000f1224d7: jmpq   0x000000000f122542
+  0x000000000f1224dc: cmp    0x630(%rsi),%r8
+  0x000000000f1224e3: jne    0x000000000f1224f2
+  0x000000000f1224e5: addq   $0x1,0x638(%rsi)
+  0x000000000f1224ed: jmpq   0x000000000f122542
+  0x000000000f1224f2: cmpq   $0x0,0x620(%rsi)
+  0x000000000f1224fd: jne    0x000000000f122516
+  0x000000000f1224ff: mov    %r8,0x620(%rsi)
+  0x000000000f122506: movq   $0x1,0x628(%rsi)
+  0x000000000f122511: jmpq   0x000000000f122542
+  0x000000000f122516: cmpq   $0x0,0x630(%rsi)
+  0x000000000f122521: jne    0x000000000f12253a
+  0x000000000f122523: mov    %r8,0x630(%rsi)
+  0x000000000f12252a: movq   $0x1,0x638(%rsi)
+  0x000000000f122535: jmpq   0x000000000f122542
+  0x000000000f12253a: addq   $0x1,0x618(%rsi)
+  0x000000000f122542: mov    %rcx,%r8           ;*invokevirtual afterNodeInsertion
+                                                ; - java.util.HashMap::putVal@295 (line 663)
+
+  0x000000000f122545: movabs $0xffffffffffffffff,%rax
+  0x000000000f12254f: callq  0x000000000f0563e0  ; OopMap{off=4180}
+                                                ;*invokevirtual afterNodeInsertion
+                                                ; - java.util.HashMap::putVal@295 (line 663)
+                                                ;   {virtual_call}
+  0x000000000f122554: movabs $0x0,%rax          ;   {oop(NULL)}
+  0x000000000f12255e: add    $0xa0,%rsp
+  0x000000000f122565: pop    %rbp
+  0x000000000f122566: test   %eax,-0xee0246c(%rip)        # 0x0000000000320100
+                                                ;   {poll_return}
+  0x000000000f12256c: retq   
+  0x000000000f12256d: mov    %rbx,0x8(%rsp)
+  0x000000000f122572: movq   $0xffffffffffffffff,(%rsp)
+  0x000000000f12257a: callq  0x000000000f11b060  ; OopMap{rdx=Oop [72]=Oop r9=Oop [80]=Oop rdi=Oop off=4223}
+                                                ;*synchronization entry
+                                                ; - java.util.HashMap::putVal@-1 (line 627)
+                                                ;   {runtime_call}
+  0x000000000f12257f: jmpq   0x000000000f121570
+  0x000000000f122584: callq  0x000000000f116940  ; OopMap{rdx=Oop [72]=Oop r9=Oop [80]=Oop rdi=Oop rbx=Oop off=4233}
+                                                ;*arraylength
+                                                ; - java.util.HashMap::putVal@12 (line 627)
+                                                ;   {runtime_call}
+  0x000000000f122589: callq  0x000000000f116940  ; OopMap{[88]=Oop [80]=Oop [72]=Oop r8=Oop off=4238}
+                                                ;*arraylength
+                                                ; - java.util.HashMap::putVal@26 (line 628)
+                                                ;   {runtime_call}
+  0x000000000f12258e: callq  0x000000000f116940  ; OopMap{[88]=Oop [80]=Oop [72]=Oop rbx=Oop off=4243}
+                                                ;*aaload
+                                                ; - java.util.HashMap::putVal@40 (line 629)
+                                                ;   {runtime_call}
+  0x000000000f122593: callq  0x000000000f116940  ; OopMap{[88]=Oop [80]=Oop [72]=Oop rbx=Oop off=4248}
+                                                ;*aaload
+                                                ; - java.util.HashMap::putVal@40 (line 629)
+                                                ;   {runtime_call}
+  0x000000000f122598: mov    %rax,(%rsp)
+  0x000000000f12259c: callq  0x000000000f115c00  ; OopMap{[88]=Oop [80]=Oop [72]=Oop rbx=Oop off=4257}
+                                                ;*aaload
+                                                ; - java.util.HashMap::putVal@40 (line 629)
+                                                ;   {runtime_call}
+  0x000000000f1225a1: mov    %r8,(%rsp)
+  0x000000000f1225a5: callq  0x000000000f115c00  ; OopMap{[72]=Oop rax=Oop rbx=Oop off=4266}
+                                                ;*aastore
+                                                ; - java.util.HashMap::putVal@59 (line 630)
+                                                ;   {runtime_call}
+  0x000000000f1225aa: callq  0x000000000f116940  ; OopMap{[72]=Oop rax=Oop off=4271}
+                                                ;*aastore
+                                                ; - java.util.HashMap::putVal@59 (line 630)
+                                                ;   {runtime_call}
+  0x000000000f1225af: mov    %rax,(%rsp)
+  0x000000000f1225b3: callq  0x000000000f118940  ; OopMap{[72]=Oop rax=Oop off=4280}
+                                                ;*aastore
+                                                ; - java.util.HashMap::putVal@59 (line 630)
+                                                ;   {runtime_call}
+  0x000000000f1225b8: callq  0x000000000f116940  ; OopMap{[72]=Oop rsi=Oop [88]=Oop [80]=Oop rbx=Oop off=4285}
+                                                ;*getfield hash
+                                                ; - java.util.HashMap::putVal@65 (line 633)
+                                                ;   {runtime_call}
+  0x000000000f1225bd: callq  0x000000000f116940  ; OopMap{[72]=Oop [88]=Oop r9=Oop [80]=Oop [104]=Oop [112]=Oop r8=Oop off=4290}
+                                                ;*invokevirtual equals
+                                                ; - java.util.HashMap::putVal@91 (line 634)
+                                                ;   {runtime_call}
+  0x000000000f1225c2: mov    %rsi,(%rsp)
+  0x000000000f1225c6: callq  0x000000000f118b80  ; OopMap{[72]=Oop [88]=Oop [104]=Oop [80]=Oop off=4299}
+                                                ;*checkcast
+                                                ; - java.util.HashMap::putVal@114 (line 637)
+                                                ;   {runtime_call}
+  0x000000000f1225cb: callq  0x000000000f116940  ; OopMap{[72]=Oop [88]=Oop [104]=Oop [80]=Oop rdx=Oop off=4304}
+                                                ;*invokevirtual putTreeVal
+                                                ; - java.util.HashMap::putVal@123 (line 637)
+                                                ;   {runtime_call}
+  0x000000000f1225d0: callq  0x000000000f116940  ; OopMap{[72]=Oop [88]=Oop [104]=Oop rsi=Oop r9=Oop [80]=Oop off=4309}
+                                                ;*getfield next
+                                                ; - java.util.HashMap::putVal@136 (line 640)
+                                                ;   {runtime_call}
+  0x000000000f1225d5: callq  0x000000000f116940  ; OopMap{[72]=Oop [88]=Oop [104]=Oop r9=Oop [80]=Oop rbx=Oop [128]=Oop off=4314}
+                                                ;*getfield hash
+                                                ; - java.util.HashMap::putVal@177 (line 646)
+                                                ;   {runtime_call}
+  0x000000000f1225da: callq  0x000000000f116940  ; OopMap{[72]=Oop [88]=Oop [104]=Oop r9=Oop [80]=Oop [128]=Oop rdx=Oop off=4319}
+                                                ;*invokevirtual equals
+                                                ; - java.util.HashMap::putVal@203 (line 647)
+                                                ;   {runtime_call}
+  0x000000000f1225df: mov    %r8,0x8(%rsp)
+  0x000000000f1225e4: movq   $0xdb,(%rsp)
+  0x000000000f1225ec: callq  0x000000000f11b060  ; OopMap{[72]=Oop [88]=Oop [104]=Oop [80]=Oop [128]=Oop off=4337}
+                                                ;*goto
+                                                ; - java.util.HashMap::putVal@219 (line 639)
+                                                ;   {runtime_call}
+  0x000000000f1225f1: jmpq   0x000000000f121fba
+  0x000000000f1225f6: callq  0x000000000f116940  ; OopMap{rdx=Oop [72]=Oop [88]=Oop rax=Oop off=4347}
+                                                ;*getfield value
+                                                ; - java.util.HashMap::putVal@229 (line 653)
+                                                ;   {runtime_call}
+  0x000000000f1225fb: nop
+  0x000000000f1225fc: nop
+  0x000000000f1225fd: mov    0x2a8(%r15),%rax
+  0x000000000f122604: movabs $0x0,%r10
+  0x000000000f12260e: mov    %r10,0x2a8(%r15)
+  0x000000000f122615: movabs $0x0,%r10
+  0x000000000f12261f: mov    %r10,0x2b0(%r15)
+  0x000000000f122626: add    $0xa0,%rsp
+  0x000000000f12262d: pop    %rbp
+  0x000000000f12262e: jmpq   0x000000000f1160a0  ;   {runtime_call}
+  0x000000000f122633: hlt    
+  0x000000000f122634: hlt    
+  0x000000000f122635: hlt    
+  0x000000000f122636: hlt    
+  0x000000000f122637: hlt    
+  0x000000000f122638: hlt    
+  0x000000000f122639: hlt    
+  0x000000000f12263a: hlt    
+  0x000000000f12263b: hlt    
+  0x000000000f12263c: hlt    
+  0x000000000f12263d: hlt    
+  0x000000000f12263e: hlt    
+  0x000000000f12263f: hlt    
+[Stub Code]
+  0x000000000f122640: nop                       ;   {no_reloc}
+  0x000000000f122641: nop
+  0x000000000f122642: nop
+  0x000000000f122643: nop
+  0x000000000f122644: nop
+  0x000000000f122645: movabs $0x0,%rbx          ;   {static_stub}
+  0x000000000f12264f: jmpq   0x000000000f12264f  ;   {runtime_call}
+  0x000000000f122654: nop
+  0x000000000f122655: movabs $0x0,%rbx          ;   {static_stub}
+  0x000000000f12265f: jmpq   0x000000000f12265f  ;   {runtime_call}
+  0x000000000f122664: nop
+  0x000000000f122665: movabs $0x0,%rbx          ;   {static_stub}
+  0x000000000f12266f: jmpq   0x000000000f12266f  ;   {runtime_call}
+  0x000000000f122674: nop
+  0x000000000f122675: movabs $0x0,%rbx          ;   {static_stub}
+  0x000000000f12267f: jmpq   0x000000000f12267f  ;   {runtime_call}
+  0x000000000f122684: nop
+  0x000000000f122685: movabs $0x0,%rbx          ;   {static_stub}
+  0x000000000f12268f: jmpq   0x000000000f12268f  ;   {runtime_call}
+  0x000000000f122694: nop
+  0x000000000f122695: movabs $0x0,%rbx          ;   {static_stub}
+  0x000000000f12269f: jmpq   0x000000000f12269f  ;   {runtime_call}
+  0x000000000f1226a4: nop
+  0x000000000f1226a5: movabs $0x0,%rbx          ;   {static_stub}
+  0x000000000f1226af: jmpq   0x000000000f1226af  ;   {runtime_call}
+  0x000000000f1226b4: nop
+  0x000000000f1226b5: movabs $0x0,%rbx          ;   {static_stub}
+  0x000000000f1226bf: jmpq   0x000000000f1226bf  ;   {runtime_call}
+  0x000000000f1226c4: nop
+  0x000000000f1226c5: movabs $0x0,%rbx          ;   {static_stub}
+  0x000000000f1226cf: jmpq   0x000000000f1226cf  ;   {runtime_call}
+  0x000000000f1226d4: nop
+  0x000000000f1226d5: movabs $0x0,%rbx          ;   {static_stub}
+  0x000000000f1226df: jmpq   0x000000000f1226df  ;   {runtime_call}
+[Exception Handler]
+  0x000000000f1226e4: callq  0x000000000f1187e0  ;   {runtime_call}
+  0x000000000f1226e9: mov    %rsp,-0x28(%rsp)
+  0x000000000f1226ee: sub    $0x80,%rsp
+  0x000000000f1226f5: mov    %rax,0x78(%rsp)
+  0x000000000f1226fa: mov    %rcx,0x70(%rsp)
+  0x000000000f1226ff: mov    %rdx,0x68(%rsp)
+  0x000000000f122704: mov    %rbx,0x60(%rsp)
+  0x000000000f122709: mov    %rbp,0x50(%rsp)
+  0x000000000f12270e: mov    %rsi,0x48(%rsp)
+  0x000000000f122713: mov    %rdi,0x40(%rsp)
+  0x000000000f122718: mov    %r8,0x38(%rsp)
+  0x000000000f12271d: mov    %r9,0x30(%rsp)
+  0x000000000f122722: mov    %r10,0x28(%rsp)
+  0x000000000f122727: mov    %r11,0x20(%rsp)
+  0x000000000f12272c: mov    %r12,0x18(%rsp)
+  0x000000000f122731: mov    %r13,0x10(%rsp)
+  0x000000000f122736: mov    %r14,0x8(%rsp)
+  0x000000000f12273b: mov    %r15,(%rsp)
+  0x000000000f12273f: movabs $0x278af20,%rcx    ;   {external_word}
+  0x000000000f122749: movabs $0xf1226e9,%rdx    ;   {internal_word}
+  0x000000000f122753: mov    %rsp,%r8
+  0x000000000f122756: and    $0xfffffffffffffff0,%rsp
+  0x000000000f12275a: callq  0x000000000244d370  ;   {runtime_call}
+  0x000000000f12275f: hlt    
+[Deopt Handler Code]
+  0x000000000f122760: movabs $0xf122760,%r10    ;   {section_word}
+  0x000000000f12276a: push   %r10
+  0x000000000f12276c: jmpq   0x000000000f057600  ;   {runtime_call}
+  0x000000000f122771: hlt    
+  0x000000000f122772: hlt    
+  0x000000000f122773: hlt    
+  0x000000000f122774: hlt    
+  0x000000000f122775: hlt    
+  0x000000000f122776: hlt    
+  0x000000000f122777: hlt    
+<nmethod compile_id='15' compiler='C1' level='3' entry='0x000000000f121500' size='8016' address='0x000000000f121290' relocation_offset='288' insts_offset='624' stub_offset='5040' scopes_data_offset='5360' scopes_pcs_offset='6368' dependencies_offset='7904' nul_chk_table_offset='7912' method='java/util/HashMap putVal (ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;' bytes='300' count='519' backedge_count='69' iicount='519' stamp='0.341'/>
+<tty_done stamp='0.343'/>
+</tty>
+<compilation_log thread='15784'>
+<start_compile_thread name='C1 CompilerThread2' thread='15784' process='13840' stamp='0.287'/>
+<task compile_id='12' method='java/lang/String indexOf (II)I' bytes='70' count='1059' backedge_count='64658' iicount='1059' level='2' stamp='0.288'>
+<phase name='buildIR' stamp='0.288'>
+<type id='707' name='int'/>
+<klass id='715' name='java/lang/String' flags='17'/>
+<method id='817' holder='715' name='indexOf' return='707' arguments='707 707' flags='1' bytes='70' iicount='1059'/>
+<parse method='817'  stamp='0.288'>
+<bc code='183' bci='66'/>
+<method id='819' holder='715' name='indexOfSupplementary' return='707' arguments='707 707' flags='2' bytes='71' iicount='1'/>
+<call method='819' instr='invokespecial'/>
+<inline_fail reason='callee is too large'/>
+<parse_done stamp='0.288'/>
+</parse>
+<phase name='optimize_blocks' stamp='0.288'>
+<phase_done name='optimize_blocks' stamp='0.288'/>
+</phase>
+<phase name='rangeCheckElimination' stamp='0.288'>
+<phase_done name='rangeCheckElimination' stamp='0.288'/>
+</phase>
+<phase name='optimize_null_checks' stamp='0.288'>
+<phase_done name='optimize_null_checks' stamp='0.288'/>
+</phase>
+<phase_done name='buildIR' stamp='0.288'/>
+</phase>
+<phase name='emit_lir' stamp='0.288'>
+<phase name='lirGeneration' stamp='0.288'>
+<phase_done name='lirGeneration' stamp='0.289'/>
+</phase>
+<phase name='linearScan' stamp='0.289'>
+<phase_done name='linearScan' stamp='0.289'/>
+</phase>
+<phase_done name='emit_lir' stamp='0.289'/>
+</phase>
+<phase name='codeemit' stamp='0.289'>
+<phase_done name='codeemit' stamp='0.289'/>
+</phase>
+<phase name='codeinstall' stamp='0.289'>
+<phase_done name='codeinstall' stamp='0.295'/>
+</phase>
+<code_cache total_blobs='241' nmethods='2' adapters='163' free_code_cache='250549824'/>
+<task_done success='1' nmsize='616' count='1059' backedge_count='64658' stamp='0.295'/>
+</task>
+<task compile_id='10' method='java/lang/String startsWith (Ljava/lang/String;I)Z' bytes='72' count='979' backedge_count='1397' iicount='979' level='3' stamp='0.295'>
+<phase name='buildIR' stamp='0.295'>
+<type id='701' name='boolean'/>
+<klass id='715' name='java/lang/String' flags='17'/>
+<type id='707' name='int'/>
+<method id='817' holder='715' name='startsWith' return='701' arguments='715 707' flags='1' bytes='72' iicount='979'/>
+<parse method='817'  stamp='0.295'>
+<parse_done stamp='0.295'/>
+</parse>
+<phase name='optimize_blocks' stamp='0.295'>
+<phase_done name='optimize_blocks' stamp='0.295'/>
+</phase>
+<phase name='rangeCheckElimination' stamp='0.295'>
+<phase_done name='rangeCheckElimination' stamp='0.295'/>
+</phase>
+<phase name='optimize_null_checks' stamp='0.295'>
+<phase_done name='optimize_null_checks' stamp='0.295'/>
+</phase>
+<phase_done name='buildIR' stamp='0.295'/>
+</phase>
+<phase name='emit_lir' stamp='0.295'>
+<phase name='lirGeneration' stamp='0.295'>
+<phase_done name='lirGeneration' stamp='0.295'/>
+</phase>
+<phase name='linearScan' stamp='0.295'>
+<phase_done name='linearScan' stamp='0.295'/>
+</phase>
+<phase_done name='emit_lir' stamp='0.295'/>
+</phase>
+<phase name='codeemit' stamp='0.295'>
+<phase_done name='codeemit' stamp='0.295'/>
+</phase>
+<phase name='codeinstall' stamp='0.295'>
+<phase_done name='codeinstall' stamp='0.303'/>
+</phase>
+<code_cache total_blobs='244' nmethods='3' adapters='163' free_code_cache='250547456'/>
+<task_done success='1' nmsize='816' count='979' backedge_count='1397' stamp='0.303'/>
+</task>
+<fragment>
+<![CDATA[
+<task compile_id='15' method='java/util/HashMap putVal (ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object;' bytes='300' count='512' backedge_count='69' iicount='512' level='3' stamp='0.303'>
+<phase name='buildIR' stamp='0.303'>
+<klass id='714' name='java/lang/Object' flags='1'/>
+<type id='707' name='int'/>
+<type id='701' name='boolean'/>
+<klass id='817' name='java/util/HashMap' flags='1'/>
+<method id='818' holder='817' name='putVal' return='714' arguments='707 714 714 701 701' flags='16' bytes='300' iicount='512'/>
+<parse method='818'  stamp='0.303'>
+<bc code='182' bci='20'/>
+<klass id='821' name='[Ljava/util/HashMap$Node;' flags='1040'/>
+<method id='822' holder='817' name='resize' return='821' flags='16' bytes='359' iicount='32'/>
+<call method='822' instr='invokevirtual'/>
+<inline_fail reason='callee is too large'/>
+<bc code='182' bci='56'/>
+<klass id='820' name='java/util/HashMap$Node' flags='8'/>
+<method id='824' holder='817' name='newNode' return='820' arguments='707 714 714 820' flags='0' bytes='13' iicount='356'/>
+<call method='824' instr='invokevirtual'/>
+<inline_fail reason='no static binding'/>
+<bc code='182' bci='91'/>
+<method id='825' holder='714' name='equals' return='701' arguments='714' flags='1' bytes='11' iicount='1'/>
+<call method='825' instr='invokevirtual'/>
+<inline_fail reason='no static binding'/>
+<bc code='182' bci='123'/>
+<klass id='826' name='java/util/HashMap$TreeNode' flags='24'/>
+<method id='827' holder='826' name='putTreeVal' return='826' arguments='817 821 707 714 714' flags='16' bytes='314' iicount='1'/>
+<call method='827' instr='invokevirtual'/>
+<inline_fail reason='not inlineable'/>
+<bc code='182' bci='152'/>
+<call method='824' instr='invokevirtual'/>
+<inline_fail reason='no static binding'/>
+<bc code='182' bci='169'/>
+<type id='709' name='void'/>
+<method id='828' holder='817' name='treeifyBin' return='709' arguments='821 707' flags='16' bytes='110' iicount='1'/>
+<call method='828' instr='invokevirtual'/>
+<inline_fail reason='callee is too large'/>
+<bc code='182' bci='203'/>
+<call method='825' instr='invokevirtual'/>
+<inline_fail reason='no static binding'/>
+<bc code='182' bci='253'/>
+<method id='830' holder='817' name='afterNodeAccess' return='709' arguments='820' flags='0' bytes='1' iicount='17'/>
+<call method='830' instr='invokevirtual'/>
+<inline_fail reason='no static binding'/>
+<bc code='182' bci='288'/>
+<call method='822' instr='invokevirtual'/>
+<inline_fail reason='callee is too large'/>
+<bc code='182' bci='295'/>
+<method id='831' holder='817' name='afterNodeInsertion' return='709' arguments='701' flags='0' bytes='1' iicount='361'/>
+<call method='831' instr='invokevirtual'/>
+<inline_fail reason='no static binding'/>
+<parse_done stamp='0.304'/>
+</parse>
+<phase name='optimize_blocks' stamp='0.304'>
+<phase_done name='optimize_blocks' stamp='0.304'/>
+</phase>
+<phase name='rangeCheckElimination' stamp='0.304'>
+<phase_done name='rangeCheckElimination' stamp='0.304'/>
+</phase>
+<phase name='optimize_null_checks' stamp='0.304'>
+<phase_done name='optimize_null_checks' stamp='0.304'/>
+</phase>
+<phase_done name='buildIR' stamp='0.304'/>
+</phase>
+<phase name='emit_lir' stamp='0.304'>
+<phase name='lirGeneration' stamp='0.304'>
+<phase_done name='lirGeneration' stamp='0.304'/>
+</phase>
+<phase name='linearScan' stamp='0.304'>
+<phase_done name='linearScan' stamp='0.305'/>
+</phase>
+<phase_done name='emit_lir' stamp='0.305'/>
+</phase>
+<phase name='codeemit' stamp='0.305'>
+<phase_done name='codeemit' stamp='0.305'/>
+</phase>
+<phase name='codeinstall' stamp='0.305'>
+]]>
+</fragment>
+</compilation_log>
+<compilation_log thread='11004'>
+<fragment>
+<![CDATA[
+<start_compile_thread name='C2 CompilerThread0' thread='11004' process='13840' stamp='0.286'/>
+]]>
+</fragment>
+</compilation_log>
+<compilation_log thread='14476'>
+<fragment>
+<![CDATA[
+<start_compile_thread name='C2 CompilerThread1' thread='14476' process='13840' stamp='0.286'/>
+]]>
+</fragment>
+</compilation_log>
+<hotspot_log_done stamp='0.346'/>
+</hotspot_log>
