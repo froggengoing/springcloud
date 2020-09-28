@@ -9,7 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="awesome-rabbit-pratise" />
         <module name="awesome-scala-practise" />
-        <module name="cloud-api-commons" />
+        <module name="awesome-mybatis-pratise" />
+        <module name="hello-mybatisplus-practise" />
         <module name="cloud-stream-rabbit-consumer8802" />
         <module name="cloud-nacos-config3300" />
         <module name="cloud-provider-paymentZK8004" />
@@ -18,25 +19,35 @@
         <module name="awe-algorithm-practise" />
         <module name="test-servlet" />
         <module name="awesome-springaop-example" />
+        <module name="hello-payment-ali" />
         <module name="awesome-netty-practice" />
         <module name="awesome-rabbitspring-practise" />
-        <module name="cloud-provider-paymentCS8006" />
+        <module name="hello-hbase-practise" />
         <module name="awe-pattern-practice" />
-        <module name="awesome-mybatis-pratise" />
+        <module name="hello-http-practise" />
+        <module name="cloud-api-commons" />
+        <module name="awesome-database-document" />
         <module name="awesome-kafka-pratise" />
         <module name="simple-webservice-practise" />
         <module name="cloud-consumer-orderFeignHystrix80" />
+        <module name="hello-guava-practise" />
         <module name="awesome-redis-pratise" />
+        <module name="cloud-consumer-orderOpenFeign80" />
+        <module name="shanjupay-common" />
         <module name="awesome-MongoDB-practice" />
+        <module name="awesome-rocketmq-alijava" />
         <module name="cloud-gateway-gateway9527" />
         <module name="springcloud-nacos-consumer" />
         <module name="cloud-nacos-discoveryserver9090" />
-        <module name="springcloud-sentinel-example" />
+        <module name="awesome-rocketmq-practise" />
+        <module name="awesome-rabbitmqspring-consumer" />
         <module name="cloud-eureka-server7002" />
         <module name="cloud-eureka-server7001" />
+        <module name="awesome-jdk-practice" />
+        <module name="awesome-rocketmq-alipractise" />
         <module name="cloud-consumer-orderZK80" />
         <module name="cloud-consumer-orderCS80" />
-        <module name="awesome-jdk-practice" />
+        <module name="cloud-provider-paymentCS8006" />
         <module name="cloud-consumer-hystrix-dashboard9001" />
         <module name="cloud-consumer-order80" />
         <module name="awesome-spring-example" />
@@ -47,9 +58,15 @@
         <module name="cloud-provider-hystrix-payment8001" />
         <module name="springcloud-nacos-config" />
         <module name="springboot-nacosconfig-example" />
+        <module name="awesome-rabbitspring-producer" />
         <module name="awesome-zookeeper-practice" />
-        <module name="cloud-consumer-orderOpenFeign80" />
+        <module name="springcloud-sentinel-example" />
       </profile>
     </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="shanjupay-common" options="-parameters -bootclasspath &quot;C:/Program Files/Java/jdk1.8.0_45/jre/lib/rt.jar;C:/Program Files/Java/jdk1.8.0_45/jre/lib/jce.jar&quot;" />
+    </option>
   </component>
 </project>

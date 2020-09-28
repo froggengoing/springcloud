@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/../0opensource/shanjupay-master/shanjupay-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/awe-algorithm-practise" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/awe-flink-practise" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/awe-pattern-practice" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/awesome-MongoDB-practice" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/awesome-database-document" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/awesome-jdk-practice" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/awesome-kafka-pratise" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/awesome-mybatis-pratise" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/awesome-netty-practice" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/awesome-rabbit-pratise" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/awesome-rabbitmqspring-consumer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/awesome-rabbitspring-practise" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/awesome-rabbitspring-producer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/awesome-redis-pratise" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/awesome-rocketmq-alijava" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/awesome-rocketmq-alipractise" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/awesome-rocketmq-practise" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/awesome-scala-practise" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/awesome-spring-example" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/awesome-springaop-example" charset="UTF-8" />
@@ -38,6 +45,11 @@
     <file url="file://$PROJECT_DIR$/cloud-provider-paymentZK8004" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-stream-rabbit-consumer8802" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-stream-rabbit-server8801" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hello-guava-practise" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hello-hbase-practise" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hello-http-practise" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hello-mybatisplus-practise" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hello-payment-ali" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/simple-webservice-practise" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-nacosconfig-example" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-nacos-config" charset="UTF-8" />
