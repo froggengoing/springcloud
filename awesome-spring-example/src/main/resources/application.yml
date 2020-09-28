@@ -1,3 +1,7 @@
+testmap:
+  map:
+    key: value1
+    key2: value2
 com:
   froggengo:
     test: testyml_up
@@ -12,6 +16,21 @@ spring:
       username: root
       password: 82878871
       driver-class-name: org.gjt.mm.mysql.Driver
+  ###配置redis
+  redis:
+    host: localhost
+    port:  6379
+    password: 82878871
+    #database: 0
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+  ################# 使用 Redis 存储 Session 设置 #################
+  # Redis|JDBC|Hazelcast|none
+  session:
+    store-type: Redis
 ---
 com:
   froggengo:

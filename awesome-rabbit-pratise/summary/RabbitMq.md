@@ -139,25 +139,39 @@
 
 10. 设置权限
 
+    > ```shell
     > 权限相关命令为：
-    >
+    > 
     > (1) 设置用户权限
-    >
+    > 
     > .\rabbitmqctl.bat   set_permissions  -p  VHostPath  User  ConfP  WriteP  ReadP
-    >
+    > 
     > (2) 查看(指定hostpath)所有用户的权限信息
-    >
+    > 
     > .\rabbitmqctl.bat   list_permissions  [-p  VHostPath]
-    >
+    > 
     > (3) 查看指定用户的权限信息
-    >
+    > 
     > .\rabbitmqctl.bat   list_user_permissions  User
-    >
+    > 
     > (4)  清除用户的权限信息
-    >
+    > 
     > .\rabbitmqctl.bat   clear_permissions  [-p VHostPath]  User
+    > ```
+    >
+    > 
 
 * [官方指令网址](https://www.rabbitmq.com/rabbitmqctl.8.html) 
+
+11. 消息轨迹插件
+
+    ```shell
+    
+    ```
+
+    
+
+12. 
 
 ### 集群 
 
@@ -856,6 +870,54 @@ public class RPCClient implements AutoCloseable {
 
 
 
+## 整合Springboot示例
+
+
+
+### [rabbitmq basicReject / basicNack / basicRecover区别](https://blog.csdn.net/fly_leopard/article/details/102821776)
+
+- ```html
+  channel.basicReject(deliveryTag, true);
+  ```
+
+​    basic.reject方法拒绝deliveryTag对应的消息，第二个参数是否requeue，true则重新入队列，否则丢弃或者进入死信队列。
+
+该方法reject后，该消费者还是会消费到该条被reject的消息。
+
+- ```html
+  channel.basicNack(deliveryTag, false, true);
+  ```
+
+​    basic.nack方法为不确认deliveryTag对应的消息，第二个参数是否应用于多消息，第三个参数是否requeue，与basic.reject区别就是同时支持多个消息，可以nack该消费者先前接收未ack的所有消息。nack后的消息也会被自己消费到。
+
+- ```html
+  channel.basicRecover(true);
+  ```
+
+​    basic.recover是否恢复消息到队列，参数是是否requeue，true则重新入队列，并且尽可能的将之前recover的消息投递给其他消费者消费，而不是自己再次消费。false则消息会重新被投递给自己。
+
+> [官网](https://www.rabbitmq.com/confirms.html#consumer-nacks-requeue) ：It is possible to reject or requeue multiple messages at once using the basic.nack method. This is what differentiates it from basic.reject. It accepts an additional parameter, multiple.
+
+### [RabbitMQ实现重试次数方法一-SpringRetry](https://www.jianshu.com/p/4904c609632f) 
+
+
+
+
+
+
+
+### 资料
+
+1. [RabbitMQ(三) RabbitMQ高级整合应用 ](https://www.cnblogs.com/niugang0920/p/13043708.html) 
+2. [RabbitMQ笔记十三：使用@RabbitListener注解消费消息](https://www.jianshu.com/p/382d6f609697)
+3. [@RabbitListener起作用的原理](https://blog.csdn.net/zidongxiangxi/article/details/100623548) 
+4. [Springboot整合RabbitMQ](https://www.cnblogs.com/your-Name/p/10394620.html)
+5. [AMQP协议详解与RABBITMQ，MQ消息队列的应用场景，如何避免消息丢失等消息队列常见问题](https://www.cnblogs.com/theRhyme/p/9578675.html) 
+6. [Spring Boot系列——死信队列](https://www.cnblogs.com/bigdataZJ/p/springboot-deadletter-queue.html) 
+7. [RabbitMQ整合Spring Booot【死信队列】](https://www.cnblogs.com/toov5/p/10288260.html)
+
+
+
 ## 笔记
 
 ### 持久性
@@ -1122,3 +1184,86 @@ channel.addConfirmListener(new ConfirmListener() {
 | RABBITMQ_PLUGINS_EXPAND_DIR   | $RABBITMQ_MNESIA_BASE/$RABBITMQ_NODENAME-plugins-expand |
 | RABBITMQ_ENABLED_PLUGINS_FILE | $RABBITMQ_HOME/etc/rabbitmq/enabled_plugins             |
 | RABBITMQ_PID_FILE             | $RABBITMQ_MNESIA_DIR.pid                                |
+
+
+
+## [spring-rabbit消费过程解析及AcknowledgeMode选择](https://blog.csdn.net/weixin_38380858/article/details/84963944)
+
+说明：本文内容来源于对`amqp-client`和`spring-rabbit`包源码的解读及`debug`，尽可能保证内容的准确性。*
+
+`rabbitmq`消费过程示意如下：
+![在这里插入图片描述](RabbitMq.assets/20181219222238485.png)
+图中首字母大写的看上去像类名的，如`ConsumerWorkService`，`MainLoop`，`WorkPoolRunnable`等，没错就是类名，可自行根据类名去查看相关源码。
+
+下面解释上图的含义。
+
+### 1. 启动流程
+
+- 通过`BeanPostProcessor`扫描所有的`bean`中存在的`@RabbitListener`注解及相应的`Method`；
+- 由`RabbitListenerContainerFactory`根据配置为每一个`@RabbitListener`注解创建一个`MessageListenerContainer`，持有`@RabbitListener`注解及`Method`信息；
+- 初始化`MessageListenerContainer`，主要是循环依次创建`consumer`（`AsyncMessageProcessingConsumer`类），启动`consumer`；
+- 创建`consumer`，过程包括：创建`AMQConnection`（仅第一次创建），创建`AMQChannel`（每个`consumer`都会创建），发送消费`queue`的请求（`basic.consume`），接收并处理消息；
+- `AMQConnection`持有连接到`rabbitmq server`的`Socket`，创建完成后启动`MainLoop`循环从`Socket`流中读取`Frame`，此时流中没有消息，因为`channel`还没创建完成；
+- 创建`AMQChannel`（一个`AMQConnection`中持有多个`AMQChannel`），并将创建完成的`channel`注册到`AMQConnection`持有的`ConsumerWorkService`，实际就是添加到`WorkPool`类的`Map`里面去，此时`Socket`流中也没有消息，因为`channel`还没有与`queue`绑定；
+- 创建完成的`AMQChannel`的代理返回给`consumer`，`consumer`通过`channel`发送消费`queue`的请求到`rabbitmq server`（绑定成功），此时还没开始处理消息，但`Socket`流中已经有消息，并且已经被`connection`读取到内存（即`BlockingQueue`）中，并且已经开始向`BlockingQueue`分发；
+- `consumer`启动循环，从`BlockingQueue`中取消息，利用`MessageListenerContainer`中持有的`Method`反射调用`@RabbitListener`注解方法处理消息。
+
+### 2. 消费流程
+
+- `rabbitmq server`往`Socket`流中写入字节。
+- `AMQConnection`启动一个`main loop thread`来跑`MainLoop`，不断从`Socket`流中读取字节转换成`Frame`对象，这是每个`connection`唯一的数据来源。
+
+Frame对象结构如下：
+![在这里插入图片描述](RabbitMq.assets/20181212024209650.png)
+`type`：指定当前`Frame`的类型，如`method(1)`、`message header(2)`、`message body(3)`、`heartbeat(8)`等；
+
+`channel`：`channel`的编号，从`0~n`排列，指定当前`Frame`需要交给哪个`channel`处理。`channel-0`为一类，`channel-n`为一类。`channel-0`是一个匿名类，用来处理特殊`Frame`，如`connection.start`。`channel-n`都是`ChannelN`类，由`ChannelManager`类统一管理。
+
+`payload`：当前`Frame`的具体内容。
+
+`consumer`启动后，`connection`读取到的`Frame`如上图所示（一个`consumer`的情况，多个`consumer`的`Frame`可能会交替）。从`basic.deliver`开始是消息的内容，每条消息分成三个`Frame`：第一个是`method`，`basic.deliver`代表这是一个消息，后面一定会再跟着两个`Frame`；第二个是`message header`；第三个是`message body`，`body`读取之后将三个`Frame`整合到一起转换成一条完整的`deliver`命令。
+
+- `AMQConnection`根据读取到的`Frame`中的`type`决定要怎么处理这个`Frame`：`heartbeat(8) do nothing`；其它的根据`channel`编号交给相应的`AMQChannel`去处理，（编号为`0`的是特殊的`channel`，消息相关的用的都是编号非`0`的`channel`），消息都会拿着这个编号到`ChannelManager`找对应的`ChannelN`处理。
+- `ChannelN`经过一系列中间过程由`Frame`（消息是三个`Frame`）得到了`Runnable`，将`(ChannelN, Runnable) put`到`ConsumerWorkService`持有的`WorkPool`里面的一个`Map>`里面去。这样这个`Runnable`就进入了与`ChannelN`对应的`BlockingQueue`（写死的`size=1000`）里面了。
+- `execute`一个`WorkPoolRunnable`，执行的任务是：从`WorkPool`中找出一个`ready`状态的`ChannelN`，把这个`ChannelN`设为`inProgress`状态，从对应的`BlockingQueue`中取最多`16`（写死的）个`Runnable`在`WorkPoolRunnable`的线程里依次执行（注意：此处不再另开线程，所以可能会堵塞当前线程，导致这个`ChannelN`长时间处于`inProgress`状态），执行完后将当前`ChannelN`状态改为`ready`，并在当前线程`execute`另一个`WorkPoolRunnable`。
+- `BlockingQueue`里面的`Runnable`执行的逻辑是：构造一个`Delivery put`到与`ChannelN`对应的`AsyncMessageProcessingConsumer`持有的`BlockingQueue`（`size=prefetchCount`可配置）里面去（如果消息处理速度太慢，`BlockingQueue`已满，此处会堵塞）。
+- 每个`AsyncMessageProcessingConsumer`都有一个独立的线程在循环从`BlockingQueue`一次读取一个`Delivery`转换成`Message`反射调用`@RabbitListener`注解方法来处理。
+
+### 3. 无ack消费模式与有ack消费模式对比
+
+根据以上对消费过程的分析，将无`ack`模式与`ack`模式进行对比。
+
+#### 无`ack`模式（`AcknowledgeMode.NONE`）
+
+##### `server`端行为
+
+- `rabbitmq server`默认推送的所有消息都已经消费成功，会不断地向消费端推送消息。
+- 因为`rabbitmq server`认为推送的消息已被成功消费，所以推送出去的消息不会暂存在`server`端。
+
+##### 消息丢失的风险
+
+当`BlockingQueue`堆满时（`BlockingQueue`一定会先满），`server`端推送消息会失败，然后断开`connection`。消费端从`Socket`读取`Frame`将会抛出`SocketException`，触发异常处理，`shutdown`掉`connection`和所有的`channel`，`channel shutdown`后`WorkPool`中的`channel`信息（包括`channel inProgress`,`channel ready`以及`Map`）全部清空，所以`BlockingQueue`中的数据会全部丢失。
+
+此外，服务重启时也需对内存中未处理完的消息做必要的处理，以免丢失。
+
+而在`rabbitmq server`，`connection`断掉后就没有消费者去消费这个`queue`，因此在`server`端会看到消息堆积的现象。
+
+#### 有`ack`模式（`AcknowledgeMode.AUTO`，`AcknowledgeMode.MANUAL`）
+
+`AcknowledgeMode.MANUAL`模式需要人为地获取到`channel`之后调用方法向`server`发送`ack`（或消费失败时的`nack`）信息。
+
+`AcknowledgeMode.AUTO`模式下，由`spring-rabbit`依据消息处理逻辑是否抛出异常自动发送`ack`（无异常）或`nack`（异常）到`server`端。
+
+##### `server`端行为
+
+- `rabbitmq server`推送给每个`channel`的消息数量有限制，会保证每个`channel`没有收到`ack`的消息数量不会超过`prefetchCount`。
+- `server`端会暂存没有收到`ack`的消息，等消费端`ack`后才会丢掉；如果收到消费端的`nack`（消费失败的标识）或`connection`断开没收到反馈，会将消息放回到原队列头部。
+
+这种模式不会丢消息，但效率较低，因为`server`端需要等收到消费端的答复之后才会继续推送消息，当然，推送消息和等待答复是异步的，可适当增大`prefetchCount`提高效率。
+
+注意，有`ack`的模式下，需要考虑`setDefaultRequeueRejected(false)`，否则当消费消息抛出异常没有`catch`住时，这条消息会被`rabbitmq`放回到`queue`头部，再被推送过来，然后再抛异常再放回…死循环了。设置`false`的作用是抛异常时不放回，而是直接丢弃，所以可能需要对这条消息做处理，以免丢失。更详细的配置参考[这里](https://blog.csdn.net/weixin_38380858/article/details/84258507)。
+
+#### 对比
+
+- 无`ack`模式：效率高，存在丢失大量消息的风险。
+- 有`ack`模式：效率低，不会丢消息。

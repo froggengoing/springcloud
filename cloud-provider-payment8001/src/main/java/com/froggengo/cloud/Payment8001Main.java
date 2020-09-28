@@ -7,10 +7,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration;
 import org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration;
 
-//@SpringBootApplication
-@SpringBootApplication(exclude = {EurekaClientAutoConfiguration.class, EurekaDiscoveryClientConfiguration.class})//测试mybatis
-//@EnableEurekaClient
-//@EnableDiscoveryClient
+@SpringBootApplication
+//@SpringBootApplication(exclude = {EurekaClientAutoConfiguration.class, EurekaDiscoveryClientConfiguration.class})//测试mybatis
+@EnableEurekaClient
+@EnableDiscoveryClient
 public class Payment8001Main {
     public static void main(String[] args) {
         SpringApplication.run(Payment8001Main.class,args);

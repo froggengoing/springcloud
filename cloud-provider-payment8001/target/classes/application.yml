@@ -5,7 +5,7 @@ spring:
   application:
     name: cloud-payment-service
   profiles:
-    active: dev
+    active: pro
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
@@ -25,8 +25,17 @@ eureka:
     instance-id: payment8001
     prefer-ip-address: true
   client:
+    #httpclient连接服务器的超时时间
+    eureka-server-connect-timeout-seconds: 5
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      ##defaultZone: http://localhost:7001/eureka
-      defaultZone: http://eureka7002.com:7002/eureka,http://eureka7001.com:7001/eureka
+      #defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
+      #该参数在配置地址时，不可使用localhost，应使用域名，DNS解析配置文件在C:\Windows\System32\drivers\etc\hosts文件内
+      defaultZone: http://eureka7001.com:7001/eureka     #,http://eureka7002.com:7002/eureka
+      ##,http://eureka7001.com:7001/eureka
+    #当 ApplicationInfoManager 的状态转变时，会调用相应的listener方法
+    #启用true这会，#DiscoveryClient.initScheduledTasks:1325 中向ApplicationInfoManager设置listener
+    #在spring容器启动的过程会调用 lifeclcle 的Bean的start()方法
+    #ApplicationInfoManager.setInstanceStatus,进而进行注册(其中一个listener的实现)
+    on-demand-update-status-change: true

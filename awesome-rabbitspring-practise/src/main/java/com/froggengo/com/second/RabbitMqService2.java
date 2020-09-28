@@ -1,5 +1,6 @@
 package com.froggengo.com.second;
 
+import org.springframework.amqp.core.ExchangeTypes;
 import org.springframework.amqp.rabbit.annotation.*;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @RabbitListener(bindings = @QueueBinding(
-        exchange = @Exchange(value = "spring-boot-exchange",durable = "true",type = "topic"),
+        exchange = @Exchange(value = "${rabbitMqService2.spring-boot-exchange}",durable = "true",type = ExchangeTypes.TOPIC),
         value = @Queue(value = "spring-boot",durable = "true"),
         key = {"key.#","log.#"}
 ))

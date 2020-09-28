@@ -51,6 +51,16 @@
       <module>awesome-rabbitspring-practise</module>
       <module>awesome-springaop-example</module>
       <module>simple-webservice-practise</module>
+      <module>awesome-rabbitspring-producer</module>
+      <module>awesome-rabbitmqspring-consumer</module>
+      <module>awesome-database-document</module>
+      <module>hello-payment-ali</module>
+      <module>hello-hbase-practise</module>
+      <module>hello-guava-practise</module>
+      <module>hello-mybatisplus-practise</module>
+      <module>awesome-rocketmq-practise</module>
+      <module>awesome-rocketmq-alipractise</module>
+      <module>hello-http-practise</module>
   </modules>
   <packaging>pom</packaging>
 

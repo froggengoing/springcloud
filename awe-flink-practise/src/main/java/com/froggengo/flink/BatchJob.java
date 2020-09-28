@@ -33,6 +33,7 @@ public class BatchJob {
     public static class Tokenizer implements FlatMapFunction<String, Tuple2<String, Integer>> {
         @Override
         public void flatMap(String value, Collector<Tuple2<String, Integer>> out) {
+
             // 统一大小写并把每一行切割为单词
             String[] tokens = value.toLowerCase().split("\\W+");
             // 消费二元组

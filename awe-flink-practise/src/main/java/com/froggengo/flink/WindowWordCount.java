@@ -19,7 +19,11 @@ public class WindowWordCount {
         DataStream<Tuple2<String, Integer>> dataStream = text
                 .flatMap(new Splitter())
                 .keyBy(0)
-                .timeWindow(Time.seconds(5))
+                //感觉这个滑动窗口的意思是：有数据过来等10秒后统计结果，从下一次没有统计的数据开始在重新计算10秒再输出结果
+                //a-5-b-6-c-7-d
+                //a数据过来开始计算10秒，5秒后b过来，在10秒时统计一次结果
+                //11秒c过来，重新在c这个点计算10秒，即统计c和d
+                .timeWindow(Time.seconds(10))
                 .sum(1);
         dataStream.print();
         env.execute("Window WordCount");

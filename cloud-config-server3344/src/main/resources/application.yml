@@ -17,14 +17,17 @@ spring:
   cloud:
     config:
       server:
-        git:
+        #git:
           ##注意与下载地址不同 https://github.com/froggengoing/springcloud-config.git
           ##uri: git@github.com:froggengoing/springcloud-config.git
-          uri: https://github.com/froggengoing/springcloud-config.git
-          search-paths:
-            - springclouud-config
-          skip-ssl-validation: true
-      label: master
+#          uri: https://github.com/froggengoing/springcloud-config.git
+#          search-paths:
+#            - springclouud-config
+#          skip-ssl-validation: true
+        native:
+          #file:///
+          searchLocations: file:///D:\\1PracticeProject\\cloud2020\\[1]config
+      #label: master
       #spring.rabbitmq.password
   . bus:
      trace:
@@ -34,6 +37,9 @@ spring:
     port: 5672
     username: admin
     password: admin
+  profiles:
+    active: native
+    include: dev
 ##刷新客户端配置
 #curl localhost:3344/actuator/bus-refresh -d {} -H "Content-Type:application/json"
 #指定刷新的服务器
