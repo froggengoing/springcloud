@@ -1139,9 +1139,37 @@ public class ConfigFileApplicationContextInitializer
 
 
 
+## 依赖注入相关
+
+### 接口：RuntimeBeanReference
+
+
+
+
+
+### 接口：ObjectProvider
+
+
+
+
+
+#### 接口：NamedContextFactory
+
+> 此接口在：org.springframework.cloud.context.named.NamedContextFactory
+
+
+
+
+
 
 
 ## 接口：BeanDefinition
+
+
+
+
+
+
 
 
 
