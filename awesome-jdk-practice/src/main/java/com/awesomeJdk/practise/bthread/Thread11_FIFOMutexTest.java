@@ -1,6 +1,5 @@
 package com.awesomeJdk.practise.bthread;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;
@@ -12,15 +11,16 @@ import java.util.concurrent.locks.LockSupport;
  * 一致忽略了unpark后会由于Thread11_FIFOMutex中locked值为false，而导致unpark后重新被阻塞。
  */
 public class Thread11_FIFOMutexTest {
+
     public static void main(String[] args) throws InterruptedException {
         Thread11_FIFOMutex lock = new Thread11_FIFOMutex();
         Runnable runnable = () -> {
             lock.lock();
-            System.out.println("进入线程:"+Thread.currentThread().getName());
+            System.out.println("进入线程:" + Thread.currentThread().getName());
             try {
                 TimeUnit.SECONDS.sleep(3);
                 System.out.println("子线程直接unpark");
-                System.out.println("等待线程:"+lock.getThread());
+                System.out.println("等待线程:" + lock.getThread());
                 /*LockSupport.unpark(lock.getThread());*/
                 TimeUnit.SECONDS.sleep(10);
                 System.out.println("退出线程");
@@ -33,8 +33,8 @@ public class Thread11_FIFOMutexTest {
             }
 
         };
-        Thread thread1 = new Thread(runnable,"t1");
-        Thread thread2 = new Thread(runnable,"t2");
+        Thread thread1 = new Thread(runnable, "t1");
+        Thread thread2 = new Thread(runnable, "t2");
         thread1.start();
         TimeUnit.SECONDS.sleep(1);
         thread2.start();

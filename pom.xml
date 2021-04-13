@@ -56,11 +56,13 @@
       <module>awesome-database-document</module>
       <module>hello-payment-ali</module>
       <module>hello-hbase-practise</module>
-      <module>hello-guava-practise</module>
+      <module>hello--practise</module>
       <module>hello-mybatisplus-practise</module>
       <module>awesome-rocketmq-practise</module>
       <module>awesome-rocketmq-alipractise</module>
       <module>hello-http-practise</module>
+    <module>awe-refactor-code</module>
+    <module>vertx-verticle-learn</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -87,6 +89,7 @@
     <mysql.version>5.1.47</mysql.version>
     <druid.version>1.1.10</druid.version>
     <mybatis.spring.boot.version>1.3.0</mybatis.spring.boot.version>
+    <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
   </properties>
 
   <!-- 子模块继承之后，提供作用：锁定版本+子modlue不用写groupId和version  -->
@@ -156,6 +159,13 @@
         <configuration>
           <fork>true</fork>
           <addResources>true</addResources>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven-compiler-plugin.version}</version>
+        <configuration>
+          <release>11</release>
         </configuration>
       </plugin>
     </plugins>

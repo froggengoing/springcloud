@@ -27,6 +27,7 @@ public class MyServer {
             ServerBootstrap serverBootstrap = new ServerBootstrap().group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
                     .childHandler(new MyTwoInitializer());
+
             ChannelFuture future = serverBootstrap.bind(8001).sync();
             future.channel().closeFuture().sync();
         } finally {

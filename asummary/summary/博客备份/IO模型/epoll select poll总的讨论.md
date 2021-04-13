@@ -17,8 +17,7 @@ If both fields of the
        can block indefinitely.
 ```
 
-[《Linux/UNIX系统编程手册》Michael Kerrisk著 P1094]
-[![tim 20180415181145](https://user-images.githubusercontent.com/22494815/38777319-966e1c54-40d8-11e8-9ecc-ca75f3254a38.jpg)](https://user-images.githubusercontent.com/22494815/38777319-966e1c54-40d8-11e8-9ecc-ca75f3254a38.jpg)
+![tim 20180415181145](https://user-images.githubusercontent.com/22494815/38777319-966e1c54-40d8-11e8-9ecc-ca75f3254a38.jpg)
 
 ## Poll:
 

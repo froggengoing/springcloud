@@ -8,7 +8,7 @@ http://127.0.0.1:18083/actuator/sentinel
 
 
 
-![image-20200810113023350](SentinelLearn.assets/image-20200810113023350.png)
+![image-20200810113023350](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131400.png)
 
 ### 持久化
 
@@ -171,7 +171,7 @@ public class CommonFilter implements Filter {
 //通过Servlet的Filter进行扩展，实现一个Filter，然后在doFilter方法中对请求进行限流控制，如果请求被限流则将请求重定向到一个默认页面，否则将请求放行给下一个Filter。
 ```
 
-##### 
+
 
 
 

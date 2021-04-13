@@ -415,7 +415,7 @@ chkconfig [--add][--del][--list][系统服务] 或 chkconfig [--level <等级代
 
 ### 执行top后显示图
 
-![](linuxlearn.assets/QQ%E5%9B%BE%E7%89%8720200519153607.png)
+![](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093734.png)
 
 ### 列表缩写释意
 
@@ -480,7 +480,7 @@ chkconfig [--add][--del][--list][系统服务] 或 chkconfig [--level <等级代
 
 按下 `h` 调用帮助界面，该界面也显示了默认延迟（屏幕更新的时间间隔）。这个值默认（大约）是 3 秒，但你可以输入 `d`（大概是 delay 的意思）或者 `s`（可能是 screen 或 seconds 的意思）来修改它。显示如下
 
-![image-20200519154109147](linuxlearn.assets/image-20200519154109147.png)
+![image-20200519154109147](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093735.png)
 
 > 按数字1就可以显示每核CPU的使用情况
 >
@@ -498,7 +498,7 @@ chkconfig [--add][--del][--list][系统服务] 或 chkconfig [--level <等级代
 
 这些命令，是对/proc目录中一系列信息的解析和友好的展示，这些值，Linux内核都算好了躺在那呢。
 
-![img](linuxlearn.assets/1672446af9121413)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093736.png)
 
 (图片来源网络) 创建这个目录的人真是天才！
 作者：小姐姐味道
@@ -523,7 +523,7 @@ chkconfig [--add][--del][--list][系统服务] 或 chkconfig [--level <等级代
 -V：显示版本信息。
 ```
 
-![image-20200925092132380](linuxlearn.assets/image-20200925092132380.png)
+![image-20200925092132380](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093737.png)
 
 #### 解释
 
@@ -707,7 +707,7 @@ soft -Hn
 >
 > 
 
-![image-20200925093655864](linuxlearn.assets/image-20200925093655864.png)
+![image-20200925093655864](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093738)
 
 
 
@@ -782,7 +782,7 @@ netstat -anop
 
 
 
-![image-20200925094756587](linuxlearn.assets/image-20200925094756587.png)
+![image-20200925094756587](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093739.png)
 
 
 
@@ -901,8 +901,8 @@ $echo "hello \!" #必须加转义符号
 var='hello froggengo'
 echo $var
 hello froggengo
-echo “$var”
-“hello froggengo”
+echo "$var"
+"hello froggengo"
 echo '$var'
 $var #直接数据$var而不会对该变量求值
 ```
@@ -1189,7 +1189,7 @@ tput bold
 
 ### 获取、设置日期和延时
 
-![image-20200615101200529](linuxlearn.assets/image-20200615101200529.png)
+![image-20200615101200529](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093740.png)
 
 
 
@@ -1235,6 +1235,29 @@ $ echo ${end}
 
 
 
+## 脚本
+
+### Shell命令替换：将命令的输出结果赋值给变量
+
+Shell 中有两种方式可以完成命令替换，一种是反引号`` ``，一种是`$()`，使用方法如下：
+
+```shell
+variable=`commands`
+variable=$(commands)
+```
+
+其中，variable 是变量名，commands 是要执行的命令。commands 可以只有一个命令，也可以有多个命令，多个命令之间以分号`;`分隔。
+例如，date 命令用来获得当前的系统时间，使用命令替换可以将它的结果赋值给一个变量。
+
+```shell
+#!/bin/bash
+begin_time=`date`    #开始时间，使用``替换
+sleep 20s            #休眠20秒
+finish_time=$(date)  #结束时间，使用$()替换
+echo "Begin time: $begin_time"
+echo "Finish time: $finish_time"
+```
+
 
 
 
@@ -1276,7 +1299,7 @@ $ echo ${end}
    >
    > LDT的地址和大小放在ldtr控制寄存器中
 
-   ![image-20200524163815619](linuxlearn.assets/image-20200524163815619.png)
+   ![image-20200524163815619](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093741.png)
 
    | 字段  | 描述                                                         |
    | ----- | ------------------------------------------------------------ |
@@ -1290,9 +1313,9 @@ $ echo ${end}
    | D/B   | 称为D或B的标志，取决于是代码段还是数据段。如果段偏移量地址长度为32位，则一般为1,否则偏移量为16位，则为0 |
    | AVL   | LINUX忽略                                                    |
 
-   ![image-20200524165324053](linuxlearn.assets/image-20200524165324053.png)
+   ![image-20200524165324053](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093742.png)
 
-   ![image-20200524165737580](linuxlearn.assets/image-20200524165737580.png)
+   ![image-20200524165737580](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093743.png)
 
    TI（Table Indicator）:0为GDT，1为LDT
 
@@ -1306,9 +1329,9 @@ $ echo ${end}
 
    分段单元（电路）转换逻辑地址
 
-   ![image-20200524171451555](linuxlearn.assets/image-20200524171451555.png)
+   ![image-20200524171451555](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093744.png)
 
-   ![image-20200524170456029](linuxlearn.assets/image-20200524170456029.png)
+   ![image-20200524170456029](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093745.png)
 
    * index * 8 
    * 根据TI值决定是在gdtr还是ldtr取值
@@ -1339,7 +1362,7 @@ $ echo ${end}
    >
    > 另一类“页”，我们称之为物理页，或者是页框、页桢的。是分页单元把所有的物理内存也划分为固定长度的管理单位，它的长度一般与内存页是一一对应的。
 
-   ![image-20200524182056918](linuxlearn.assets/image-20200524182056918.png)
+   ![image-20200524182056918](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093746.webp)
 
    > 32位线性地址分为3个域：
    >
@@ -1388,9 +1411,9 @@ $ echo ${end}
 
 7. 虚拟地址
 
-   ![img](linuxlearn.assets/8804020-5f938f9246931cae.webp)
+   ![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093747.png)
 
-   ![这里写图片描述](linuxlearn.assets/20150908171548301)
+   ![这里写图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093748)
 
    [来源](https://www.cnblogs.com/pacoson/p/4819374.html)
 

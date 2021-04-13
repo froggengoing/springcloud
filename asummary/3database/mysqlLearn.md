@@ -55,7 +55,7 @@ innoDB架构
 * 在头部，是最近访问的new（“young”）page子列表
 * 在尾部，是最近较少访问的old page子列表。
 
-![Content is described in the surrounding text.](mysqlLearn.assets/innodb-buffer-pool-list.png)
+![Content is described in the surrounding text.](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094042.png)
 
 该算法将大量页面保留在新的子列表中。旧的子列表包含较少使用的页面。这些页面是候选被驱逐（清除）的对象。
 
@@ -73,7 +73,7 @@ innoDB架构
 
 Change 缓冲区是一种特殊的数据结构，用于当第二索引页不在缓冲池时，缓存对这些页的修改。由insert、update、delete操作引起的缓存修改，会在之后由于其他读操作引发页面被加载到缓冲池时合并。
 
-![Content is described in the surrounding text.](mysqlLearn.assets/innodb-change-buffer-1592885631885.png)
+![Content is described in the surrounding text.](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094043.png)
 
 与聚簇索引不同，二级索引通常不是唯一的，并且二级索引的插入以相对随机的顺序发生。同样，删除和更新可能会影响索引树中不相邻的二级索引页。当稍后通过其他操作将受影响的页读入缓冲池时，合并change buffer中的更改，从而避免从磁盘将二级索引页读入缓冲池所需的大量随机访问I / O。
 
@@ -553,7 +553,7 @@ InnoDB使用不同的锁定策略支持此处描述的每个事务隔离级别�
    SELECT * from information_schema.`ENGINES`
    ```
 
-   ![image-20200623091954836](mysqlLearn.assets/image-20200623091954836.png)
+   ![image-20200623091954836](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094044.png)
 
 2. 查看buffer pool
 
@@ -571,7 +571,16 @@ InnoDB使用不同的锁定策略支持此处描述的每个事务隔离级别�
 
    
 
-4. 
+
+### 局域网开放访问
+
+[参考](https://blog.csdn.net/qq_38762237/article/details/81137626)
+
+```sql
+Grant all privileges on *.* to 'root'@'%' identified by 'password' with grant option;
+```
+
+使用root，密码未password登录
 
 # 资料
 

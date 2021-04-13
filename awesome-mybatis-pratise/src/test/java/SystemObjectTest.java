@@ -1,4 +1,6 @@
 import com.froggengo.entity.Payment;
+import java.io.IOException;
+import org.apache.ibatis.builder.xml.XMLConfigBuilder;
 import org.apache.ibatis.reflection.*;
 import org.apache.ibatis.reflection.factory.DefaultObjectFactory;
 import org.apache.ibatis.reflection.invoker.Invoker;
@@ -13,6 +15,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import org.springframework.core.io.ClassPathResource;
 
 public class SystemObjectTest {
     @Test
@@ -92,6 +95,12 @@ public class SystemObjectTest {
     @Test
     public void testReflectorFactory (){
         DefaultReflectorFactory reflectorFactory = new DefaultReflectorFactory();
+    }
+    @Test
+    public void testResource () throws IOException {
+        ClassPathResource resource = new ClassPathResource("mybatis/mybatis-config.xml");
+        XMLConfigBuilder parser = new XMLConfigBuilder(resource.getInputStream(), null, null);
+        org.apache.ibatis.session.Configuration configuration=parser.parse();
     }
 
 }

@@ -20,7 +20,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public List<Payment> get(){
-        List<Payment> list = paymentMapper.getList();
+        List<Payment> list = paymentMapper.getList(null);
         return list;
     }
 

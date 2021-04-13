@@ -14,7 +14,7 @@ epoll：http://www.cnblogs.com/Anker/archive/2013/08/17/3263780.html
 
 **select的调用过程如下所示：**
 
-**![img](img/17201205-8ac47f1f1fcd4773bd4edd947c0bb1f4.png)**
+**![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131752.png)**
 
 （1）使用copy_from_user从用户空间拷贝fd_set到内核空间
 

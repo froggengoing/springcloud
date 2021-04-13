@@ -8,7 +8,7 @@ import java.util.List;
 @MyMapper
 public interface PaymentMapper {
 
-    public List<Payment> getList();
+    List<Payment> getList(Payment payment);
 
     int insert(Payment payment);
 }

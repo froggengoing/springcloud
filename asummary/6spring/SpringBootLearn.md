@@ -300,7 +300,7 @@ protected List<String> getCandidateConfigurations(AnnotationMetadata metadata, A
 
 > 负责查找每个jar包的，**/META-INF/spring.factories**里面对应的接口的值
 
-![image-20200801000304341](SpringBootLearn.assets/image-20200801000304341.png)
+![image-20200801000304341](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131138.png)
 
 ```java
 @Test
@@ -898,7 +898,7 @@ public class PropertyPlaceholderAutoConfiguration {
 
 ##### PropertySourcesPlaceholderConfigurer
 
-![30173810_SVn2](SpringBootLearn.assets/30173810_SVn2.png)
+![30173810_SVn2](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131139.png)
 
 > 调用过程较为复杂，最后调用到如下逻辑。
 >

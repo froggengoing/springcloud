@@ -1,6 +1,6 @@
 ### 流程图
 
-![](servlet.assets/http%E6%B8%85%E6%B1%82servlet%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B.png)
+![](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131210.png)
 
 源码解析
 

@@ -20,7 +20,8 @@ public class class5_unsafe {
         System.out.println(unsafe.objectFieldOffset(VO.class.getDeclaredField("b")));
 
         // fieldOffset与objectFieldOffset功能一样,fieldOffset是过时方法,最好不要再使用
-        System.out.println(unsafe.fieldOffset(VO.class.getDeclaredField("b")));
+        //jdk8可以用，11不能用
+        //System.out.println(unsafe.fieldOffset(VO.class.getDeclaredField("b")));
         // 获取类的静态字段偏地址
         System.out.println(unsafe.staticFieldOffset(VO.class.getDeclaredField("c")));
         System.out.println(unsafe.staticFieldOffset(VO.class.getDeclaredField("d")));

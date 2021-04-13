@@ -1,12 +1,11 @@
 package com.awesomeJdk.practise.bthread;
 
-import com.sun.corba.se.impl.orbutil.concurrent.Mutex;
+
 
 public class ConcurrencyTest {
-    private static final long count = 100_0000l;
+    private static final long count = 100_0000L;
     public static void main(String[] args) throws InterruptedException {
         concurrency();
-        Mutex m;
         serial();
     }
     private static void concurrency() throws InterruptedException {

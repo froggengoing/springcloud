@@ -8,7 +8,7 @@
 
 
 
-![image-20200516190408020](img/image-20200516190408020.png)
+![image-20200516190408020](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125711.png)
 
 ### 查看zookeeper端口
 
@@ -46,7 +46,7 @@ bin/kafka-topics.sh --zookeeper localhost:2181 --describe --topic test1
 kafka-topics.bat --zookeeper localhost:2181 --describe --topic test1
 ```
 
-![image-20200516191840184](img/image-20200516191840184.png)
+![image-20200516191840184](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125712.png)
 
 #### 分区增加partition
 
@@ -74,7 +74,7 @@ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test1
 
 ### 在producer窗口输入信息，在consumer可以查看到发出的消息
 
-![image-20200516233623055](img/image-20200516233623055.png)
+![image-20200516233623055](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125713.png)
 
 ### 查看kafka的日志文件
 
@@ -97,7 +97,7 @@ kafka-run-class.bat kafka.tools.DumpLogSegments --files D:\tmp\kafka-logs\__cons
 
 如果是windows那么就是在kafka的安装盘的根目录下创建该目录。改日志下按`topicname-{partitionId}`为每个topic的分区创建文件夹，文件夹内容如下：
 
-![image-20200710095403501](kafakalearn.assets/image-20200710095403501.png)
+![image-20200710095403501](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125714.png)
 
 | 名字        | 含义                                                | 备注     |
 | ----------- | --------------------------------------------------- | -------- |
@@ -111,7 +111,7 @@ kafka-run-class.bat kafka.tools.DumpLogSegments --files D:\tmp\kafka-logs\__cons
 
 索引文件中包含的若干条目，每个条目表示的数据文件中的一条message的索引——是当前的message在数据文件的offset和在文件的position（message在文件中的绝对位置信息）的对应关系。如下图所示：
 
-![img](kafakalearn.assets/20190402095714500.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125715.png)
 
 > 图中log文件的Postion应该有错，offset与position应该是正比的，我的理解是log日志数据是顺序存储，offset表示第几个条目，而position由于每个消息长度不一样，所以无法计算出来，而是通过position标记在磁盘的位置，offset大的position一定也较大，所以图中的倒数第三个条目不应该是1108的。
 
@@ -187,7 +187,7 @@ bin/zkServer.sh status  conf/zoo_sample.cfg
 lsof -i:2181
 ```
 
-![image-20200516192808974](img/image-20200516192808974.png)
+![image-20200516192808974](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125716.png)
 
 ### 其余与上相同
 
@@ -205,11 +205,11 @@ lsof -i:2181
 
 ### **zookeeper的dockerFile**
 
-![image-20200516193545285](img/image-20200516193545285.png)
+![image-20200516193545285](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125717.png)
 
 ### **kafka的dockerFile**
 
-![image-20200516193840017](img/image-20200516193840017.png)
+![image-20200516193840017](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125718.png)
 
 ### **docker启动zookeeper**
 
@@ -223,7 +223,7 @@ lsof -i:2181
 
 
 
-![image-20200516205557703](img/image-20200516205557703.png)
+![image-20200516205557703](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125719.png)
 
 ### **docker启动kafka**
 
@@ -237,7 +237,7 @@ lsof -i:2181
 
 
 
-![image-20200516205854594](img/image-20200516205854594.png)
+![image-20200516205854594](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125720.png)
 
 ### **启动topic实例**
 
@@ -250,7 +250,7 @@ bin/kafka-topics.sh --describe --topic test2 --zookeeper zookeeper:2181
 
 ```
 
-![image-20200516210657240](img/image-20200516210657240.png)
+![image-20200516210657240](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125721.png)
 
 ### 启动producer实例
 
@@ -258,7 +258,7 @@ bin/kafka-topics.sh --describe --topic test2 --zookeeper zookeeper:2181
 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test1
 ```
 
-![image-20200516210808546](img/image-20200516210808546.png)
+![image-20200516210808546](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125722.png)
 
 ### 启动consumer实例
 
@@ -266,11 +266,11 @@ bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test1
 bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --topic test1
 ```
 
-![image-20200516211005254](img/image-20200516211005254.png)
+![image-20200516211005254](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125723.png)
 
 ### topic之间传输
 
-![image-20200516211326165](img/image-20200516211326165.png)
+![image-20200516211326165](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125724.png)
 
 
 
@@ -317,7 +317,7 @@ bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --topic test1
     #端口号分别为10744、13704、12420,并已经与zookeeper建立连接
    ```
 
-   ![image-20200722095344406](kafakalearn.assets/image-20200722095344406.png)
+   ![image-20200722095344406](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125725.png)
 
 5. 创建topic，注意复制因子为2。
 
@@ -425,7 +425,7 @@ bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --topic test1
 
 7. zookeeper-dev-ZooInspector.jar。zookeeper可视化工具
 
-![image-20200722123023456](kafakalearn.assets/image-20200722123023456.png)
+![image-20200722123023456](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125726.png)
 
 
 
@@ -437,7 +437,7 @@ bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --topic test1
 
 ## 框架结构，主要是翻译官网
 
-![image.png](kafakalearn.assets/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy8yNDI0NzMwLTM4YWZjMmRkNWM0OGY5MzUucG5n.jpg)
+![image.png](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125727.png)
 
 ### **topic**
 
@@ -445,13 +445,13 @@ Topic 就是数据主题，是数据记录发布的地方,可以用来区分业�
 
 对于每一个topic， Kafka集群都会维持一个分区日志，如下所示：
 
-![img](kafakalearn.assets/log_anatomy.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125728.jpg)
 
 每个分区都是有序且顺序不可变的记录集，并且不断地追加到结构化的commit log文件。**分区中的每一个记录都会分配一个id号来表示顺序，我们称之为offset，*offset*用来唯一的标识分区中每一条记录**。
 
 Kafka 集群保留所有发布的记录—无论他们是否已被消费—并通过一个可配置的参数——保留期限来控制. 举个例子， 如果保留策略设置为2天，一条记录发布后两天内，可以随时被消费，两天过后这条记录会被抛弃并释放磁盘空间。Kafka的性能和数据大小无关，所以长时间存储数据没有什么问题.
 
-![img](kafakalearn.assets/log_consumer.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125729.png)
 
 事实上，**在每一个消费者中唯一保存的元数据是offset（偏移量）即消费在log中的位置**.偏移量由消费者所控制:通常在读取记录后，消费者会以线性的方式增加偏移量，但是实际上，由于这个位置由消费者控制，所以消费者可以采用任何顺序来消费记录。例如，一个消费者可以重置到一个旧的偏移量，从而重新处理过去的数据；也可以跳过最近的记录，从"现在"开始消费。
 
@@ -473,7 +473,7 @@ Kafka 集群保留所有发布的记录—无论他们是否已被消费—并�
 * 如果没有指定partition，但是设置了数据的key，则会根据key的值hash出一个partition。
 * 如果既没指定partition，又没有设置key，则会轮询选出一个partition。
 
-![image.png](kafakalearn.assets/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy8yNDI0NzMwLTQ4YzdjOWZjNzU0OTMzNzMucG5n.jpg)
+![image.png](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125730.jpg)
 
 发送数据可靠性保证：ACK机制！
 
@@ -493,7 +493,7 @@ Kafka 集群保留所有发布的记录—无论他们是否已被消费—并�
 
 ##### 保存数据
 
-![image.png](kafakalearn.assets/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy8yNDI0NzMwLTJlOGFlNzJlZTMwMzRkOTYucG5n.jpg)
+![image.png](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125731.png)
 
 操作系统本身有一层缓存，叫做 Page Cache，是在内存里的缓存，我们也可以称之为 OS Cache，意思就是操作系统自己管理的缓存。你在写入磁盘文件的时候，可以直接写入这个 OS Cache 里，也就是仅仅写入内存中，接下来由操作系统自己决定什么时候把 OS Cache 里的数据真的刷入磁盘文件中。
 
@@ -511,7 +511,7 @@ Kafka提供了一个参数——producer.type来控制是不是主动flush，如
 
 如果所有的消费者实例在不同的消费组中，**每条消息记录会广播到所有的消费者进程.**
 
-![img](kafakalearn.assets/consumer-groups.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125732.png)
 
 如图，这个 Kafka 集群有两台 server 的，四个分区(p0-p3)和两个消费者组。消费组A有两个消费者，消费组B有四个消费者。
 
@@ -531,11 +531,11 @@ bin/kafka-topics.sh --zookeeper localhost:2181 --describe --topic test1
  ls
 ```
 
-![image-20200517114641603](kafakalearn.assets/image-20200517114641603.png)
+![image-20200517114641603](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125733.jpg)
 
 
 
-![image.png](kafakalearn.assets/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy8yNDI0NzMwLWYxZjE3ZDc0MTAwNWYzYjQucG5n.jpg)
+![image.png](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125734.png)
 
 消费者通过pull模式主动的去kafka集群拉取消息，与producer相同的是，消费者在拉取消息的时候也是找leader去拉取。
 
@@ -1049,7 +1049,7 @@ The use of the message offset as the message id is unusual. Our original idea wa
 
 > 
 
-![img](kafakalearn.assets/kafka_log-1594527526769.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125735.png)
 
 ##### [Writes](http://kafka.apache.org/documentation/#impl_writes)
 
@@ -1428,9 +1428,9 @@ advertised.listeners=PLAINTEXT://host_ip:9092
 
 3. 滴滴云增加对外开放端口，[如何查看阿里云端口是否开放以及开放端口](https://www.cnblogs.com/ergexy/p/9718732.html)
 
-   ![img](img/ISO32H%7DE80IPEDK_A%60HU%25~U.png)
+   ![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125736.png)
 
-   ![img](kafakalearn.assets/3W%7D(X$ZJ)V_CFYG6$RN$S.png)
+   ![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125737.png)
 
 4. window测是否可用
 
@@ -1460,7 +1460,7 @@ advertised.listeners=PLAINTEXT://host_ip:9092
 
    再次启动java程序，producer启动发送成功
 
-   ![img](kafakalearn.assets/MF$WTS0@NL%7DS2Z$V9V4HW%7BP.png)
+   ![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125738.png)
 
 ### POM依赖
 
@@ -1522,7 +1522,7 @@ advertised.listeners=PLAINTEXT://host_ip:9092
 
 ### 消息发送
 
-![在这里插入图片描述](kafakalearn.assets/201911101014500.png)
+![在这里插入图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125739.png)
 
 
 
@@ -1549,7 +1549,7 @@ advertised.listeners=PLAINTEXT://host_ip:9092
 
 **Broker端在缓存中保存了这seq number，对于接收的每条消息，如果其序号比Broker缓存中序号大于1则接受它，否则将其丢弃。**这样就可以实现了消息重复提交了。<font color=red>但是，只能保证单个Producer对于同一个<Topic, Partition>的Exactly Once语义。不能保证同一个Producer一个topic不同的partion幂等。</font>  
 
-![1](kafakalearn.assets/1-1.png)
+![1](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125740.webp)
 
 
 
@@ -1559,7 +1559,7 @@ advertised.listeners=PLAINTEXT://host_ip:9092
 
 调用流程，新版有改动，仅作为参考
 
-![img](kafakalearn.assets/12038882-31615799381754e2.webp)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125741.jpg)
 
 ##### **1.2.2 生成PID的流程**
 
@@ -1601,7 +1601,7 @@ org.apache.kafka.clients.producer.internals.Sender#run
 
 #### 消费者多于分区
 
-![img](kafakalearn.assets/2414051-4c77d6b4a8d3ae9a.jpg)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125742.jpg)
 
 生产者消费者对应关系1.jpg
 
@@ -1616,7 +1616,7 @@ org.apache.kafka.clients.producer.internals.Sender#run
 
  
 
-![img](kafakalearn.assets/2414051-dd61642376e23f15.jpg)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125743)
 
 生产者消费者对应关系2.jpg
 
@@ -1634,7 +1634,7 @@ C2接收到2，5，8
 
 
 
-![img](kafakalearn.assets/20170906113741757)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125744.png)
 
 
 
@@ -1644,7 +1644,7 @@ C2接收到2，5，8
 
 ## io
 
-![img](kafakalearn.assets/941117-20190415151355245-1616621096.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125745.jpg)
 
 ## 资源
 

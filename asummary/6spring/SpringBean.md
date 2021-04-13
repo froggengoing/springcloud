@@ -65,7 +65,7 @@ Arrays.stream(propertyDescriptors).forEach(descriptor->{
 
 #### 示意图
 
-![设置属性值流程图](SpringBean.assets/Beaninfo%E6%B5%81%E7%A8%8B.svg)
+![设置属性值流程图](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131156.svg)
 
 #### 问题
 
@@ -88,7 +88,7 @@ Arrays.stream(propertyDescriptors).forEach(descriptor->{
 
 
 
-![](SpringBean.assets/BeanWrapperImpl.png)
+![](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131157.png)
 
 根据第一部分的理解也能只能，beanwrapper其实是对上述**设置属性值**的封装：
 
@@ -149,13 +149,13 @@ beanwrapper处理复杂的设置属性的逻辑，如属性名的嵌套、list�
 
 #### 流程图
 
-![BeanWrapper](SpringBean.assets/BeanWrapper.svg)
+![BeanWrapper](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131158.png)
 
 #### 数据转换
 
 ##### 接口图
 
-![数据转换](SpringBean.assets/%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2.png)
+![数据转换](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131159.svg)
 
 ##### 注册
 
@@ -395,7 +395,7 @@ public class myConfiguration {
 
    **@Configuration**下，会在容器中查找`getBean_Book()`所代表的Bean，而**@Component **只会作为java方法指向
 
-   ![](SpringBean.assets/DifBetweenComponentAndConfiguration.png)
+   ![](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131200.png)
 
 ### BeanFactory和ApplicationContext区别
 
@@ -437,7 +437,7 @@ public class myConfiguration {
 
 ### 流程示意图
 
-![](SpringBean.assets/Bean%E4%BB%8E%E5%8A%A0%E8%BD%BD%E5%88%B0%E5%AE%9E%E4%BE%8B%E5%8C%96.svg)
+![](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131201.svg)
 
 ### 思考问题
 
@@ -541,7 +541,7 @@ BeanDefinition接口说明：
 
 #### 继承图
 
-![](SpringBean.assets/BeanDefinition.png)
+![](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131202.png)
 
 #### BeanDefinition示例
 
@@ -621,7 +621,7 @@ public class BeanLearn {
 
 #### 单一Class注册至BeanFactory流程图
 
-![](SpringBean.assets/BeanDefinition%E8%A7%A3%E6%9E%90.svg)
+![](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131203.svg)
 
 示例只表明了单一class怎么生产BeanDefinition的过程，不同的环境BeanDefinition来源不一样，比如XML、注解等
 
@@ -629,7 +629,7 @@ public class BeanLearn {
 
 #### SpringBootBeanDefinition扫描及注册
 
-![](SpringBean.assets/SpringBootBenDefinition%E6%89%AB%E6%8F%8F%E5%8F%8A%E6%B3%A8%E5%86%8C.svg)
+![](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131204.svg)
 
 **长话短说：**
 

@@ -256,7 +256,7 @@ Netty在每次创建ByteBuf时，基于抽样率，抽样命中时会轮询(poll
 
 
 
-![img](img/netty_reference_count.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130556.png)
 
 
 

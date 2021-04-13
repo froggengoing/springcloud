@@ -18,12 +18,12 @@ public class NioServer {
 
         ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
         serverSocketChannel.configureBlocking(false);
+        //没有bind 的的serverScoket，在调用accept时会报错NotyetBoundException
         serverSocketChannel.socket().bind(new InetSocketAddress(8899));
 
         Selector selector = Selector.open();
         Object attachment=new Object();
         serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT,attachment);
-
         while (true){
             int number = selector.select();
             Set<SelectionKey> selectionKeys = selector.selectedKeys();

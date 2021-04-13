@@ -135,7 +135,7 @@ ET (edge-triggered)是高速工作方式，只支持no-block socket，它效率�
 
 图示说明：
 
-![img](img/Center1.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131742.png)
 
 >
 > Nginx默认采用ET模式来使用epoll。
@@ -680,7 +680,7 @@ main (int argc, char *argv[])
 
   
 
-![img](img/Center.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131743.png)
 
 运行方式：
 

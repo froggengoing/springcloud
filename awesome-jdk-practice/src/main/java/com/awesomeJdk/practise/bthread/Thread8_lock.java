@@ -1,6 +1,6 @@
 package com.awesomeJdk.practise.bthread;
 
-import com.sun.corba.se.impl.orbutil.concurrent.Sync;
+
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
@@ -25,9 +25,12 @@ public class Thread8_lock implements Lock {
 
         @Override
         protected boolean tryRelease(int arg) {
-            if(getState() ==0) throw new IllegalMonitorStateException();
-            if(getExclusiveOwnerThread() !=Thread.currentThread())
+            if(getState() ==0) {
+                throw new IllegalMonitorStateException();
+            }
+            if(getExclusiveOwnerThread() !=Thread.currentThread()) {
                 throw  new IllegalMonitorStateException();
+            }
             setExclusiveOwnerThread(null);
             setState(0);
             return true;

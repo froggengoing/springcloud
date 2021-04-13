@@ -2,11 +2,11 @@
 
 ## 线程类继承图
 
-![](img/EventExecutor.png)
+![](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130459.png)
 
 ## NioEventLoopGroup
 
-![](img/NioEventLoopGroup.svg)
+![](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130500.svg)
 
 ### 理解：
 
@@ -38,7 +38,7 @@ Future<?> shutdownGracefully(long quietPeriod, long timeout, TimeUnit unit);//�
 
 ### 初始化
 
-![](img/NioEventLoop.svg)
+![](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130501.svg)
 
 ### 理解
 
@@ -46,7 +46,7 @@ Future<?> shutdownGracefully(long quietPeriod, long timeout, TimeUnit unit);//�
 
 ### Task任务执行流程
 
-![](img/启动流程-NioeventLoop执行任务.svg)
+![](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130502.png)
 
 > 第一次注册：
 >
@@ -1529,7 +1529,7 @@ io.netty.buffer.AbstractByteBufAllocator#ioBuffer(int);
 
 ## P61 解读论文Reactor论文中5大角色
 
-![image-20200504173221778](img/reactor.png)
+![image-20200504173221778](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130503.png)
 
 > 1. **handle：**通常指系统管理的资源，比如网络连接、打开的文件、定时器、同步对象等。在日志服务器模型中，Handler用于区分不同的客户终端，这样同步事件分离器（synchronous Event Demultiplexer）可以等待这些终端上发生的事件,日志服务器感兴趣的事件为连接（connect event）和读事件（read event），代表着有新的客户端连接进来或者有新的数据进来。
 >
@@ -1556,11 +1556,11 @@ io.netty.buffer.AbstractByteBufAllocator#ioBuffer(int);
 >
 > * Initiation Dispatcher 回调Event Handler上的 `handle_event()` 钩子方法来执行程序特定与事件相一致的功能。出现的事件类型可以作为参数传递，以执行格外的服务特定分离和分发（service-specific demultiplexing and dispatching）。
 >
->   ![image-20200505191459346](img/reactor-flow.png)
+>   ![image-20200505191459346](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130504.png)
 
-![image-20200504183011780](img/5%E5%A4%A7%E8%A7%92%E8%89%B2.png)
+![image-20200504183011780](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130505.png)
 
-![image-20200505234004619](img/reactor-flow-class.png)
+![image-20200505234004619](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130506.svg)
 
 理解：
 

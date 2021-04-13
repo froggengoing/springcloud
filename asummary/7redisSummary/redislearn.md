@@ -10,7 +10,7 @@
 
    显示如下信息说明启动成功:
 
-![redis启动页面](redislearn.assets/clip_image001.png)
+![redis启动页面](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131043.png)
 
 3. **安装服务：**
 
@@ -22,7 +22,7 @@ redis-server --service-install redis.windows-service.conf
 
 services.msc中查看是否安装成功。
 
-![服务安装页面](redislearn.assets/clip_image002.png)
+![服务安装页面](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131044.png)
 
 4. 启动命令窗口：
 
@@ -51,11 +51,11 @@ services.msc中查看是否安装成功。
 
 1. 设置密码，redis.windows.conf找到requirepass，并输入密码
 
-   ![img](redislearn.assets/clip_image003.png)
+   ![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131045.png)
 
 2. 登录，`auth password`
 
-  ![登录](redislearn.assets/clip_image004.png)  
+  ![登录](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131046.png)  
 
 ## redis学习
 
@@ -259,7 +259,7 @@ public void testHash(){
 
 #### redis存储结果
 
-![image-20200715131332273](redislearn.assets/image-20200715131332273.png)
+![image-20200715131332273](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131047.png)
 
 其中用户名为fly的是序列化对象添加了ObjectMapper对象的，而fff是没有添加的。
 
@@ -278,7 +278,7 @@ om.activateDefaultTyping(LaissezFaireSubTypeValidator.instance, ObjectMapper.Def
 
 存储的json字符串略有变动，多了`@class`
 
-![image-20200715133201166](redislearn.assets/image-20200715133201166.png)
+![image-20200715133201166](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131048.png)
 
 ## Redisson
 
@@ -689,13 +689,13 @@ org.springframework.boot.autoconfigure.session.RedisSessionConfiguration;
 org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration
 ```
 
-![img](redislearn.assets/df1618c983f6ef9440972cadd06bac32.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131049.png)
 
-![img](redislearn.assets/7a99e2a9c7b91b2cdafac44faf541d2a.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131050.png)
 
-![img](redislearn.assets/010d1ba899a536742a6663e4c21bb2e8.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131051.png)
 
-![img](redislearn.assets/cdbb20ae7e4364d50208b2f55913590e.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131052.png)
 
 ## redis课程笔记
 
@@ -717,7 +717,7 @@ org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessi
 >
 > 而非关系型的数据库则由于其本身的特点得到了非常迅速的发展。NoSQL数据库的产生就是为了解决大规模数据集合多重数据种类带来的挑战，尤其是大数据应用难题。
 
-![img](redislearn.assets/20200522202119473.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131053.png)
 
 #### 1.2 Nosql的类型
 
@@ -950,7 +950,7 @@ bind 127.0.0.1
 requirepass password
 ```
 
-![image-20200712224413854](redislearn.assets/image-20200712224413854.png)
+![image-20200712224413854](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131054.png)
 
 ### 5 Redis启动
 
@@ -1405,7 +1405,7 @@ redis使用16384个寄存器，所以标准差是0.81%。
 
 图片理解：[HyperLogLog in Presto: A significantly faster way to handle cardinality estimation](https://engineering.fb.com/data-infrastructure/hyperloglog/)
 
-![Figure illustrating an example of the probability of observing a sequence of three consecutive zeros. ](redislearn.assets/HLL31.png)
+![Figure illustrating an example of the probability of observing a sequence of three consecutive zeros. ](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131055.png)
 
 在数据量足够大，hash足够均匀的情况下。hash的每一位出现0、1的概率一样都是0.5。而 比如出现000的概率是1/8，那么认为此时样本数据就是8。
 
@@ -1421,11 +1421,11 @@ redis使用16384个寄存器，所以标准差是0.81%。
 
 1. 数据经过hash后，服从均匀分布，[图片来源](http://blog.codinglabs.org/articles/cardinality-estimate-exper.html) 
 
-![img](redislearn.assets/murmurhash32-10-distrib.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131056.png)
 
 2. 0的后缀长度为幂律分布
 
-   ![img](redislearn.assets/murmurhash32-10-buckets.png)
+   ![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131057.png)
 
 3. 
 
@@ -1459,11 +1459,11 @@ Redis 事务可以一次执行多个命令（允许在一次单独的步骤中�
 
 1. 队列中的某个命令出现了报告错误，执行时整个的所有队列都会被取消。
 
-![在这里插入图片描述](redislearn.assets/20200326211726445.png)
+![在这里插入图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131058.png)
 
 2. 如果执行的某个命令报出了错误，则只有报错的命令不会被执行，而其它的命令都会执行，不会回滚。如下图所示
 
-   ![在这里插入图片描述](redislearn.assets/2020032621083435.png)
+   ![在这里插入图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131059.png)
 
 
 
@@ -1488,9 +1488,9 @@ WATCH key [key ...]
 
 
 
-![在这里插入图片描述](redislearn.assets/20200326222414514.png)
+![在这里插入图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131100.png)
 
-![在这里插入图片描述](redislearn.assets/20200326222420702.png)
+![在这里插入图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131101.png)
 
 
 
@@ -1534,7 +1534,7 @@ RDB：是redis的默认持久化机制。RDB相当于照快照，保存的是一
 
 rdb是Redis DataBase缩写，功能核心函数rdbSave(生成RDB文件)和rdbLoad (从文件加载内存)两个函数
 
-![image-20200715233558459](redislearn.assets/image-20200715233558459.png)
+![image-20200715233558459](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131102.png)
 
 > 优点：
 >
@@ -1563,7 +1563,7 @@ rdb是Redis DataBase缩写，功能核心函数rdbSave(生成RDB文件)和rdbLoa
 
 `Append-only file:aof` 比快照方式有更好的持久化性，是由于在使用aof 持久化方式时,redis 会将每一个收到的写命令都通过write 函数追加到文件中(默认是appendonly.aof)。当redis 重启时会通过重新执行文件中保存的写命令来在内存中重建整个数据库的内容。
 
-![image-20200715233747399](redislearn.assets/image-20200715233747399.png)
+![image-20200715233747399](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131103.png)
 
 每当执行服务器(定时)任务或者函数时flushAppendOnlyFile函数都会被调用,这个函数执行以下两个工作
 aof写入保存:
@@ -1623,13 +1623,13 @@ aof写入保存:
 
 ​	对于并发程度较高的，可采用异步队列的方式同步，可采用kafka等消息中间件处理消息生产和消费。
 
-![在这里插入图片描述](redislearn.assets/20200326231429279.png)
+![在这里插入图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131104.png)
 
 ####  使用阿里的同步工具canal
 
 canal实现方式是模拟mysql slave 和master的同步机制，监控DB bitlog 的日志更新来触发缓存的更新，此种方法可以解放程序员双手，减少工作量，但在使用时有些局限性。
 
-![在这里插入图片描述](redislearn.assets/2020032623144043.png)
+![在这里插入图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131105.png)
 
 1.  master 将改变记录到二进制日志(binary log)中(这些记录叫做二进制日志事件，binary log events,可以通过show binlog events进行查看) ; 
 2. slave 将master的binary log events 拷贝到它的中继日志(relay log); 
@@ -1637,7 +1637,7 @@ canal实现方式是模拟mysql slave 和master的同步机制，监控DB bitlog
 
 #### canal原理
 
-![image-20200716000155361](redislearn.assets/image-20200716000155361.png)
+![image-20200716000155361](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131106.png)
 
 1. canal 模拟mysql slave的交互协议，伪装自己为mysql slave,向mysql master发送dump
 协议。
@@ -1656,7 +1656,7 @@ canal实现方式是模拟mysql slave 和master的同步机制，监控DB bitlog
 
 * 布隆过滤器，如果key存在数据库，那么一定能通过过滤器，不存在数据库的也可能通过过滤器，但几率小
 
-  ![img](redislearn.assets/20190106002635906.png)
+  ![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323131107.png)
 
   将所有数据库可能的key值，经过布隆过滤器映射到bitmap中，那么请求key时先判断bitmap是否为1，这样就能过滤掉不存在的key了。布隆过滤器就是相当于hash值散列到桶里，但是因为有hash冲突，所有就多个hash函数，如果某个key的多个hash值都相同，那么基本可以认为该key就是我们存在的key。
 

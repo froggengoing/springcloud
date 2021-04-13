@@ -28,7 +28,7 @@
 
 下图分析了写场景下的DirectIO和BufferIO：
 
-![img](IOlearn.assets/29075379_138165232328pb.jpg)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093850.jpg)
 
  
 
@@ -48,7 +48,7 @@ Reids作缓存的几大优势：
 
 更新一下数据源：
 
-![img](IOlearn.assets/v2-0bca913bed8f7d40ac523dbb7688da07_hd.jpg)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093851.jpg)
 
 ref :
 
@@ -106,14 +106,14 @@ Send packet CA->Netherlands->CA 150,000,000 ns
 
 ## 标准文件访问方式
 
-![图片描述](IOlearn.assets/124905454-58442bbf2569d_articlex.jpg)
+![图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093852.jpg)
 
 ### 具体步骤：
 
 当应用程序调用read接口时，操作系统检查在内核的高速缓存有没有需要的数据，如果已经缓存了，那么就直接从缓存中返回，如果没有，则从磁盘中读取，然后缓存在操作系统的缓存中。
 
 应用程序调用write接口时，将数据从用户地址空间复制到内核地址空间的缓存中，这时对用户程序来说，写操作已经完成，至于什么时候再写到磁盘中，由操作系统决定，除非显示调用了sync同步命令。
-![图片描述](IOlearn.assets/1699126908-58442be37ef86_articlex.jpg)
+![图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093853.jpg)
 
 ## 内存映射(`减少数据在用户空间和内核空间之间的拷贝操作,适合大量数据传输`)
 
@@ -125,11 +125,11 @@ Linux内核提供一种访问磁盘文件的特殊方式，它可以将内存中
 
 使用内存映射文件处理存储于磁盘上的文件时，将不必再对文件执行I/O操作，这意味着在对文件进行处理时将不必再为文件申请并分配缓存，所有的文件缓存操作均由系统直接管理，由于取消了将文件数据加载到内存、数据从内存到文件的回写以及释放内存块等步骤，使得**内存映射文件在处理大数据量的文件时能起到相当重要的作用**。
 
-![图片描述](IOlearn.assets/2440402385-58442d23661be_articlex.jpg)
+![图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093854.jpg)
 
 ### 访问步骤
 
-![图片描述](IOlearn.assets/3598476989-58442d405587f_articlex.jpg)
+![图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093855.jpg)
 
 在大多数情况下，使用内存映射可以提高磁盘I/O的性能，它无须使用read()或write()等系统调用来访问文件，而是通过mmap()系统调用来建立内存和磁盘文件的关联，然后像访问内存一样自由地访问文件。
 有两种类型的内存映射，共享型和私有型，前者可以将任何对内存的写操作都同步到磁盘文件，而且所有映射同一个文件的进程都共享任意一个进程对映射内存的修改；后者映射的文件只能是只读文件，所以不可以将对内存的写同步到文件，而且多个进程不共享修改。显然，共享型内存映射的效率偏低，因为如果一个文件被很多进程映射，那么每次的修改同步将花费一定的开销。
@@ -144,11 +144,11 @@ Linux内核提供一种访问磁盘文件的特殊方式，它可以将内存中
 应用程序直接访问磁盘数据，不经过操作系统内核数据缓冲区，**这样做的目的是减少一次从内核缓冲区到用户程序缓存的数据复制**。这种方式通常是在对数据的缓存管理由应用程序实现的数据库管理系统中。
 **直接I/O的缺点就是如果访问的数据不在应用程序缓存中，那么每次数据都会直接从磁盘进行加载，这种直接加载会非常缓慢。通常直接I/O跟异步I/O结合使用会得到较好的性能。**
 
-![图片描述](IOlearn.assets/3851406707-58442c61980f9_articlex.jpg)
+![图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093856.jpg)
 
 ### 访问步骤
 
-![图片描述](IOlearn.assets/3521793774-58442caf750f5_articlex.jpg)
+![图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093857.jpg)
 
 Linux提供了对这种需求的支持，即在open()系统调用中增加参数选项O_DIRECT，用它打开的文件便可以**绕过内核缓冲区的直接访问，这样便有效避免了CPU和内存的多余时间开销**。
 
@@ -163,7 +163,7 @@ Linux提供了对这种需求的支持，即在open()系统调用中增加参数
 3）应用将数据写回内核的Socket缓存中
 4）操作系统将数据从Socket缓存区复制到网卡缓存，然后将其通过网络发出
 
-![图片描述](IOlearn.assets/2548285981-5844306f139b8_articlex.jpg)
+![图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093858.jpg)
 
 1、当调用read系统调用时，通过DMA（Direct Memory Access）将数据copy到内核模式
 2、然后由CPU控制将内核模式数据copy到用户模式下的 buffer中
@@ -174,7 +174,7 @@ Linux提供了对这种需求的支持，即在open()系统调用中增加参数
 
 ### sendfile
 
-![图片描述](IOlearn.assets/3481964482-584430e53460d_articlex.jpg)
+![图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093859.jpg)
 
 通过sendfile传送文件只需要一次系统调用，当调用 sendfile时：
 1、首先通过DMA copy将数据从磁盘读取到kernel buffer中
@@ -183,7 +183,7 @@ Linux提供了对这种需求的支持，即在open()系统调用中增加参数
 sendfile与read/write方式相比，少了 一次模式切换一次CPU copy。但是从上述过程中也可以发现从kernel buffer中将数据copy到socket buffer是没必要的。
 
 为此，Linux2.4内核对sendfile做了改进，下图所示
-![图片描述](IOlearn.assets/3225447292-58443131cc85f_articlex.jpg)
+![图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093900.jpg)
 改进后的处理过程如下：
 1、DMA copy将磁盘数据copy到kernel buffer中
 2、向socket buffer中追加当前要发送的数据在kernel buffer中的位置和偏移量
@@ -195,11 +195,11 @@ sendfile与read/write方式相比，少了 一次模式切换一次CPU copy。�
 
 Java NIO中FileChannel.transferTo(long position, long count, WriteableByteChannel target)方法将当前通道中的数据传送到目标通道target中，在支持Zero-Copy的linux系统中，transferTo()的实现依赖于 sendfile()调用。
 
-![图片描述](IOlearn.assets/837443789-58442ffd25fda_articlex.png)
+![图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093901.jpg)
 
 传统方式对比零拷贝方式：
 
-![图片描述](IOlearn.assets/3979874305-584430124c07a_articlex.jpg)
+![图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093902.png)
 
 整个数据通路涉及4次数据复制和2个系统调用，如果使用sendfile则可以避免多次数据复制，操作系统可以**直接将数据从内核页缓存中复制到网卡缓存**，这样可以大大加快整个过程的速度。
 

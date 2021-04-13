@@ -214,7 +214,7 @@ RabbitMq消息模型的核心是producer生产者不会直接发送一条消息�
 
 生产者只是将消息发送给一个exchange。一方面，exchange接收来自生产者的消息另一方面push（推送）至queue中。exchange必须知道它究竟要怎么处理它接收到的消息。是追加至特定的队列？还是追加至多个队列？还是应该将消息丢弃?这些规则通过exchange type定义：
 
-![img](RabbitMq.assets/exchanges.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125443.png)
 
 一些可用的**exchange type：direct, topic, headers 和fanout**。我们将关注最后一个--fanout。下面创建一个fanout的exchange 类型：
 
@@ -274,7 +274,7 @@ String queueName = channel.queueDeclare().getQueue();
 
 #### Bindings
 
-![img](RabbitMq.assets/bindings.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125444.png)
 
 我们已经创建了一个exchange和queue。我们现在需要让exchange发送消息到我们的 队列中。交换和队列之间的关系称为绑定 ，代码如下：
 
@@ -290,7 +290,7 @@ channel.queueBind(queueName, "logs", "");
 rabbitmqctl list_bindings
 ```
 
-![img](RabbitMq.assets/python-three-overall.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125445.png)
 
 生产者的程序，与前面的例子并没有太大的区别。最重要的一点是，现在会将消息发送值logs echange中而不是匿名的exchange。发送消息时需要提供一个routingKey，但这个值会被fanout exchange忽略。完整代码如下：
 
@@ -384,7 +384,7 @@ channel.queueBind(queueName, EXCHANGE_NAME, "black");
 
 本节，我们将使用`direct exchange`类型。`direct`的路由算法也很简单，一个消息只有当queue的binding key与routing key相匹配，才会推送该消息至queue中。
 
-![img](RabbitMq.assets/direct-exchange.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125446.png)
 
 在上图中中，我们可以看到direct exchange类型的X有两个queue队列绑定到它上面。第一个queue的binding key为`orange`，第二个队列的binding  key是`black`和`green`。
 
@@ -392,7 +392,7 @@ channel.queueBind(queueName, EXCHANGE_NAME, "black");
 
 #### Multiple bindings
 
-![img](RabbitMq.assets/direct-exchange-multiple.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125447.png)
 
 用相同的bingings key绑定到多个队列是完全合法的。在上图中，我们将x和Q1、Q2都是使用black作为binding key。这种情况，就像fanout类型一样，会广播所有的消息到匹配的队列中。一个routing key为black的消息将被分发至Q1和Q2中。
 
@@ -424,7 +424,7 @@ for(String severity : argv){
 }
 ```
 
-![img](RabbitMq.assets/python-four.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125448.png)
 
 
 
@@ -519,7 +519,7 @@ binding key必须是同样的格式。topic exchange的处理逻辑与direct exc
 * `*`星号能匹配一个单词
 * `#`井号能匹配0个或多个单词
 
-![img](RabbitMq.assets/python-five.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125449.png)
 
 在此示例中，我们将发送所有描述动物的消息。将使用包含三个词（两个点）的routing key发送消息。`routing key`中的第一个单词将描述一个速度，第二个是颜色，第三个是物种。`"<celerity>.<colour>.<species>".`
 
@@ -680,7 +680,7 @@ channel.basicPublish("", "rpc_queue", props, message.getBytes());
 
 #### Summary
 
-![img](RabbitMq.assets/python-six.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125450.png)
 
 RPC工作流程：
 
@@ -902,7 +902,182 @@ public class RPCClient implements AutoCloseable {
 
 
 
+### properties
 
+```properties
+# Comma-separated list of addresses to which the client should connect.
+spring.rabbitmq.addresses= 
+# Virtual host to use when connecting to the broker.
+spring.rabbitmq.virtual-host= 
+# Connection timeout. Set it to zero to wait forever.
+spring.rabbitmq.connection-timeout= 
+# Whether to create an AmqpAdmin bean.
+spring.rabbitmq.dynamic=true 
+# RabbitMQ host.
+spring.rabbitmq.host=localhost 
+# RabbitMQ port.
+spring.rabbitmq.port=5672 
+# Login to authenticate against the broker.
+spring.rabbitmq.password=guest 
+# Login user to authenticate to the broker.
+spring.rabbitmq.username=guest 
+# Whether to enable publisher confirms.
+spring.rabbitmq.publisher-confirms=false 
+# Whether to enable publisher returns.
+spring.rabbitmq.publisher-returns=false 
+# Requested heartbeat timeout; zero for none. If a duration suffix is not specified, seconds will be used.
+spring.rabbitmq.requested-heartbeat= 
+#########################################################################
+
+# Duration to wait to obtain a channel if the cache size has been reached.
+spring.rabbitmq.cache.channel.checkout-timeout= 
+# Number of channels to retain in the cache.
+spring.rabbitmq.cache.channel.size= 
+# Connection factory cache mode.
+spring.rabbitmq.cache.connection.mode=channel 
+# Number of connections to cache.
+spring.rabbitmq.cache.connection.size= 
+#########################################################################
+
+# Acknowledge mode of container.
+spring.rabbitmq.listener.direct.acknowledge-mode= 
+# Whether to start the container automatically on startup.
+spring.rabbitmq.listener.direct.auto-startup=true 
+# Number of consumers per queue.
+spring.rabbitmq.listener.direct.consumers-per-queue= 
+# Whether rejected deliveries are re-queued by default.
+spring.rabbitmq.listener.direct.default-requeue-rejected= 
+# How often idle container events should be published.
+spring.rabbitmq.listener.direct.idle-event-interval= 
+# Whether to fail if the queues declared by the container are not available on the broker.
+spring.rabbitmq.listener.direct.missing-queues-fatal=false 
+# Maximum number of unacknowledged messages that can be outstanding at each consumer.
+spring.rabbitmq.listener.direct.prefetch= 
+# Whether publishing retries are enabled.
+spring.rabbitmq.listener.direct.retry.enabled=false 
+# Duration between the first and second attempt to deliver a message.
+spring.rabbitmq.listener.direct.retry.initial-interval=1000ms 
+# Maximum number of attempts to deliver a message.
+spring.rabbitmq.listener.direct.retry.max-attempts=3 
+# Maximum duration between attempts.
+spring.rabbitmq.listener.direct.retry.max-interval=10000ms 
+# Multiplier to apply to the previous retry interval.
+spring.rabbitmq.listener.direct.retry.multiplier=1 
+# Whether retries are stateless or stateful.
+spring.rabbitmq.listener.direct.retry.stateless=true 
+# Acknowledge mode of container.
+spring.rabbitmq.listener.simple.acknowledge-mode= 
+# Whether to start the container automatically on startup.
+spring.rabbitmq.listener.simple.auto-startup=true 
+# Minimum number of listener invoker threads.
+spring.rabbitmq.listener.simple.concurrency= 
+# Whether rejected deliveries are re-queued by default.
+spring.rabbitmq.listener.simple.default-requeue-rejected= 
+# How often idle container events should be published.
+spring.rabbitmq.listener.simple.idle-event-interval= 
+# Maximum number of listener invoker threads.
+spring.rabbitmq.listener.simple.max-concurrency= 
+# Whether to fail if the queues declared by the container are not available on the broker and/or whether to stop the container if one or more queues are deleted at runtime.
+spring.rabbitmq.listener.simple.missing-queues-fatal=true 
+# Maximum number of unacknowledged messages that can be outstanding at each consumer.
+spring.rabbitmq.listener.simple.prefetch= 
+# Whether publishing retries are enabled.
+spring.rabbitmq.listener.simple.retry.enabled=false 
+# Duration between the first and second attempt to deliver a message.
+spring.rabbitmq.listener.simple.retry.initial-interval=1000ms 
+# Maximum number of attempts to deliver a message.
+spring.rabbitmq.listener.simple.retry.max-attempts=3 
+# Maximum duration between attempts.
+spring.rabbitmq.listener.simple.retry.max-interval=10000ms 
+# Multiplier to apply to the previous retry interval.
+spring.rabbitmq.listener.simple.retry.multiplier=1 
+# Whether retries are stateless or stateful.
+spring.rabbitmq.listener.simple.retry.stateless=true 
+# Number of messages to be processed between acks when the acknowledge mode is AUTO. If larger than prefetch, prefetch will be increased to this value.
+spring.rabbitmq.listener.simple.transaction-size= 
+# Listener container type.
+spring.rabbitmq.listener.type=simple 
+#########################################################################
+
+# SSL algorithm to use. By default, configured by the Rabbit client library.
+spring.rabbitmq.ssl.algorithm= 
+# Whether to enable SSL support.
+spring.rabbitmq.ssl.enabled=false 
+# Path to the key store that holds the SSL certificate.
+spring.rabbitmq.ssl.key-store= 
+# Password used to access the key store.
+spring.rabbitmq.ssl.key-store-password= 
+# Key store type.
+spring.rabbitmq.ssl.key-store-type=PKCS12 
+# Trust store that holds SSL certificates.
+spring.rabbitmq.ssl.trust-store= 
+# Password used to access the trust store.
+spring.rabbitmq.ssl.trust-store-password= 
+# Trust store type.
+spring.rabbitmq.ssl.trust-store-type=JKS 
+# Whether to enable server side certificate validation.
+spring.rabbitmq.ssl.validate-server-certificate=true 
+# Whether to enable hostname verification.
+spring.rabbitmq.ssl.verify-hostname=true 
+# Name of the default queue to receive messages from when none is specified explicitly.
+spring.rabbitmq.template.default-receive-queue= 
+# Name of the default exchange to use for send operations.
+spring.rabbitmq.template.exchange= 
+# Whether to enable mandatory messages.
+spring.rabbitmq.template.mandatory= 
+# Timeout for `receive()` operations.
+spring.rabbitmq.template.receive-timeout= 
+# Timeout for `sendAndReceive()` operations.
+spring.rabbitmq.template.reply-timeout= 
+# Whether publishing retries are enabled.
+spring.rabbitmq.template.retry.enabled=false 
+# Duration between the first and second attempt to deliver a message.
+spring.rabbitmq.template.retry.initial-interval=1000ms 
+# Maximum number of attempts to deliver a message.
+spring.rabbitmq.template.retry.max-attempts=3 
+# Maximum duration between attempts.
+spring.rabbitmq.template.retry.max-interval=10000ms 
+# Multiplier to apply to the previous retry interval.
+spring.rabbitmq.template.retry.multiplier=1 
+# Value of a default routing key to use for send operations.
+spring.rabbitmq.template.routing-key= 
+
+
+
+
+
+spring.rabbitmq.listener.type=simple: 容器类型.simple或direct
+ 
+spring.rabbitmq.listener.simple.auto-startup=true: 是否启动时自动启动容器
+spring.rabbitmq.listener.simple.acknowledge-mode: 表示消息确认方式，其有三种配置方式，分别是none、manual和auto；默认auto
+spring.rabbitmq.listener.simple.concurrency: 最小的消费者数量
+spring.rabbitmq.listener.simple.max-concurrency: 最大的消费者数量
+spring.rabbitmq.listener.simple.prefetch: 一个消费者最多可处理的nack消息数量，如果有事务的话，必须大于等于transaction数量.
+spring.rabbitmq.listener.simple.transaction-size: 当ack模式为auto时，一个事务（ack间）处理的消息数量，最好是小于等于prefetch的数量.若大于prefetch， 则prefetch将增加到这个值
+spring.rabbitmq.listener.simple.default-requeue-rejected: 决定被拒绝的消息是否重新入队；默认是true（与参数acknowledge-mode有关系）
+spring.rabbitmq.listener.simple.missing-queues-fatal=true 若容器声明的队列在代理上不可用，是否失败； 或者运行时一个多多个队列被删除，是否停止容器
+spring.rabbitmq.listener.simple.idle-event-interval: 发布空闲容器的时间间隔，单位毫秒
+spring.rabbitmq.listener.simple.retry.enabled=false: 监听重试是否可用
+spring.rabbitmq.listener.simple.retry.max-attempts=3: 最大重试次数
+spring.rabbitmq.listener.simple.retry.max-interval=10000ms: 最大重试时间间隔
+spring.rabbitmq.listener.simple.retry.initial-interval=1000ms:第一次和第二次尝试传递消息的时间间隔
+spring.rabbitmq.listener.simple.retry.multiplier=1: 应用于上一重试间隔的乘数
+spring.rabbitmq.listener.simple.retry.stateless=true: 重试时有状态or无状态
+ 
+spring.rabbitmq.listener.direct.acknowledge-mode= ack模式
+spring.rabbitmq.listener.direct.auto-startup=true 是否在启动时自动启动容器
+spring.rabbitmq.listener.direct.consumers-per-queue= 每个队列消费者数量.
+spring.rabbitmq.listener.direct.default-requeue-rejected= 默认是否将拒绝传送的消息重新入队.
+spring.rabbitmq.listener.direct.idle-event-interval= 空闲容器事件发布时间间隔.
+spring.rabbitmq.listener.direct.missing-queues-fatal=false若容器声明的队列在代理上不可用，是否失败.
+spring.rabbitmq.listener.direct.prefetch= 每个消费者可最大处理的nack消息数量.
+spring.rabbitmq.listener.direct.retry.enabled=false  是否启用发布重试机制.
+spring.rabbitmq.listener.direct.retry.initial-interval=1000ms # Duration between the first and second attempt to deliver a message.
+spring.rabbitmq.listener.direct.retry.max-attempts=3 # Maximum number of attempts to deliver a message.
+spring.rabbitmq.listener.direct.retry.max-interval=10000ms # Maximum duration between attempts.
+spring.rabbitmq.listener.direct.retry.multiplier=1 # Multiplier to apply to the previous retry interval.
+spring.rabbitmq.listener.direct.retry.stateless=true # Whether retries are stateless or stateful.
+```
 
 
 
@@ -988,7 +1163,7 @@ try {
 
 了解了事务的实现之后，那么事务究竟是怎么执行的，让我们来使用wireshark抓个包看看，如图所示：
 
-![img](RabbitMq.assets/rabbitmq-trsaction-wr.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125451.png)
 
 输入ip.addr==rabbitip && amqp查看客户端和rabbit之间的通讯，可以看到交互流程：
 
@@ -1079,7 +1254,7 @@ channel.addConfirmListener(new ConfirmListener() {
 
 异步模式的优点，就是执行效率高，不需要等待消息执行完，只需要监听消息即可，以上异步返回的信息如下：
 
-![img](RabbitMq.assets/rabbitmq-confirm-async-result.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125452.png)
 
 可以看出，代码是异步执行的，消息确认有可能是批量确认的，是否批量确认在于返回的multiple的参数，此参数为bool值，如果true表示批量执行了deliveryTag这个值以前的所有消息，如果为false的话表示单条确认。
 
@@ -1192,7 +1367,7 @@ channel.addConfirmListener(new ConfirmListener() {
 说明：本文内容来源于对`amqp-client`和`spring-rabbit`包源码的解读及`debug`，尽可能保证内容的准确性。*
 
 `rabbitmq`消费过程示意如下：
-![在这里插入图片描述](RabbitMq.assets/20181219222238485.png)
+![在这里插入图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125453.png)
 图中首字母大写的看上去像类名的，如`ConsumerWorkService`，`MainLoop`，`WorkPoolRunnable`等，没错就是类名，可自行根据类名去查看相关源码。
 
 下面解释上图的含义。
@@ -1214,7 +1389,7 @@ channel.addConfirmListener(new ConfirmListener() {
 - `AMQConnection`启动一个`main loop thread`来跑`MainLoop`，不断从`Socket`流中读取字节转换成`Frame`对象，这是每个`connection`唯一的数据来源。
 
 Frame对象结构如下：
-![在这里插入图片描述](RabbitMq.assets/20181212024209650.png)
+![在这里插入图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125454.png)
 `type`：指定当前`Frame`的类型，如`method(1)`、`message header(2)`、`message body(3)`、`heartbeat(8)`等；
 
 `channel`：`channel`的编号，从`0~n`排列，指定当前`Frame`需要交给哪个`channel`处理。`channel-0`为一类，`channel-n`为一类。`channel-0`是一个匿名类，用来处理特殊`Frame`，如`connection.start`。`channel-n`都是`ChannelN`类，由`ChannelManager`类统一管理。

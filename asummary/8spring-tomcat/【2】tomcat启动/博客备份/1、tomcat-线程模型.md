@@ -5,7 +5,7 @@
 Tomcat支持三种接收请求的处理方式：BIO、NIO、APR
 
 1. BIO模式：阻塞式I/O操作，表示Tomcat使用的是传统Java I/O操作(即Java.io包及其子包)。Tomcat7以下版本默认情况下是以bio模式运行的，由于每个请求都要创建一个线程来处理，线程开销较大，不能处理高并发的场景，在三种模式中性能也最低。启动tomcat看到如下日志，表示使用的是BIO模式：
-   ![这里写图片描述](1%E3%80%81tomcat-%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B.assets/20170712084104165.png)
+   ![这里写图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130911.png)
 2. NIO模式：是java SE 1.4及后续版本提供的一种新的I/O操作方式(即java.nio包及其子包)。是一个基于缓冲区、并能提供非阻塞I/O操作的Java API，它拥有比传统I/O操作(bio)更好的并发运行性能。在tomcat 8之前要让Tomcat以nio模式来运行比较简单，只需要在Tomcat安装目录/conf/server.xml文件中将如下配置：
 
 ```
@@ -19,7 +19,7 @@ Tomcat支持三种接收请求的处理方式：BIO、NIO、APR
 ```
 
 Tomcat8以上版本，默认使用的就是NIO模式，不需要额外修改
-![这里写图片描述](1%E3%80%81tomcat-%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B.assets/20170712084323183.png)
+![这里写图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130912.png)
 
 1. apr模式：简单理解，就是从操作系统级别解决异步IO问题，大幅度的提高服务器的处理和响应性能， 也是Tomcat运行高并发应用的首选模式。
    启用这种模式稍微麻烦一些，需要安装一些依赖库，下面以在CentOS7 mini版环境下Tomcat-8.0.35为例，介绍安装步聚：
@@ -34,16 +34,16 @@ GNU development environment (gcc, make)1234
 #### **二. tomcat的NioEndpoint**
 
 我们先来简单回顾下目前一般的NIO服务器端的大致实现，借鉴infoq上的一篇文章Netty系列之Netty线程模型中的一张图
-![这里写图片描述](1%E3%80%81tomcat-%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B.assets/20170712084736110.png)
+![这里写图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130913.png)
 
 一个或多个Acceptor线程，每个线程都有自己的Selector，Acceptor只负责accept新的连接，一旦连接建立之后就将连接注册到其他Worker线程中。
 多个Worker线程，有时候也叫IO线程，就是专门负责IO读写的。一种实现方式就是像Netty一样，每个Worker线程都有自己的Selector，可以负责多个连接的IO读写事件，每个连接归属于某个线程。另一种方式实现方式就是有专门的线程负责IO事件监听，这些线程有自己的Selector，一旦监听到有IO读写事件，并不是像第一种实现方式那样（自己去执行IO操作），而是将IO操作封装成一个Runnable交给Worker线程池来执行，这种情况每个连接可能会被多个线程同时操作，相比第一种并发性提高了，但是也可能引来多线程问题，在处理上要更加谨慎些。tomcat的NIO模型就是第二种。
 
 这就要详细了解下tomcat的NioEndpoint实现了。先来借鉴看下 [断网故障时Mtop触发tomcat高并发场景下的BUG排查和修复（已被apache采纳）](https://yq.aliyun.com/articles/2889?spm=5176.100239.blogcont39093.8.s7Uavb) 中的一张图
-![这里写图片描述](1%E3%80%81tomcat-%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B.assets/20170712085042514.png)
+![这里写图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130914.png)
 这张图勾画出了NioEndpoint的大致执行流程图，worker线程并没有体现出来，它是作为一个线程池不断的执行IO读写事件即SocketProcessor（一个Runnable），即这里的Poller仅仅监听Socket的IO事件，然后封装成一个个的SocketProcessor交给worker线程池来处理。下面我们来详细的介绍下NioEndpoint中的Acceptor、Poller、SocketProcessor。
 它们处理客户端连接的主要流程如图所示：
-![这里写图片描述](1%E3%80%81tomcat-%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B.assets/20170712085200173.png)
+![这里写图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130915.png)
 图中Acceptor及Worker分别是以线程池形式存在，Poller是一个单线程。注意，与BIO的实现一样，缺省状态下，在server.xml中没有配置<Executor>，则以Worker线程池运行，如果配置了<Executor>，则以基于java concurrent 系列的java.util.concurrent.ThreadPoolExecutor线程池运行。
 
 1. Acceptor

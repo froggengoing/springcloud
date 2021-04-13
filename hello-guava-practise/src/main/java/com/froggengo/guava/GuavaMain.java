@@ -7,8 +7,10 @@ import org.springframework.util.Assert;
 
 @SpringBootApplication
 public class GuavaMain {
+
     public static void main(String[] args) {
-        SpringApplication.run(GuavaMain.class,args);
+        SpringApplication.run(GuavaMain.class, args);
     }
 }
+
 

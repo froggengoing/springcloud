@@ -21,10 +21,21 @@
         <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+    <dependency>
         <groupId>org.mybatis</groupId>
         <artifactId>mybatis</artifactId>
         <version>3.5.2</version>
     </dependency>
+    <dependency>
+        <groupId>com.github.pagehelper</groupId>
+        <artifactId>pagehelper</artifactId>
+        <version>5.1.11</version>
+    </dependency>
+
+
     <!--工具类，比如反射-->
     <dependency>
         <groupId>commons-lang</groupId>

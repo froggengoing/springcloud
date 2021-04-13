@@ -24,7 +24,7 @@
 
 This article explains the internal architecture of the Java Virtual Machine (JVM). The following diagram show the key internal components of a typical JVM that conforms to [The Java Virtual Machine Specification Java SE 7 Edition](http://www.amazon.co.uk/Virtual-Machine-Specification-Edition-Series/dp/0133260445).
 
-![](img/JVM_Internal_Architecture_small.png)
+![](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322093614.png)
 
 The components shown on this diagram are each explained below in two sections. [First section](https://blog.jamesdbloom.com/JVMInternals.html#threads) covers the components that are created for each thread and the [second section](https://blog.jamesdbloom.com/JVMInternals.html#shared_between_threads) covers the components that are created independently of threads.
 

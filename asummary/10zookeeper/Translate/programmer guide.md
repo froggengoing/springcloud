@@ -145,7 +145,7 @@ ZooKeeper中每个znode的Stat结构由以下字段组成：
 
 ZooKeeper客户端创建句柄通过bind绑定与ZooKeeper服务建立会话。创建句柄后，该句柄将开始处于CONNECTING状态，客户端尝试连接到ZooKeeper集群中的其中一个服务器，连接成功后它将切换为CONNECTED状态。在正常操作期间，客户端句柄将处于这两种状态之一。如果发生不可恢复的错误，例如会话到期或身份验证失败，或者如果应用程序显式关闭了句柄，则该句柄将移至CLOSED状态。下图显示了ZooKeeper客户端可能的状态转换：
 
-![State transitions](programmer%20guide.assets/state_dia.jpg)
+![State transitions](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125940.jpg)
 
 > To create a client session the application code must provide a connection string containing a comma separated list of host:port pairs, each corresponding to a ZooKeeper server (e.g. "127.0.0.1:4545" or "127.0.0.1:3000,127.0.0.1:3001,127.0.0.1:3002"). The ZooKeeper client library will pick an arbitrary server and try to connect to it. If this connection fails, or if the client becomes disconnected from the server for any reason, the client will automatically try the next server in the list, until a connection is (re-)established.
 
@@ -897,7 +897,7 @@ BASE理论：
 
 ### 2pc：two phase commit
 
-![image-20200721210517117](programmer%20guide.assets/image-20200721210517117.png)
+![image-20200721210517117](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125941.png)
 
 角色：参与者与协调者
 
@@ -913,7 +913,7 @@ BASE理论：
 
 ### 3PC：three phase commit
 
-![image-20200721211301368](programmer%20guide.assets/image-20200721211301368.png)
+![image-20200721211301368](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125942.png)
 
 角色：参与者和协调者
 
@@ -931,7 +931,7 @@ BASE理论：
 
 ### paxos
 
-![image-20200721214338637](programmer%20guide.assets/image-20200721214338637.png)
+![image-20200721214338637](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125943.png)
 
 分布式系统，一般部署在同一个局域网，而不用担心数据在通道中被篡改。
 
@@ -955,7 +955,7 @@ paxos假设背景：paxos小岛上通过议会形式通过法令，议员之间�
 
     解决：提案由：【编号，提案内容组成】=》【M,V】
 
-    ![image-20200721221031415](programmer%20guide.assets/image-20200721221031415.png)
+    ![image-20200721221031415](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125944.png)
 
   * p2a：如果【M0,v0】被选定，那么编号M比M0高，且被通过的提案，V必须等于V0
 
@@ -971,13 +971,13 @@ acceptor可能接收到Proposer两种请求，分别是Prepare和Accept请求
 
 算法概述
 
-![image-20200721231922266](programmer%20guide.assets/image-20200721231922266.png)
+![image-20200721231922266](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125945.png)
 
 * 
 
 #### 提案获取
 
-![image-20200721232501548](programmer%20guide.assets/image-20200721232501548.png)
+![image-20200721232501548](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125946.png)
 
 
 
@@ -1030,9 +1030,9 @@ create、read、write、delete、admin
 
 #### ZAB协议（zookeeper atomic broadcast）
 
-![image-20200721235129953](programmer%20guide.assets/image-20200721235129953.png)
+![image-20200721235129953](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125947.png)
 
-![image-20200721235255981](programmer%20guide.assets/image-20200721235255981.png)
+![image-20200721235255981](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323125948.png)
 
 
 

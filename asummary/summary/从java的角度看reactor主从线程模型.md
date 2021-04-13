@@ -17,7 +17,7 @@ Handler：处理非阻塞的任务
 流程图
 为了更好的理解主从reactor主从线程模型，我简单实现了一个demo，大体执行流程如下。
 
-![在这里插入图片描述](img/1.png)
+![在这里插入图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130613.png)
 
 关键类：
 BossGroup：该类只对连接事件感兴趣，它会监听一个端口 ,如果有请求进来，它会进行连接，后续的读写操作都会由TCPSubReactor来管理

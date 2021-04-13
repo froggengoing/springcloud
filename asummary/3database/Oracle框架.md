@@ -2,7 +2,7 @@ Oracle架构，讲述了Oracle RDBMS的底层实现原理，是Oracle DBA**调�
 
 ## Oracle RDBMS[架构图](https://yq.aliyun.com/articles/237414)
 
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200246845-454155686.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094239.png)
 
  
 
@@ -21,7 +21,7 @@ Database由一些物理文件(如：存放在存储设备中的二维表文件)�
 
 将上面的Oracle RDBMS架构图进行抽象分类，可以将Oracle架构抽象为：Oracle体系 = 内存结构 + 进程结构 + 存储结构
 
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200303188-2030579251.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094240.png)
 
  
 
@@ -31,11 +31,11 @@ Database由一些物理文件(如：存放在存储设备中的二维表文件)�
 
 Oracle Instance是Oracle RDBMS的核心之一，负责RDBMS的管理功能。Oracle Instance主要由内存池SGA和后台进程组成。
 
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200321783-1113694554.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094241.png)
 
 ## 系统全局区SGA
 
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200332700-841681458.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094242.png)
 
 内存池SGA的默认Size，会在安装Oracle的时候会根据LinuxOS的sysctl.conf参数文件来决定：
 
@@ -176,7 +176,7 @@ ALTER SYSTEM SET SHARED_POOL_SIZE = 110M;
 
 ### 用户连接进程
 
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200528952-1141504105.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094243.png)
 
  
 
@@ -193,7 +193,7 @@ User Process的作用：
 并不会直接与Oracle Server交互
 connect连接：是User和Server Process之间的通信通道。
 
- ![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200541913-1327168312.png)
+ ![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094244.png)
 
  
 
@@ -207,13 +207,13 @@ Server Process的作用：
 复制执行和返回结果
 Session会话：一个用户通过User Process(本质是通过Server Process)与Oracle Instance建立连接后称之为一个会话，一个用户可以建立多个会话，即同时使用同一个用户可以多次的连接到同一个实例，也就是说多个session可以使用同一个connect。
 
- ![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200556789-579979687.png)
+ ![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094245.png)
 
  
 
 ### 程序全局区PGA
 
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200617903-422522903.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094246.png)
 
  
 
@@ -239,7 +239,7 @@ Oracle的connect连接和session会话与User Process紧密相关
 
 常用的核心进程：
 
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200633374-1772438222.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094247.png)
 
  
 
@@ -276,7 +276,7 @@ MMNL Manageability Monitor Process 2
 
 ### 数据库写入进程(DBWn)
 
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200644944-1580866433.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094248.png)
 
  
 
@@ -291,7 +291,7 @@ Database writer (DBWn)数据库写进程：
 
 ### 检查点(CKPT)
 
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200656675-1719990799.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094249.png)
 
  
 
@@ -302,7 +302,7 @@ Ckpt 进程会降低数据库性能，但是提高数据库崩溃时，自我恢
 
 ### 进程监视进程(PMON)
 
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200709150-549010149.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094250.png)
 
  
 
@@ -320,7 +320,7 @@ PMON在后台进程执行失败后负责清理数据库缓存和闲置资源，�
 
 ### 系统监视进程(SMON)
 
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200727891-1791218834.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094251.png)
 
  
 
@@ -334,7 +334,7 @@ SMON启动后会自动的用于在实例崩溃时进行数据库实例自动恢�
 
 重做日志文件和日志写入进程
 
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200740417-1258396459.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094252.png)
 
  
 
@@ -350,7 +350,7 @@ SMON启动后会自动的用于在实例崩溃时进行数据库实例自动恢�
 归档进程(ARCn)
 归档进程(ARCn)是非核心进程。
 
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200809973-1060529755.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094253.png)
 
  
 
@@ -360,7 +360,7 @@ SMON启动后会自动的用于在实例崩溃时进行数据库实例自动恢�
 
 Oracle RDBMS存储结构主要由Database组成。
 
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200822122-2088126875.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094254.png)
 
  
 
@@ -424,13 +424,13 @@ Control Files
 逻辑空间到物理空间的映射
 段、区和块：
 
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200843631-2097796415.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094255.png)
 
  
 
 
 执行一条写入的SQL语句时在RDBMS中都发生了什么
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200852607-488650592.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094256.png)
 
  
 
@@ -446,11 +446,11 @@ Control Files
 最后
 最后我们举个例子来看看Oracle RDBMS是怎么运作的
 
- ![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200910646-1679314485.png)
+ ![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094257.png)
 
  
 
-![img](Oracle%E6%A1%86%E6%9E%B6.assets/1309603-20190809200918481-1919169353.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094258.png)
 
  
 

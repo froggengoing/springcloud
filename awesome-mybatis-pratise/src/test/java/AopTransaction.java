@@ -63,7 +63,7 @@ public class AopTransaction {
         });
         //proxyFactory.addAdvisors(advisedSupport.getAdvisors());
         PaymentMapper proxy = (PaymentMapper)proxyFactory.getProxy();
-        proxy.getList();
+        proxy.getList(null);
 
         TransactionAspectSupport t;
     }

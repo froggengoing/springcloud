@@ -87,7 +87,7 @@ metaParameters=org.apache.ibatis.reflection.MetaObject@4a22f9e2]
 
 ### 层次结构
 
-![](other/img/mybatis%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84.png)
+![](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130818.png)
 
 #### 分页原理
 
@@ -163,7 +163,7 @@ metaParameters=org.apache.ibatis.reflection.MetaObject@4a22f9e2]
 
 4. 执行顺序
 
-![img](mybatisLearn.assets/20181113212345185.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130819.png)
 
 ```properties
 ==== SecondExamplePlugin 开始搞事情：query  ====
@@ -181,7 +181,7 @@ metaParameters=org.apache.ibatis.reflection.MetaObject@4a22f9e2]
 >
 > [或者pageHelper作者github](https://github.com/pagehelper/Mybatis-PageHelper/blob/master/wikis/zh/Interceptor.md)
 
-![img](mybatisLearn.assets/20181113222714696.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130820.png)
 
 **所以，后面的将会代理前面的，这也就是为什么SecondExamplePlugin先执行的原因了——越外层的越先执行嘛**
 
@@ -554,11 +554,11 @@ public class QsMybatisConfig  {
 
 1. 架构图，[来源](https://blog.csdn.net/luanlouis/article/details/40422941)
 
-   ![img](mybatisLearn.assets/20141028232313593.png)
+   ![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130821.png)
 
    
 
-   ![img](mybatisLearn.assets/20141028140852531.png)
+   ![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130822.png)
 
 2. 思考
 
@@ -660,7 +660,7 @@ private static Connection getConnection(...){
 >
 >    > `ServiceLoader` 通过读取 `META-INF/services` 的配置文件, Driver类全称按行分隔。参考mysql
 >    >
->    > ![image-20200703101014017](mybatisLearn.assets/image-20200703101014017.png) 
+>    > ![image-20200703101014017](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130823.png) 
 >
 > 2.  `Class.forName()` 加载 class，从而触发static代码，进而注册到 `DriverManager` 中，实际存储在`CopyOnWriteArrayList<DriverInfo>`
 >

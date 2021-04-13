@@ -129,7 +129,7 @@ select id,level from t connect by level<4;
 -- 那么会生成3棵高度为3的子树，然后先根遍历
 ```
 
-![img](oracleLearn.assets/20180115174727350.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094218.png)
 
 实例
 
@@ -346,7 +346,7 @@ ROWID：数据库中行的全局唯一地址
 - BBBBBB：数据块编号（6位显示）
 - RRR：数据块中行编号（3位显示）
 
-![img](oracleLearn.assets/20140516093153828.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094219.png)
 
 ```sql
 --1、使用sql
@@ -471,7 +471,7 @@ Predicate Information (identified by operation id):
 
 #### *Graphical View of SQL Explain Plan in SQL Scratchpad*
 
-![Text description of scratchpad1.gif follows.](oracleLearn.assets/scratchpad1.gif)
+![Text description of scratchpad1.gif follows.](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094220.png)
 
 
 
@@ -507,7 +507,7 @@ Predicate Information (identified by operation id):
 
 sql执行流程
 
-![Text description of pfgrf185.gif follows](oracleLearn.assets/pfgrf185.gif)
+![Text description of pfgrf185.gif follows](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094221.gif)
 
 > The Oracle server provides the cost-based (CBO) and rule-based (RBO) optimization. In general, use the cost-based approach.  The optimizer determines the cost of a plan based on:
 >
@@ -521,9 +521,9 @@ sql执行流程
 
 ##### index unique scan  
 
-![img](oracleLearn.assets/image.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094222.gif)
 
-![img](oracleLearn.assets/image1.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094223.png)
 
 ##### INDEX RANGE SCAN 
 
@@ -537,7 +537,7 @@ SQL> analyze index t1_idx compute statistics;
 Index analyzed.
 ```
 
-![img](oracleLearn.assets/image2.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094224.png)
 
 > 改为btree索引（非唯一索引）后，这里变成了范围扫描
 >
@@ -563,11 +563,11 @@ Index analyzed.
 
 ##### nested loop join
 
-![See the source image](oracleLearn.assets/Nested-Loop-Join-50fps-1.gif)
+![See the source image](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094225.jpg)
 
 ##### hash join
 
-![img](oracleLearn.assets/Hash-Match-Join-Looping-1.gif)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094226.gif)
 
 
 
@@ -575,7 +575,7 @@ Index analyzed.
 
 > merge join 强调的是两个需要连接的表是已排序的
 
-![img](oracleLearn.assets/Merge-Join-1.gif)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094227.png)
 
 #### 优化总结：
 
@@ -685,7 +685,7 @@ Index analyzed.
 
 ## [explain](https://docs.oracle.com/cd/B10500_01/server.920/a96533/ex_plan.htm)
 
-![这里写图片描述](oracleLearn.assets/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTYxMTMwMjAwNTE2Mjgw.jpg)
+![这里写图片描述](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094228.png)
 
 #### 多表连接方式:[来源](https://blog.csdn.net/tianlesoftware/article/details/5826546) 
 
@@ -1164,9 +1164,9 @@ alter table table_name truncate partition p5;
    SELECT C.CST_ID, C.CST_LEVEL FROM VC_CUSTOMER C WHERE C.CST_LEVEL <> '04' FOR UPDATE OF CST_LEVEL
    ```
 
-   ![image-20200722150435246](oracleLearn.assets/image-20200722150435246.png)
+   ![image-20200722150435246](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094229.gif)
 
-   ![image-20200722150545769](oracleLearn.assets/image-20200722150545769.png)
+   ![image-20200722150545769](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094230.png)
 
 3. 并且sql_exe_start字段的时间与日志的时间吻合。判断为sql语句导致锁表
 
@@ -1400,6 +1400,6 @@ select b.file_name 物理文件名,
 
 ```
 
-![dba_free_space ](oracleLearn.assets/clip_image001-1594955259237.png)
+![dba_free_space ](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094231.gif)
 
 如上自动分区是默认next为1M，那么即使在没有数据时候也将占用1m，导致磁盘空间耗尽

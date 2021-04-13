@@ -24,4 +24,12 @@ public class ReduceUser{
     public void setMoney(int money) {
         this.money = money;
     }
+
+    @Override
+    public String toString() {
+        return "ReduceUser{" +
+            "name='" + name + '\'' +
+            ", money=" + money +
+            '}';
+    }
 }

@@ -1,6 +1,5 @@
 package com.froggengo.class9codec;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.*;
@@ -41,7 +40,7 @@ public class MyClient  {
                                 @Override
                                 public void channelActive(ChannelHandlerContext ctx) throws Exception {
                                     System.out.println("SimpleChannelInboundHandler channelActive() invoke");
-                                    ctx.writeAndFlush(99999l);
+                                    ctx.writeAndFlush(99999L);
                                    // ctx.writeAndFlush(99999); //因为encode只接受long，所以数据没发出去
                                 }
 

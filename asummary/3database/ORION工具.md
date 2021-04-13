@@ -180,9 +180,9 @@ C:\Program Files(x86)\Oracle\Orion>orion -help
 >
 > C:\Program Files (x86)\Oracle\Orion>
 
-![img](ORION%E5%B7%A5%E5%85%B7.assets/31476473_1524897977YmCP.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094329.png)
 
-![img](ORION%E5%B7%A5%E5%85%B7.assets/31476473_15248980015ss5.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094330.png)
 
 > num_streamIO: 增加这个参数来仿真并行执行操作。指定计划的并行度。一个好的开始点是CPU数目*一个CPU的线程数。
 >
@@ -201,7 +201,7 @@ C:\Program Files(x86)\Oracle\Orion>orion -help
 >   row:只测给定num_large值的那一行的small IO
 >   max:以num_small，num_large做为横竖坐标的最大值，测试n*m矩阵内所有组合的值
 
-![img](ORION%E5%B7%A5%E5%85%B7.assets/31476473_1524898738eZoA.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094331.png)
 
 ### 1.3使用
 
@@ -218,9 +218,9 @@ orion.exe -run simple -testname D:\app1\oracleio -num_disks 1
 
 **执行结果**
 
-![image-20200519120211803](ORION%E5%B7%A5%E5%85%B7.assets/image-20200519120211803.png)
+![image-20200519120211803](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094332.png)
 
-![image-20200519120253553](ORION%E5%B7%A5%E5%85%B7.assets/image-20200519120253553.png)
+![image-20200519120253553](https://gitee.com/froggengo/cloudimage/raw/master/img/20210322094333.png)
 
 ```properties
 Maximum Large MBPS=32.78 @ Small=0 and Large=2

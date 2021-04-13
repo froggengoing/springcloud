@@ -1,6 +1,6 @@
 package com.awesomeJdk.practise.athread;
 
-import jdk.nashorn.tools.Shell;
+
 import org.junit.Test;
 
 import java.io.IOException;
@@ -21,22 +21,24 @@ import java.util.Set;
  * 6、使用Kill pid命令干掉进程（注：在使用kill -9 pid时，是不会被调用的）
  */
 public class Thread13_Hook {
-    public static final String LOCK_PATH=System.getProperty("user.dir");
-    public static final String LOCK_FIEL=".lock";
+
+    public static final String LOCK_PATH = System.getProperty("user.dir");
+    public static final String LOCK_FIEL = ".lock";
     public static volatile boolean isExists = false;
+
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        Runtime.getRuntime().addShutdownHook(new Thread(){
+        Runtime.getRuntime().addShutdownHook(new Thread() {
             @Override
             public void run() {
                 System.out.println("退出运行！");
-                if(!isExists){
+                if (!isExists) {
                     Paths.get(LOCK_PATH, LOCK_FIEL).toFile().delete();
                 }
 
             }
         });
-        System.out.println("lock文件位置:"+LOCK_PATH);
+        System.out.println("lock文件位置:" + LOCK_PATH);
         checkRunning();
         while (true) {
             System.out.println("running");
@@ -46,19 +48,20 @@ public class Thread13_Hook {
 
     private static void checkRunning() throws IOException {
         Path path = Paths.get(LOCK_PATH, LOCK_FIEL);
-        if(path.toFile().exists()){
+        if (path.toFile().exists()) {
             isExists = true;
             throw new RuntimeException("程序已启动！");
         }
         //Set<PosixFilePermission> filePermissions = PosixFilePermissions.fromString(PERMISSION);
         Files.createFile(path);
     }
+
     @Test
-    public void test () throws IOException {
+    public void test() throws IOException {
         Path path = Paths.get(LOCK_PATH, LOCK_FIEL);
         if (path.toFile().exists()) {
             isExists = true;
-            System.out.println("文件存在："+path.toFile().getCanonicalPath());
+            System.out.println("文件存在：" + path.toFile().getCanonicalPath());
             path.toFile().delete();
         }
     }

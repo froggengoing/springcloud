@@ -7,11 +7,11 @@
 
 运维通知，线上系统一直在FGC，通过zabbix查看GC 的次数
 
-![img](img/20161212213026888.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130533.png)
 
 再查看YGC和FGC空间占用情况
 
-![img](img/20161212213031920.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130534.png)
 
 这里有几个疑问：
 
@@ -27,7 +27,7 @@
 
 通过查看打印出来的ERROR日志，确定是Direct buffer 不够。在申请DirectByteBuffer的时候，会检查是否还有空闲的空间，剩余空间不够，则会调用system.gc，引起FGC(具体后续会详细介绍)。这里可以解释old space很低，但是一直FGC。并不是old区不够用，而是堆外空间不够用。
 
-![img](img/20161212213037013.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130535.png)
 
 ### 第二个问题
 
@@ -90,7 +90,7 @@ FGC引起的Eden space 回收没有打印YGC日志或者 CollectionCount的增�
 
 下面对gc做一个梳理(jdk7和开启CMS)
 
-![img](img/20161212213041204.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130536.png)
 
 ​                         
 
@@ -142,7 +142,7 @@ FGC(并行)前提是开启了ExplicitGCInvokesConcurrent参数。
 
    通过NIO 的Channel write一个buffer：SocketChannel.write(ByteBuffer src) ，会调用如下接口：
 
-![img](img/20161212213047248.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130537.png)
 
 如果是HeapByteBuffer，还是要转换为的DirectByteBuffer，多一次数据拷贝。
 
@@ -150,7 +150,7 @@ FGC(并行)前提是开启了ExplicitGCInvokesConcurrent参数。
 
 #### 4.2.1 DirectByteBuffer结构
 
-![img](img/20161212213051486.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130538.png)
 
 #### 4.2.2资源的销毁方案
 
@@ -160,7 +160,7 @@ FGC(并行)前提是开启了ExplicitGCInvokesConcurrent参数。
 
 sun不推荐实现finalize，实际上JDK内部很多类都实现了finalize。
 
-![img](img/20161212213057158.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130539.png)
 
 如果对象实现了finalize，在对象初始化后,会封装成Finalizer对象添加到 Finalizer链表中。
 
@@ -178,7 +178,7 @@ Finalizer 线程poll到对象，先删除掉Finalizer链表中对应的对象，
 
 2：Cleaner方案
 
-![img](img/20161212213101236.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130540.png)
 
 比如创建DirectByteBuffer，会新建Cleaner对象，该对象添加到Cleaner链表中。
 
@@ -214,13 +214,13 @@ DirectByteBuffer详情可参考：Netty之Java堆外内存扫盲贴
 
   堆外空间不够会进行休眠： sleep 100ms 。
 
-![img](img/20161212213105798.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130541.png)
 
 很多文章都有提到会休眠100ms，特别对响应时间敏感的系统，影响比较大。这里需要思考为什么要设计休眠100ms，如果不休眠又会有什么问题？
 
 如下图：(开启了CMS )
 
-![img](img/20161212213109529.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130542.png)
 
   1：system.gc的仅仅是封装成一个VMOperation，添加到VMOperationQueue。VMThread会循环扫描Queue, 执行VMOperation。
 
@@ -244,7 +244,7 @@ JNA的描述(https://github.com/java-native-access/jna)
 
 ### 4.5 netty的ByteBuf
 
-![img](img/20161212213113127.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130543.png)
 
 可以看到netty的DirectByteBuf底层的实现是JDK的DirectByteBuffer，仅仅是对JDK的DirectByteBuffer做了api的封装。
 
@@ -276,7 +276,7 @@ Netty DirectByteBuf的特性：
 
  下面以mycat 1.4.0版本的buffer pool进行描述：
 
-![img](img/20161212213118451.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130544.png)
 
 规则：
 
@@ -314,7 +314,7 @@ Netty 4实现了一套java版的jemalloc(buddy allocation和slab allocation)，�
 
 下面先看一下twitter对netty buffer pool的性能测试。
 
-![img](img/20161212213122857.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130545.png)
 
   来源：https://blog.twitter.com/2013/netty-4-at-twitter-reduced-gc-overhead
 
@@ -342,7 +342,7 @@ Netty 4实现了一套java版的jemalloc(buddy allocation和slab allocation)，�
 
 #### 5.5.1 层级概念
 
-![img](img/20161212213126080.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130546.png)
 
 
 PoolArena ：作为内存申请和释放的入口。负责同步控制
@@ -357,7 +357,7 @@ PoolSubpage ：将Page进行拆分，减少内存碎片，提升内存使用效�
 
 #### 5.5.2 Buffer申请流程
 
-![img](img/20161212213132440.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130547.png)
 
 
 申请Buffer流程
@@ -386,7 +386,7 @@ ThreadLocal容量管理
 
 
 
- ![img](img/20161212213135920.png)
+ ![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130548.png)
 
 1：为了提升性能，在ThreadLocal里对tiny，small,normal进行缓存。
 
@@ -394,7 +394,7 @@ ThreadLocal容量管理
 
 PoolArena容量管理
 
-![img](img/20161212213140284.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130549.png)
 
 申请的size是tiny或者small ：PoolArena会缓存tiny和small的buffer。从Arena里面的tinyPool和smallPool申请buffer。
 
@@ -408,7 +408,7 @@ Tiny或者small数组每一位代表不同大小的buffer，比如tiny的第0个
 
 #### 5.5.4 Chunk管理
 
-![img](img/20161212213144654.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130550.png)
 
 图片来源：http://blog.csdn.net/youaremoon/article/details/47910971
 
@@ -427,7 +427,7 @@ Netty会将缓存buffer的线程进行watch，如果发现watch的线程会注�
 
 非常好奇，如果业务线程申请了buffer，未做归还，如何监控发现。我尝试去设计该监控方案，但是一直未有好的思路，发现netty此处设计的非常巧妙。
 
-![img](img/20161212213149096.png)
+![img](https://gitee.com/froggengo/cloudimage/raw/master/img/20210323130551.png)
 
 ​                    **Simple采样场景**
 
