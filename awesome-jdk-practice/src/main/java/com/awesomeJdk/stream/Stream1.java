@@ -12,6 +12,7 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
+import org.junit.Test;
 
 /**
  * @author froggengo@qq.com
@@ -19,17 +20,10 @@ import java.util.stream.StreamSupport;
  */
 public class Stream1 {
 
-    public static void main(String[] args) {
+    @Test
+    public  void test1() {
         Collector<Person, ?, Double> averagingInt = Collectors.averagingInt(Person::getAge);
-        ArrayList<Person> list=new ArrayList<>();
-        list.add(new Person("1",20));
-        list.add(new Person("2",22));
-        list.add(new Person("3",24));
-        list.add(new Person("4",26));
-        list.add(new Person("5",28));
-        list.add(new Person("6",20));
-        list.add(new Person("7",18));
-        list.add(new Person("8",16));
+        ArrayList<Person> list = getData();
         Stream<Person> sorted = list.stream()/*.sorted()*/;
         Double collect = sorted.peek(System.out::println).collect(averagingInt);
         System.out.println("--");
@@ -44,5 +38,21 @@ public class Stream1 {
         Spliterator<Person> spliterator = list.stream().spliterator();
         System.out.println(spliterator.characteristics());
 
+    }
+    @Test
+    public void test (){
+        getData().stream().filter(person -> person.getAge() >24).map(Person::getName).forEach(System.out::println);
+    }
+    private static ArrayList<Person> getData() {
+        ArrayList<Person> list=new ArrayList<>();
+        list.add(new Person("1",20));
+        list.add(new Person("2",22));
+        list.add(new Person("3",24));
+        list.add(new Person("4",26));
+        list.add(new Person("5",28));
+        list.add(new Person("6",20));
+        list.add(new Person("7",18));
+        list.add(new Person("8",16));
+        return list;
     }
 }
