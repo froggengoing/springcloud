@@ -27,7 +27,6 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.FileStore;
 import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
-import java.nio.file.FileVisitOption;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -160,7 +159,7 @@ public class File1Example {
         if (file.createNewFile()) {
             final FileOutputStream fileOutputStream = new FileOutputStream(file);
 
-            for (int i = 0; i < 1000_000; i++) {
+            for (int i = 0; i < 5000_000; i++) {
                 fileOutputStream.write(str.getBytes());
             }
             fileOutputStream.close();
@@ -192,7 +191,7 @@ public class File1Example {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("time:" + (System.currentTimeMillis() - begin1));
+        System.out.println("FileInputStream time(size=8192):" + (System.currentTimeMillis() - begin1));
 
         final long begin2 = System.currentTimeMillis();
         try (RandomAccessFile file = new RandomAccessFile("log/1.txt", "rw");) {
@@ -202,23 +201,30 @@ public class File1Example {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("time:" + (System.currentTimeMillis() - begin2));
+        System.out.println("RandomAccessFile time(size=8192):" + (System.currentTimeMillis() - begin2));
 
         final long begin3 = System.currentTimeMillis();
         final File fileDes = new File("log/1.txt");
         try (RandomAccessFile file = new RandomAccessFile(fileDes, "rw");) {
             final MappedByteBuffer map = file.getChannel().map(MapMode.READ_ONLY, 0, fileDes.length());
-            //final CharBuffer decode = Charset.forName("UTF-8").decode(map);
+//            map.load();
+            final byte[] bytes = new byte[size];
+
+            while (map.remaining() > 0) {
+                int length = map.remaining() > size ? size : map.remaining();
+                final ByteBuffer b = map.get(bytes, 0, length);
+            }
+//            final CharBuffer decode = Charset.forName("UTF-8").decode(map);
             //System.out.println(decode);
-            map.clear();
+//            map.clear();
             //false ,并没有载入内存
             System.out.println(map.isLoaded());
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        System.gc();
         System.out.println("time:" + (System.currentTimeMillis() - begin3));
+        System.gc();
 
     }
 
@@ -319,6 +325,44 @@ public class File1Example {
             byteBuffer.compact();
         }
         fileInputStream.close();
+    }
+
+    @Test
+    public void testBytebuffer4() {
+        final ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+        byteBuffer.put("1234567".getBytes());
+        byteBuffer.flip();
+        byteBuffer.get();
+        //截取byteBuffer的1到7位到新的ByteBuffer
+        //所以新的ByteBuffer的caption位6、limit位6
+        //但是byteBuffer和slice共享相同的byte，所以对slice的修改对源ByteBuffer也又影响
+        final ByteBuffer slice = byteBuffer.slice();
+        System.out.println(slice.position());
+        System.out.println(slice.limit());
+        slice.put("999".getBytes());
+        slice.flip();
+        //9
+        System.out.println((char) slice.get());
+        //9
+        System.out.println((char) byteBuffer.get());
+    }
+
+    @Test
+    public void testBytebuffer5() {
+        final ByteBuffer byteBuffer = ByteBuffer.allocateDirect(1024);
+        byteBuffer.put("1234567".getBytes());
+        byteBuffer.flip();
+        byteBuffer.get();
+        //截取byteBuffer的1到7位到新的ByteBuffer
+        //所以新的ByteBuffer的caption位6、limit位6
+        //但是byteBuffer和slice共享相同的byte，所以对slice的修改对源ByteBuffer也又影响
+        final ByteBuffer slice = byteBuffer.slice();
+        System.out.println(slice.position());
+        System.out.println(slice.limit());
+        slice.put("999".getBytes());
+        slice.flip();
+        System.out.println((char) slice.get());
+        System.out.println((char) byteBuffer.get());
     }
 
     @Test
@@ -462,9 +506,9 @@ public class File1Example {
     @Test
     public void testPathMatcher() throws IOException {
         final Path parent = Path.of(".");
-        final DirectoryStream<Path> paths = Files.newDirectoryStream(parent,"*.xml");
+        final DirectoryStream<Path> paths = Files.newDirectoryStream(parent, "*.xml");
         paths.forEach(System.out::println);
-        Files.newDirectoryStream(parent,path->path.toFile().isFile()).forEach(System.out::println);
+        Files.newDirectoryStream(parent, path -> path.toFile().isFile()).forEach(System.out::println);
         //底层也是使用newDirectoryStream
         Files.list(parent);
     }
@@ -487,6 +531,7 @@ public class File1Example {
                 Files.copy(dir, targetdir, StandardCopyOption.REPLACE_EXISTING);
                 return FileVisitResult.CONTINUE;
             }
+
             @Override
             public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
                 Files.copy(file, target.resolve(source.relativize(file)), StandardCopyOption.REPLACE_EXISTING);
@@ -494,24 +539,27 @@ public class File1Example {
             }
         });
     }
+
     @Test
-    public void testFileVisitor2 () throws IOException {
+    public void testFileVisitor2() throws IOException {
         final Path path = Path.of("D:\\[4]project\\springcloud\\awesome-jdk-practice\\src\\main\\java");
-        Files.walkFileTree(path,new SimpleFileVisitor<>(){
+        Files.walkFileTree(path, new SimpleFileVisitor<>() {
             @Override
             public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-                System.out.println(file.getFileName()+"="+createFileMd5(file.toFile()));
+                System.out.println(file.getFileName() + "=" + createFileMd5(file.toFile()));
                 return FileVisitResult.CONTINUE;
             }
         });
     }
+
     @Test
-    public void testFiles1 () throws IOException {
+    public void testFiles1() throws IOException {
         //默认是UTF_8，这里也可以指定任意编码格式
         System.out.println(Files.readString(Path.of("log/fc.txt"), StandardCharsets.UTF_8));
         //默认写配置 Set.of(StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING,StandardOpenOption.WRITE);
         System.out.println(Files.write(Path.of("log/ffs.txt"), "我知道你是谁！".getBytes(), StandardOpenOption.APPEND));
     }
+
     @Test
     public void testFiles2() throws IOException {
         final Path path = Path.of("pom.xml");
@@ -525,6 +573,7 @@ public class File1Example {
         System.out.println(Files.size(file));
         System.out.println(file.toFile().length());
     }
+
     @Test
     public void testZip() {
         //new ZipFile()
